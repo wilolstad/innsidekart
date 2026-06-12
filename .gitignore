@@ -5,3 +5,4 @@ innsidekart-plan.md
 .claude/
 data/prices/
 innsidekart.db
+backfill.log

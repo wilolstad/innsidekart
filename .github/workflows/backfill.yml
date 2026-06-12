@@ -1,0 +1,55 @@
+name: Backfill historikk
+
+# Selvkjedende: hver kjøring parser ~4,5 timer bakover i Newsweb-historikken,
+# committer basen, og starter en ny kjøring hvis mars 2021 ikke er nådd.
+# Startes manuelt én gang fra Actions-fanen (eller gh workflow run).
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Installer avhengigheter
+        run: pip install requests pdfplumber
+
+      - name: Kjør backfill med tidsbudsjett
+        run: python backfill.py 1930 --minutes 270
+
+      - name: Commit basen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/transactions.ndjson
+          git diff --cached --quiet || git commit -m "data: backfill-chunk"
+          git pull --rebase origin main
+          git push
+
+      - name: Fortsett hvis ikke ferdig
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          oldest=$(python -c "import json; print(min(json.loads(l)['published'][:10] for l in open('data/transactions.ndjson')))")
+          echo "Eldste melding i basen: $oldest"
+          if [[ "$oldest" > "2021-03-08" ]]; then
+            echo "Ikke ferdig — starter neste chunk"
+            gh workflow run backfill.yml --repo "$GITHUB_REPOSITORY"
+          else
+            echo "Backfill komplett til MAR-grensen"
+          fi

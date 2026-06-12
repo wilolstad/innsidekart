@@ -15,13 +15,18 @@ from datetime import datetime, timedelta, timezone
 import newsweb
 
 
-def main(days=90):
+def main(days=90, max_minutes=None):
+    start = time.time()
     db = newsweb.load_transactions()
     print(f"{len(db)} transaksjoner i basen fra før")
     today = datetime.now(timezone.utc).date()
     new = failed = 0
 
     for offset in range(0, days, 14):
+        if max_minutes and (time.time() - start) / 60 > max_minutes:
+            print(f"Tidsbudsjett ({max_minutes} min) brukt — stopper her, "
+                  "resumerbar fra neste kjøring", flush=True)
+            break
         to_d = today - timedelta(days=offset)
         from_d = today - timedelta(days=min(offset + 14, days))
         msgs = newsweb.fetch_list(from_d.isoformat(),
@@ -50,4 +55,9 @@ def main(days=90):
 
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]) if len(sys.argv) > 1 else 90)
+    args = sys.argv[1:]
+    dager = int(args[0]) if args and not args[0].startswith("-") else 90
+    minutter = None
+    if "--minutes" in args:
+        minutter = int(args[args.index("--minutes") + 1])
+    main(dager, minutter)
