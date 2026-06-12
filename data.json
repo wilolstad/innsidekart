@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-12T08:04:39.280655+00:00",
+  "generated": "2026-06-12T08:07:16.092139+00:00",
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
@@ -932,27 +932,27 @@
   "companies": {
     "SBNOR": {
       "name": "Sparebanken Norge",
-      "price": 182.1,
+      "price": 182.06,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 31514681344,
-      "ev": 319861677056,
+      "market_cap": 31507757056,
+      "ev": 319854752768,
       "fcf": 6860000000.0,
       "hist_fcf_growth": 0.4483273304205444,
-      "pe": 11.0430565,
+      "pe": 11.04063,
       "implied_growth": null
     },
     "LINK": {
       "name": "LINK Mobility Group Holding ASA",
-      "price": 23.42,
+      "price": 23.52,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 6611920896,
-      "ev": 8327540992,
+      "market_cap": 6640153088,
+      "ev": 8355773184,
       "fcf": 870579648,
       "hist_fcf_growth": 0.19682698972527124,
-      "pe": 53.227272,
-      "implied_growth": -0.04247474670410156
+      "pe": 53.454548,
+      "implied_growth": -0.04200935363769531
     },
     "OSUN": {
       "name": "Ocean Sun AS",
@@ -992,11 +992,11 @@
     },
     "LIFE": {
       "name": "Lifecare ASA",
-      "price": 0.289,
+      "price": 0.29,
       "currency": "NOK",
       "sector": "Healthcare",
-      "market_cap": 86156600,
-      "ev": 102562600,
+      "market_cap": 86454712,
+      "ev": 102860712,
       "fcf": -82969000,
       "hist_fcf_growth": null,
       "pe": null,
@@ -1040,14 +1040,14 @@
     },
     "CADLR": {
       "name": "Cadeler A/S",
-      "price": 53.85,
+      "price": 53.95,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 20779855872,
-      "ev": 22153163872,
+      "market_cap": 20818446336,
+      "ev": 22191754336,
       "fcf": -554002112,
       "hist_fcf_growth": null,
-      "pe": 6.503623,
+      "pe": 6.515701,
       "implied_growth": null
     },
     "ORK": {
