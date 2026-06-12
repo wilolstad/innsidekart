@@ -1,5 +1,6 @@
 {
-  "generated": "2026-06-12T08:33:15.678359+00:00",
+  "generated": "2026-06-12T09:23:28.681968+00:00",
+  "window_days": 14,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
@@ -7,1108 +8,2069 @@
   },
   "messages": [
     {
-      "messageId": 676058,
-      "ticker": "SBNOR",
-      "issuer": "Sparebanken Norge",
-      "title": "Tildeling av egenkapitalbevis (SBNOR) til primærinnsidere og meldepliktig handel primærinnsidere",
-      "published": "2026-06-12T07:44:51.802Z",
-      "markets": [
-        "XOSL",
-        "XOAM"
-      ],
-      "url": "https://newsweb.oslobors.no/message/676058"
-    },
-    {
       "messageId": 676057,
+      "published": "2026-06-12T07:44:51.801Z",
       "ticker": "SBNOR",
       "issuer": "Sparebanken Norge",
       "title": "Allocation of equity certificates (SBNOR) to primary insiders and transactions made by primary insiders",
-      "published": "2026-06-12T07:44:51.801Z",
-      "markets": [
-        "XOSL",
-        "XOAM"
-      ],
-      "url": "https://newsweb.oslobors.no/message/676057"
+      "url": "https://newsweb.oslobors.no/message/676057",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 13092,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 676043,
+      "published": "2026-06-12T05:00:00.000Z",
       "ticker": "LINK",
       "issuer": "Link Mobility Group Holding ASA",
       "title": "LINK Mobility – Mandatory notification of trade",
-      "published": "2026-06-12T05:00:00.000Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/676043"
+      "url": "https://newsweb.oslobors.no/message/676043",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 89000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 676037,
+      "published": "2026-06-11T17:32:53.716Z",
       "ticker": "OSUN",
       "issuer": "Ocean Sun AS",
       "title": "Ocean Sun AS – Mandatory notification of trade",
-      "published": "2026-06-11T17:32:53.716Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/676037"
+      "url": "https://newsweb.oslobors.no/message/676037",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 11300000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 3,
+      "name": "Are Glørsen",
+      "role": "Innsider"
     },
     {
       "messageId": 675992,
+      "published": "2026-06-11T11:05:00.000Z",
       "ticker": "SPOG",
       "issuer": "Sparebanken Øst",
       "title": "Sparebanken Øst – Tildeling av egenkapitalbevis i spareprogram til primærinnsidere",
-      "published": "2026-06-11T11:05:00.000Z",
-      "markets": [
-        "XOSL",
-        "XOAM"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675992"
-    },
-    {
-      "messageId": 675981,
-      "ticker": "VEI",
-      "issuer": "Veidekke ASA",
-      "title": "Veidekke: Mandatory notification of trade",
-      "published": "2026-06-11T11:04:25.418Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675981"
+      "url": "https://newsweb.oslobors.no/message/675992",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": 74.7548,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675941,
+      "published": "2026-06-11T11:01:54.964Z",
       "ticker": "VEI",
       "issuer": "Veidekke ASA",
       "title": "Veidekke: Meldepliktig handel",
-      "published": "2026-06-11T11:01:54.964Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675941"
+      "url": "https://newsweb.oslobors.no/message/675941",
+      "type": "SALG",
+      "source": "pdf",
+      "volume": 4000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675890,
+      "published": "2026-06-11T06:10:09.104Z",
       "ticker": "LIFE",
       "issuer": "Lifecare ASA",
       "title": "Lifecare ASA: Mandatory notification of trade",
-      "published": "2026-06-11T06:10:09.104Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675890"
+      "url": "https://newsweb.oslobors.no/message/675890",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 1410392,
+      "price": 0.249,
+      "amount": 351173.5,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Nærstående"
     },
     {
       "messageId": 675876,
+      "published": "2026-06-10T17:25:05.789Z",
       "ticker": "ELABS",
       "issuer": "Elliptic Laboratories ASA",
       "title": "Elliptic Labs: Mandatory Notifications of Trade",
-      "published": "2026-06-10T17:25:05.789Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675876"
+      "url": "https://newsweb.oslobors.no/message/675876",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 1747694,
+      "price": null,
+      "amount": null,
+      "n_insiders": 5,
+      "name": "Mathias Norderud",
+      "role": "CFO"
     },
     {
       "messageId": 675875,
+      "published": "2026-06-10T16:20:00.000Z",
       "ticker": "NEXT",
       "issuer": "NEXT Biometrics Group ASA",
       "title": "Exercise of subscription rights and allocation of shares and warrants in the rights issue to primary insider",
-      "published": "2026-06-10T16:20:00.000Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675875"
-    },
-    {
-      "messageId": 675874,
-      "ticker": "TEL",
-      "issuer": "Telenor ASA",
-      "title": "Trade by primary insiders",
-      "published": "2026-06-10T16:00:00.000Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675874"
+      "url": "https://newsweb.oslobors.no/message/675875",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 739948,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Ulf Ritsvall",
+      "role": "CEO"
     },
     {
       "messageId": 675873,
+      "published": "2026-06-10T16:00:00.000Z",
       "ticker": "TEL",
       "issuer": "Telenor ASA",
       "title": "Meldepliktig handel primærinnsidere",
-      "published": "2026-06-10T16:00:00.000Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675873"
+      "url": "https://newsweb.oslobors.no/message/675873",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 12834,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675868,
+      "published": "2026-06-10T14:30:00.000Z",
       "ticker": "CADLR",
       "issuer": "Cadeler A/S",
       "title": "CADELER A/S: REPORTING ON TRANSACTIONS IN CADELER A/S SHARES BY PERSONS DISCHARGING MANAGERIAL RESPONSIBILITIES AND PERSONS CLOSELY ASSOCIATED WITH THEM",
-      "published": "2026-06-10T14:30:00.000Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675868"
+      "url": "https://newsweb.oslobors.no/message/675868",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 5472,
+      "price": 53.4,
+      "amount": 292204.8,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Nærstående"
     },
     {
       "messageId": 675864,
+      "published": "2026-06-10T14:11:06.174Z",
       "ticker": "LIFE",
       "issuer": "Lifecare ASA",
       "title": "Lifecare ASA: Mandatory notification of trade",
-      "published": "2026-06-10T14:11:06.174Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675864"
+      "url": "https://newsweb.oslobors.no/message/675864",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 4000000,
+      "price": 0.249,
+      "amount": 995960.0,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Styreleder"
     },
     {
       "messageId": 675862,
+      "published": "2026-06-10T13:55:04.294Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "published": "2026-06-10T13:55:04.294Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675862"
+      "url": "https://newsweb.oslobors.no/message/675862",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 116244,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675844,
+      "published": "2026-06-10T12:00:05.105Z",
       "ticker": "KMAR",
       "issuer": "Kongsberg Maritime ASA",
       "title": "TRADE BY PRIMARY INSIDER",
-      "published": "2026-06-10T12:00:05.105Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675844"
+      "url": "https://newsweb.oslobors.no/message/675844",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 54,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Johnny Aarseth",
+      "role": "Innsider"
     },
     {
       "messageId": 675783,
+      "published": "2026-06-10T05:30:21.719Z",
       "ticker": "BORR",
       "issuer": "Borr Drilling Limited",
       "title": "Borr Drilling Limited – Notification of PDMR Transactions",
-      "published": "2026-06-10T05:30:21.719Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675783"
+      "url": "https://newsweb.oslobors.no/message/675783",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": null,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675770,
+      "published": "2026-06-09T18:41:32.190Z",
       "ticker": "KOMPL",
       "issuer": "Komplett ASA",
       "title": "Komplett ASA: Grant of share options to primary insider",
-      "published": "2026-06-09T18:41:32.190Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675770"
+      "url": "https://newsweb.oslobors.no/message/675770",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 1327002,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Vebjørn Torsetnes",
+      "role": "CEO"
     },
     {
       "messageId": 675745,
+      "published": "2026-06-09T12:05:03.619Z",
       "ticker": "KMAR",
       "issuer": "Kongsberg Maritime ASA",
       "title": "TRADE BY PRIMARY INSIDER",
-      "published": "2026-06-09T12:05:03.619Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675745"
+      "url": "https://newsweb.oslobors.no/message/675745",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 53,
+      "price": 3571.0,
+      "amount": 191548.44,
+      "n_insiders": 1,
+      "name": "Vegard Ryen Skullerud",
+      "role": "Innsider"
     },
     {
       "messageId": 675706,
+      "published": "2026-06-09T08:00:16.968Z",
       "ticker": "CYVIZ",
       "issuer": "Cyviz AS",
       "title": "Resolution to increase the share capital in connection with share option programs",
-      "published": "2026-06-09T08:00:16.968Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675706"
+      "url": "https://newsweb.oslobors.no/message/675706",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": null,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675677,
+      "published": "2026-06-09T05:05:00.000Z",
       "ticker": "ZAL",
       "issuer": "Zalaris ASA",
       "title": "Mandatory notification of trade",
-      "published": "2026-06-09T05:05:00.000Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675677"
+      "url": "https://newsweb.oslobors.no/message/675677",
+      "type": "SALG",
+      "source": "pdf",
+      "volume": 300082,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675664,
+      "published": "2026-06-08T18:07:52.819Z",
       "ticker": "NORSE",
       "issuer": "Norse Atlantic ASA",
       "title": "Norse Atlantic ASA - Mandatory notification of trade - Receipt of Subscription Rights",
-      "published": "2026-06-08T18:07:52.819Z",
-      "markets": [
-        "XOAX"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675664"
+      "url": "https://newsweb.oslobors.no/message/675664",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 30045005,
+      "price": null,
+      "amount": null,
+      "n_insiders": 3,
+      "name": "Kristin Berthelsen",
+      "role": "Innsider"
     },
     {
       "messageId": 675657,
+      "published": "2026-06-08T14:28:46.861Z",
       "ticker": "VEND",
       "issuer": "Vend Marketplaces ASA",
       "title": "Vend Marketplaces ASA: Mandatory notification of trade by primary insider",
-      "published": "2026-06-08T14:28:46.861Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675657"
+      "url": "https://newsweb.oslobors.no/message/675657",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 4000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675651,
+      "published": "2026-06-08T12:52:50.003Z",
       "ticker": "HAV",
       "issuer": "HAV Group ASA",
       "title": "Notification of trade",
-      "published": "2026-06-08T12:52:50.003Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675651"
+      "url": "https://newsweb.oslobors.no/message/675651",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 10000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675619,
+      "published": "2026-06-08T11:02:07.748Z",
       "ticker": "REACH",
       "issuer": "Reach Subsea ASA",
       "title": "Mandatory Notification of Trade by Primary Insider",
-      "published": "2026-06-08T11:02:07.748Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675619"
+      "url": "https://newsweb.oslobors.no/message/675619",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 2000000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675607,
+      "published": "2026-06-08T08:58:05.641Z",
       "ticker": "INSTA",
       "issuer": "Instabank ASA",
       "title": "Mandatory notification of trade by primary insider",
-      "published": "2026-06-08T08:58:05.641Z",
-      "markets": [
-        "XOAM",
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675607"
+      "url": "https://newsweb.oslobors.no/message/675607",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 120000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675592,
+      "published": "2026-06-08T06:54:18.714Z",
       "ticker": "ZAL",
       "issuer": "Zalaris ASA",
       "title": "Settlement of employee share options and RSUs",
-      "published": "2026-06-08T06:54:18.714Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675592"
+      "url": "https://newsweb.oslobors.no/message/675592",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 222122,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675571,
+      "published": "2026-06-08T06:00:07.765Z",
       "ticker": "SCATC",
       "issuer": "Scatec ASA",
       "title": "Scatec ASA: Subscriptions for the Employee Share Purchase Programme 2026",
-      "published": "2026-06-08T06:00:07.765Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675571"
+      "url": "https://newsweb.oslobors.no/message/675571",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 3141,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Position",
+      "role": "Innsider"
     },
     {
       "messageId": 675554,
+      "published": "2026-06-07T17:05:05.316Z",
       "ticker": "ACED",
       "issuer": "Ace Digital AS",
       "title": "Mandatory Notification of Trade by Primary Insider",
-      "published": "2026-06-07T17:05:05.316Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675554"
+      "url": "https://newsweb.oslobors.no/message/675554",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": 485.0,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675546,
+      "published": "2026-06-05T16:00:46.772Z",
       "ticker": "CYVIZ",
       "issuer": "Cyviz AS",
       "title": "Share options exercised",
-      "published": "2026-06-05T16:00:46.772Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675546"
+      "url": "https://newsweb.oslobors.no/message/675546",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 5466,
+      "price": 1.1,
+      "amount": 6012.6,
+      "n_insiders": 1,
+      "name": "Ellen Kristine Lome",
+      "role": "Innsider"
     },
     {
       "messageId": 675545,
+      "published": "2026-06-05T15:43:50.846Z",
       "ticker": "HDLY",
       "issuer": "Huddly AS",
       "title": "Huddly AS – Mandatory notification of trade by primary insiders",
-      "published": "2026-06-05T15:43:50.846Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675545"
+      "url": "https://newsweb.oslobors.no/message/675545",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 50980,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Advokatfirmaet Simonsen Vogt Wiig",
+      "role": "Innsider"
     },
     {
       "messageId": 675541,
+      "published": "2026-06-05T14:30:05.796Z",
       "ticker": "ARR",
       "issuer": "Arribatec Group ASA",
       "title": "Arribatec Group ASA: Mandatory notification of trade",
-      "published": "2026-06-05T14:30:05.796Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675541"
+      "url": "https://newsweb.oslobors.no/message/675541",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 50000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675532,
+      "published": "2026-06-05T12:25:05.683Z",
       "ticker": "ELABS",
       "issuer": "Elliptic Laboratories ASA",
       "title": "Elliptic Labs: Grant of 2026 Share Options, Replacement Options and Mandatory Notifications of Trade",
-      "published": "2026-06-05T12:25:05.683Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675532"
+      "url": "https://newsweb.oslobors.no/message/675532",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 3150000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 5,
+      "name": "Mathias Norderud",
+      "role": "CFO"
     },
     {
       "messageId": 675506,
+      "published": "2026-06-05T11:30:04.750Z",
       "ticker": "GOD",
       "issuer": "Goodtech ASA",
       "title": "Mandatory notification of trade by primary insider",
-      "published": "2026-06-05T11:30:04.750Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675506"
+      "url": "https://newsweb.oslobors.no/message/675506",
+      "type": "SALG",
+      "source": "pdf",
+      "volume": 28366,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675483,
+      "published": "2026-06-04T19:20:46.622Z",
       "ticker": "ALNG",
       "issuer": "ALNG ASA",
       "title": "ALNG ASA – Mandatory notification of trade",
-      "published": "2026-06-04T19:20:46.622Z",
-      "markets": [
-        "XOAX"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675483"
+      "url": "https://newsweb.oslobors.no/message/675483",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 371162,
+      "price": 3.3344,
+      "amount": 1237602.57,
+      "n_insiders": 1,
+      "name": "Niels Rigault",
+      "role": "Ledelse"
     },
     {
       "messageId": 675482,
+      "published": "2026-06-04T17:19:05.204Z",
       "ticker": "PROT",
       "issuer": "Protector Forsikring ASA",
       "title": "Mandatory notification of trade - Protector Forsikring ASA",
-      "published": "2026-06-04T17:19:05.204Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675482"
+      "url": "https://newsweb.oslobors.no/message/675482",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 353874,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675481,
+      "published": "2026-06-04T16:58:46.772Z",
       "ticker": "HEX",
       "issuer": "Hexagon Composites ASA",
       "title": "Hexagon Composites ASA: Mandatory notification of trade",
-      "published": "2026-06-04T16:58:46.772Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675481"
+      "url": "https://newsweb.oslobors.no/message/675481",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 687500,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675477,
+      "published": "2026-06-04T14:57:26.227Z",
       "ticker": "STB",
       "issuer": "Storebrand ASA",
       "title": "STOREBRAND ASA: Notice of transaction by PDMR",
-      "published": "2026-06-04T14:57:26.227Z",
-      "markets": [
-        "XOSL",
-        "XOAM"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675477"
+      "url": "https://newsweb.oslobors.no/message/675477",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 1160,
+      "price": 173.0,
+      "amount": 200680.0,
+      "n_insiders": 1,
+      "name": "LINE MERETHE HESTVIK",
+      "role": "Styre"
     },
     {
       "messageId": 675476,
+      "published": "2026-06-04T14:57:26.214Z",
       "ticker": "STB",
       "issuer": "Storebrand ASA",
       "title": "STOREBRAND ASA: Meldepliktig handel for primærinnsider",
-      "published": "2026-06-04T14:57:26.214Z",
-      "markets": [
-        "XOSL",
-        "XOAM"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675476"
-    },
-    {
-      "messageId": 675473,
-      "ticker": "AFG",
-      "issuer": "AF Gruppen ASA",
-      "title": "Meldepliktig handel",
-      "published": "2026-06-04T14:30:25.810Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675473"
+      "url": "https://newsweb.oslobors.no/message/675476",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 1160,
+      "price": 173.0,
+      "amount": 200680.0,
+      "n_insiders": 1,
+      "name": "LINE MERETHE HESTVIK",
+      "role": "Styre"
     },
     {
       "messageId": 675472,
+      "published": "2026-06-04T14:30:25.808Z",
       "ticker": "AFG",
       "issuer": "AF Gruppen ASA",
       "title": "Notifiable trade",
-      "published": "2026-06-04T14:30:25.808Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675472"
+      "url": "https://newsweb.oslobors.no/message/675472",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 152710,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675374,
+      "published": "2026-06-04T09:24:10.508Z",
       "ticker": "NORCO",
       "issuer": "Norconsult ASA",
       "title": "Norconsult: Mandatory notification of trade by primary insider",
-      "published": "2026-06-04T09:24:10.508Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675374"
+      "url": "https://newsweb.oslobors.no/message/675374",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 15000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675357,
+      "published": "2026-06-04T07:41:04.688Z",
       "ticker": "CRNA",
       "issuer": "Circio Holding ASA",
       "title": "Circio Holding ASA   Exercise of Warrants by primary insiders",
-      "published": "2026-06-04T07:41:04.688Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675357"
+      "url": "https://newsweb.oslobors.no/message/675357",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 223684,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Thomas Birkballe Hansen",
+      "role": "Ledelse"
     },
     {
       "messageId": 675355,
+      "published": "2026-06-04T06:55:04.071Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "published": "2026-06-04T06:55:04.071Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675355"
-    },
-    {
-      "messageId": 675341,
-      "ticker": "MDATA",
-      "issuer": "Magnora Data Center ASA",
-      "title": "Magnora Data Center ASA: Mandatory notification of trade in connection with Private Placement ",
-      "published": "2026-06-03T21:36:51.281Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675341"
-    },
-    {
-      "messageId": 675333,
-      "ticker": "MDATA",
-      "issuer": "Magnora Data Center ASA",
-      "title": "Magnora Data Center ASA: Mandatory notification of trade in connection with the private placement",
-      "published": "2026-06-03T15:39:25.489Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675333"
+      "url": "https://newsweb.oslobors.no/message/675355",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 900,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675329,
+      "published": "2026-06-03T15:00:04.263Z",
       "ticker": "LOKO",
       "issuer": "Lokotech Group AS",
       "title": "Mandatory Notification of Trade by Primary Insider",
-      "published": "2026-06-03T15:00:04.263Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675329"
+      "url": "https://newsweb.oslobors.no/message/675329",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": 0.5734,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675269,
+      "published": "2026-06-03T11:15:06.819Z",
       "ticker": "LIFE",
       "issuer": "Lifecare ASA",
       "title": "Lifecare ASA: Mandatory notification of trade",
-      "published": "2026-06-03T11:15:06.819Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675269"
+      "url": "https://newsweb.oslobors.no/message/675269",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 4000000,
+      "price": 0.0157,
+      "amount": 62800.0,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Styreleder"
     },
     {
       "messageId": 675262,
+      "published": "2026-06-03T09:08:42.068Z",
       "ticker": "MDATA",
       "issuer": "Magnora Data Center ASA",
       "title": "Magnora Data Center ASA: Mandatory notification of trade in connection with the private placement",
-      "published": "2026-06-03T09:08:42.068Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675262"
+      "url": "https://newsweb.oslobors.no/message/675262",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 5446154,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675238,
+      "published": "2026-06-03T05:00:07.729Z",
       "ticker": "IDEX",
       "issuer": "IDEX Biometrics ASA",
       "title": "IDEX Biometrics ASA: Mandatory notification of trade and disclosure of large shareholding",
-      "published": "2026-06-03T05:00:07.729Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675238"
+      "url": "https://newsweb.oslobors.no/message/675238",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 2500000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Ledelse"
     },
     {
       "messageId": 675233,
+      "published": "2026-06-03T04:59:04.845Z",
       "ticker": "NORCO",
       "issuer": "Norconsult ASA",
       "title": "Norconsult: Mandatory notification of trade by primary insider",
-      "published": "2026-06-03T04:59:04.845Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675233"
+      "url": "https://newsweb.oslobors.no/message/675233",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 28200,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675210,
+      "published": "2026-06-02T14:00:04.071Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "published": "2026-06-02T14:00:04.071Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675210"
+      "url": "https://newsweb.oslobors.no/message/675210",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 26932,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675209,
+      "published": "2026-06-02T13:50:04.197Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "published": "2026-06-02T13:50:04.197Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675209"
+      "url": "https://newsweb.oslobors.no/message/675209",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 20000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675208,
+      "published": "2026-06-02T13:42:18.323Z",
       "ticker": "ACR",
       "issuer": "Axactor ASA",
       "title": "Subsequent offering – Subscription by primary insiders and reminder of subscription period",
-      "published": "2026-06-02T13:42:18.323Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675208"
+      "url": "https://newsweb.oslobors.no/message/675208",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 184580,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675207,
+      "published": "2026-06-02T13:40:03.970Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "published": "2026-06-02T13:40:03.970Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675207"
+      "url": "https://newsweb.oslobors.no/message/675207",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 22000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675153,
+      "published": "2026-06-02T10:39:29.758Z",
       "ticker": "NORCO",
       "issuer": "Norconsult ASA",
       "title": "Norconsult: Employee Share Programs 2026",
-      "published": "2026-06-02T10:39:29.758Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675153"
+      "url": "https://newsweb.oslobors.no/message/675153",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 15892,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675151,
+      "published": "2026-06-02T10:20:04.063Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "published": "2026-06-02T10:20:04.063Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675151"
+      "url": "https://newsweb.oslobors.no/message/675151",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 2618,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675146,
+      "published": "2026-06-02T08:33:03.720Z",
       "ticker": "CRNA",
       "issuer": "Circio Holding ASA",
       "title": "Circio Holding ASA   Exercise of Warrants by primary insiders",
-      "published": "2026-06-02T08:33:03.720Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675146"
+      "url": "https://newsweb.oslobors.no/message/675146",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 218164,
+      "price": null,
+      "amount": null,
+      "n_insiders": 2,
+      "name": "Ola Melin",
+      "role": "Ledelse"
     },
     {
       "messageId": 675122,
+      "published": "2026-06-01T20:58:04.150Z",
       "ticker": "DOFG",
       "issuer": "DOF Group ASA",
       "title": "DOF Group ASA - Mandatory notification of trade",
-      "published": "2026-06-01T20:58:04.150Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675122"
+      "url": "https://newsweb.oslobors.no/message/675122",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 3800,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675115,
+      "published": "2026-06-01T17:33:16.612Z",
       "ticker": "PROT",
       "issuer": "Protector Forsikring ASA",
       "title": "Transfer of shares to primary insiders in connection with the company's share purchase program and long-term bonus scheme",
-      "published": "2026-06-01T17:33:16.612Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675115"
+      "url": "https://newsweb.oslobors.no/message/675115",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": 456.8,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675107,
+      "published": "2026-06-01T14:00:18.469Z",
       "ticker": "ELK",
       "issuer": "Elkem ASA",
       "title": "Elkem ASA: Notification of trade - primary insiders",
-      "published": "2026-06-01T14:00:18.469Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675107"
+      "url": "https://newsweb.oslobors.no/message/675107",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 8059,
+      "price": 490.0,
+      "amount": 22936705.0,
+      "n_insiders": 6,
+      "name": "Erik Christian Must",
+      "role": "Styre"
     },
     {
       "messageId": 675105,
+      "published": "2026-06-01T13:05:05.862Z",
       "ticker": "XPLRA",
       "issuer": "Xplora Technologies AS",
       "title": "Xplora Technologies AS: Mandatory notification of purchase by primary insiders",
-      "published": "2026-06-01T13:05:05.862Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675105"
+      "url": "https://newsweb.oslobors.no/message/675105",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 200000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675099,
+      "published": "2026-06-01T12:50:50.625Z",
       "ticker": "CAPT",
       "issuer": "Capital Tankers Corp.",
       "title": "Capital Tankers Corp.   Transaction by close associate of primary insider",
-      "published": "2026-06-01T12:50:50.625Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675099"
+      "url": "https://newsweb.oslobors.no/message/675099",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 1070000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675098,
+      "published": "2026-06-01T12:36:35.992Z",
       "ticker": "INSTA",
       "issuer": "Instabank ASA",
       "title": "Mandatory notification of trade by primary insider",
-      "published": "2026-06-01T12:36:35.992Z",
-      "markets": [
-        "XOAM",
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675098"
+      "url": "https://newsweb.oslobors.no/message/675098",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": 4.1592,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675093,
+      "published": "2026-06-01T12:15:00.000Z",
       "ticker": "HGSB",
       "issuer": "Haugesund Sparebank",
       "title": "Haugesund Sparebank – Meldepliktig handel",
-      "published": "2026-06-01T12:15:00.000Z",
-      "markets": [
-        "XOSL",
-        "XOAM"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675093"
+      "url": "https://newsweb.oslobors.no/message/675093",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 400,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675087,
+      "published": "2026-06-01T11:40:29.859Z",
       "ticker": "CODE",
       "issuer": "CodeLab Capital AS",
       "title": "Primary insider notification - purchase of shares",
-      "published": "2026-06-01T11:40:29.859Z",
-      "markets": [
-        "XOAM",
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675087"
-    },
-    {
-      "messageId": 675085,
-      "ticker": "DNB",
-      "issuer": "DNB Bank ASA",
-      "title": "Trade subject to notification for primary insiders",
-      "published": "2026-06-01T11:13:36.652Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675085"
+      "url": "https://newsweb.oslobors.no/message/675087",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 20000,
+      "price": 3.43,
+      "amount": 68600.0,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Nærstående"
     },
     {
       "messageId": 675084,
+      "published": "2026-06-01T11:13:36.651Z",
       "ticker": "DNB",
       "issuer": "DNB Bank ASA",
       "title": "Meldepliktig handel for primærinnsidere",
-      "published": "2026-06-01T11:13:36.651Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675084"
+      "url": "https://newsweb.oslobors.no/message/675084",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 6287,
+      "price": 287.6,
+      "amount": 1808313.76,
+      "n_insiders": 1,
+      "name": "Gro Bakstad",
+      "role": "Styre"
     },
     {
       "messageId": 675047,
+      "published": "2026-06-01T09:08:31.650Z",
       "ticker": "ASCHO",
       "issuer": "Aktieselskabet Schouw & Co.",
       "title": "Notification of manager's and closely related parties' transactions with shares in Schouw & Co.",
-      "published": "2026-06-01T09:08:31.650Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675047"
+      "url": "https://newsweb.oslobors.no/message/675047",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 50000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Jens Bjerg Sørensen",
+      "role": "Innsider"
     },
     {
       "messageId": 675039,
+      "published": "2026-06-01T08:45:04.230Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "published": "2026-06-01T08:45:04.230Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675039"
+      "url": "https://newsweb.oslobors.no/message/675039",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 2000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 675032,
+      "published": "2026-06-01T08:39:12.837Z",
       "ticker": "NOHAL",
       "issuer": "Nordic Halibut AS",
       "title": "Nordic Halibut AS – Mandatory notification of trade ",
-      "published": "2026-06-01T08:39:12.837Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675032"
+      "url": "https://newsweb.oslobors.no/message/675032",
+      "type": "KJØP",
+      "source": "none",
+      "volume": null,
+      "price": 23.4,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675029,
+      "published": "2026-06-01T08:13:44.973Z",
       "ticker": "ABG",
       "issuer": "ABG Sundal Collier Holding ASA",
       "title": "ABG - Extension of forward contracts",
-      "published": "2026-06-01T08:13:44.973Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675029"
+      "url": "https://newsweb.oslobors.no/message/675029",
+      "type": "UKJENT",
+      "source": "none",
+      "volume": null,
+      "price": null,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 675023,
+      "published": "2026-06-01T07:53:05.284Z",
       "ticker": "ABG",
       "issuer": "ABG Sundal Collier Holding ASA",
       "title": "ABG - Share transactions",
-      "published": "2026-06-01T07:53:05.284Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/675023"
+      "url": "https://newsweb.oslobors.no/message/675023",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 1680000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 674973,
+      "published": "2026-05-30T16:13:08.991Z",
       "ticker": "LOKO",
       "issuer": "Lokotech Group AS",
       "title": "Mandatory Notification of Trade by Primary Insider",
-      "published": "2026-05-30T16:13:08.991Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674973"
+      "url": "https://newsweb.oslobors.no/message/674973",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": 0.65,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 674971,
+      "published": "2026-05-30T10:02:07.506Z",
       "ticker": "LOKO",
       "issuer": "Lokotech Group AS",
       "title": "Mandatory Notification of Trade by Primary Insider",
-      "published": "2026-05-30T10:02:07.506Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674971"
+      "url": "https://newsweb.oslobors.no/message/674971",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": 0.65,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 674963,
+      "published": "2026-05-29T19:39:38.958Z",
       "ticker": "TOM",
       "issuer": "Tomra Systems ASA",
       "title": "TOMRA: Mandatory notification of trade - additional and amended",
-      "published": "2026-05-29T19:39:38.958Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674963"
+      "url": "https://newsweb.oslobors.no/message/674963",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 8326,
+      "price": null,
+      "amount": null,
+      "n_insiders": 2,
+      "name": "Anika Jovik",
+      "role": "Ledelse"
     },
     {
       "messageId": 674958,
+      "published": "2026-05-29T17:54:18.819Z",
       "ticker": "TOM",
       "issuer": "Tomra Systems ASA",
       "title": "TOMRA: Mandatory notification of trade",
-      "published": "2026-05-29T17:54:18.819Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674958"
+      "url": "https://newsweb.oslobors.no/message/674958",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 81826,
+      "price": null,
+      "amount": null,
+      "n_insiders": 7,
+      "name": "Tove Andersen",
+      "role": "CEO"
     },
     {
       "messageId": 674955,
+      "published": "2026-05-29T16:58:20.605Z",
       "ticker": "NOSN",
       "issuer": "NOS Nova AS",
       "title": "Mandatory notification of trade in NOS Nova AS",
-      "published": "2026-05-29T16:58:20.605Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674955"
+      "url": "https://newsweb.oslobors.no/message/674955",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": null,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
     },
     {
       "messageId": 674938,
+      "published": "2026-05-29T14:05:06.827Z",
       "ticker": "ORK",
       "issuer": "Orkla ASA",
       "title": "Orkla ASA: Mandatory notification of trade - options",
-      "published": "2026-05-29T14:05:06.827Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674938"
+      "url": "https://newsweb.oslobors.no/message/674938",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 629334,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
     },
     {
       "messageId": 674923,
+      "published": "2026-05-29T12:27:22.354Z",
       "ticker": "OCEAN",
       "issuer": "Ocean GeoLoop ASA",
       "title": "Ocean GeoLoop AS: Mandatory notification of trade ",
-      "published": "2026-05-29T12:27:22.354Z",
-      "markets": [
-        "MERK"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674923"
+      "url": "https://newsweb.oslobors.no/message/674923",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 105271232,
+      "price": 0.5,
+      "amount": 52635616.0,
+      "n_insiders": 1,
+      "name": "Name",
+      "role": "Innsider"
     },
     {
       "messageId": 674916,
+      "published": "2026-05-29T11:32:57.495Z",
       "ticker": "GENT",
       "issuer": "Gentian Diagnostics ASA",
       "title": "Mandatory notification of trade",
-      "published": "2026-05-29T11:32:57.495Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674916"
+      "url": "https://newsweb.oslobors.no/message/674916",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 5000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "CEO"
     },
     {
       "messageId": 674872,
+      "published": "2026-05-29T06:54:02.857Z",
       "ticker": "VAR",
       "issuer": "Vår Energi ASA",
       "title": "Vår Energi ASA: Shares allocated to primary insiders as part of the long-term incentive program",
-      "published": "2026-05-29T06:54:02.857Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674872"
+      "url": "https://newsweb.oslobors.no/message/674872",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 80134,
+      "price": null,
+      "amount": null,
+      "n_insiders": 7,
+      "name": "Name",
+      "role": "CEO"
     },
     {
       "messageId": 674846,
+      "published": "2026-05-29T05:00:06.105Z",
       "ticker": "CRNA",
       "issuer": "Circio Holding ASA",
       "title": "Circio Holding ASA   Exercise of Warrants by primary insiders",
-      "published": "2026-05-29T05:00:06.105Z",
-      "markets": [
-        "XOSL"
-      ],
-      "url": "https://newsweb.oslobors.no/message/674846"
+      "url": "https://newsweb.oslobors.no/message/674846",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 189680,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Robert Forbes Burns",
+      "role": "Styre"
     }
   ],
   "companies": {
-    "SBNOR": {
-      "name": "Sparebanken Norge",
-      "price": 182.22,
+    "ORK": {
+      "issuer": "Orkla ASA",
+      "n_buy": 6,
+      "n_sell": 0,
+      "n_program": 2,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider",
+        "Innsider",
+        "Innsider",
+        "Innsider",
+        "Innsider",
+        "Innsider"
+      ],
+      "cluster": true,
+      "top_role": null,
+      "name": "Orkla ASA",
+      "price": 100.3,
+      "currency": "NOK",
+      "sector": "Consumer Defensive",
+      "market_cap": 97994915840,
+      "ev": 112189916160,
+      "fcf": 6867125248,
+      "hist_fcf_growth": 0.40556619136653094,
+      "implied_growth": 0.029706954956054688
+    },
+    "NORCO": {
+      "issuer": "Norconsult ASA",
+      "n_buy": 2,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider",
+        "Innsider"
+      ],
+      "cluster": true,
+      "top_role": null,
+      "name": "NORCONSULT ASA",
+      "price": 34.1,
+      "currency": "NOK",
+      "sector": "Industrials",
+      "market_cap": 10581242880,
+      "ev": 12074242816,
+      "fcf": 1402249984,
+      "hist_fcf_growth": 0.06005796568770516,
+      "implied_growth": -0.05702400207519531
+    },
+    "DNB": {
+      "issuer": "DNB Bank ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 1808313.76,
+      "sell_nok": 0.0,
+      "buyers": [
+        "Gro Bakstad"
+      ],
+      "roles": [
+        "Styre"
+      ],
+      "cluster": false,
+      "top_role": "Styre",
+      "name": "DNB Bank ASA",
+      "price": 288.2,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 31535448064,
-      "ev": 319882443776,
-      "fcf": 6860000000.0,
-      "hist_fcf_growth": 0.4483273304205444,
-      "pe": 11.050334,
+      "market_cap": 414266327040,
+      "ev": 1191925284864,
+      "fcf": 69928000000.0,
+      "hist_fcf_growth": 1.3426676629773517,
       "implied_growth": null
     },
-    "LINK": {
-      "name": "LINK Mobility Group Holding ASA",
-      "price": 23.46,
+    "ALNG": {
+      "issuer": "ALNG ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 1237602.57,
+      "sell_nok": 0.0,
+      "buyers": [
+        "Niels Rigault"
+      ],
+      "roles": [
+        "Ledelse"
+      ],
+      "cluster": false,
+      "top_role": "Ledelse",
+      "name": "ALNG ASA",
+      "price": 3.26,
       "currency": "NOK",
-      "sector": "Communication Services",
-      "market_cap": 6623213568,
-      "ev": 8338833664,
-      "fcf": 870579648,
-      "hist_fcf_growth": 0.19682698972527124,
-      "pe": 53.31818,
-      "implied_growth": -0.04228973388671875
+      "sector": "Energy",
+      "market_cap": 713791872,
+      "ev": 874899872,
+      "fcf": 9226125,
+      "hist_fcf_growth": -0.18410323564741726,
+      "implied_growth": 0.2651786804199219
     },
-    "OSUN": {
-      "name": "Ocean Sun AS",
-      "price": 0.998,
+    "STB": {
+      "issuer": "Storebrand ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 200680.0,
+      "sell_nok": 0.0,
+      "buyers": [
+        "LINE MERETHE HESTVIK"
+      ],
+      "roles": [
+        "Styre"
+      ],
+      "cluster": false,
+      "top_role": "Styre",
+      "name": "Storebrand ASA",
+      "price": 173.3,
       "currency": "NOK",
-      "sector": "Utilities",
-      "market_cap": 49805012,
-      "ev": 43117012,
-      "fcf": -18179250,
+      "sector": "Financial Services",
+      "market_cap": 72720596992,
+      "ev": 113641596928,
+      "fcf": 14422124544,
+      "hist_fcf_growth": 0.19468985372068293,
+      "implied_growth": null
+    },
+    "CODE": {
+      "issuer": "CodeLab Capital AS",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 68600.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Nærstående"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "CodeLab Capital AS",
+      "price": 3.12,
+      "currency": "NOK",
+      "sector": "Healthcare",
+      "market_cap": 61635360,
+      "ev": 51819531,
+      "fcf": 589585,
       "hist_fcf_growth": null,
-      "pe": null,
-      "implied_growth": null
+      "implied_growth": 0.25467681884765625
     },
-    "SPOG": {
-      "name": "Sparebanken Øst",
-      "price": 73.8,
+    "REACH": {
+      "issuer": "Reach Subsea ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "Reach Subsea ASA",
+      "price": 5.2,
+      "currency": "NOK",
+      "sector": "Energy",
+      "market_cap": 1700186752,
+      "ev": 3107053760,
+      "fcf": 552084608,
+      "hist_fcf_growth": 0.39990429173485564,
+      "implied_growth": -0.11799812316894531
+    },
+    "PROT": {
+      "issuer": "Protector Forsikring ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "Protector Forsikring ASA",
+      "price": 463.6,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 1526766336,
-      "ev": 24598966688,
-      "fcf": 95900000.0,
-      "hist_fcf_growth": -0.6622027753696542,
-      "pe": 9.2365465,
+      "market_cap": 38161154048,
+      "ev": 15585153280,
+      "fcf": 1321750016,
+      "hist_fcf_growth": null,
+      "implied_growth": null
+    },
+    "AFG": {
+      "issuer": "AF Gruppen ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "AF Gruppen ASA",
+      "price": 185.2,
+      "currency": "NOK",
+      "sector": "Industrials",
+      "market_cap": 21046847488,
+      "ev": 19562847488,
+      "fcf": 2396124928,
+      "hist_fcf_growth": 0.32834846189098865,
+      "implied_growth": -0.064453125
+    },
+    "XPLRA": {
+      "issuer": "Xplora Technologies AS",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "Xplora Technologies AS",
+      "price": 41.1,
+      "currency": "NOK",
+      "sector": "Consumer Cyclical",
+      "market_cap": 1962715008,
+      "ev": 2375156032,
+      "fcf": -12541125,
+      "hist_fcf_growth": null,
+      "implied_growth": null
+    },
+    "HGSB": {
+      "issuer": "Haugesund Sparebank",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "Haugesund Sparebank",
+      "price": 156.0,
+      "currency": "NOK",
+      "sector": "Financial Services",
+      "market_cap": 819599168,
+      "ev": 5813634144,
+      "fcf": -78762000.0,
+      "hist_fcf_growth": null,
+      "implied_growth": null
+    },
+    "NOHAL": {
+      "issuer": "Nordic Halibut AS",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null,
+      "name": "Nordic Halibut AS",
+      "price": 23.4,
+      "currency": "NOK",
+      "sector": "Consumer Defensive",
+      "market_cap": 1250493312,
+      "ev": 1832663328,
+      "fcf": -307123488,
+      "hist_fcf_growth": null,
+      "implied_growth": null
+    },
+    "ABG": {
+      "issuer": "ABG Sundal Collier Holding ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 1,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "ABG Sundal Collier Holding ASA",
+      "price": 7.36,
+      "currency": "NOK",
+      "sector": "Financial Services",
+      "market_cap": 3838642176,
+      "ev": 3576342176,
+      "fcf": 232127000.0,
+      "hist_fcf_growth": null,
       "implied_growth": null
     },
     "VEI": {
+      "issuer": "Veidekke ASA",
+      "n_buy": 0,
+      "n_sell": 1,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null,
       "name": "Veidekke ASA",
-      "price": 180.8,
+      "price": 181.0,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 24400095232,
-      "ev": 20042095424,
+      "market_cap": 24427085824,
+      "ev": 20069086016,
       "fcf": 3185125120,
       "hist_fcf_growth": 0.6266987747390833,
-      "pe": 15.322034,
-      "implied_growth": -0.101593017578125
+      "implied_growth": -0.10139846801757812
+    },
+    "ZAL": {
+      "issuer": "Zalaris ASA",
+      "n_buy": 0,
+      "n_sell": 1,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null,
+      "name": "Zalaris ASA",
+      "price": 101.5,
+      "currency": "NOK",
+      "sector": "Industrials",
+      "market_cap": 2210613248,
+      "ev": 2467782240,
+      "fcf": 199482496,
+      "hist_fcf_growth": null,
+      "implied_growth": -0.00748443603515625
+    },
+    "GOD": {
+      "issuer": "Goodtech ASA",
+      "n_buy": 0,
+      "n_sell": 1,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "SBNOR": {
+      "issuer": "Sparebanken Norge",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "LINK": {
+      "issuer": "Link Mobility Group Holding ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "OSUN": {
+      "issuer": "Ocean Sun AS",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "SPOG": {
+      "issuer": "Sparebanken Øst",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "LIFE": {
-      "name": "Lifecare ASA",
-      "price": 0.28,
-      "currency": "NOK",
-      "sector": "Healthcare",
-      "market_cap": 83473520,
-      "ev": 99879520,
-      "fcf": -82969000,
-      "hist_fcf_growth": null,
-      "pe": null,
-      "implied_growth": null
+      "issuer": "Lifecare ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 3,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "ELABS": {
-      "name": "Elliptic Laboratories ASA",
-      "price": 2.96,
-      "currency": "NOK",
-      "sector": "Technology",
-      "market_cap": 373956832,
-      "ev": 314313832,
-      "fcf": -21012750,
-      "hist_fcf_growth": null,
-      "pe": null,
-      "implied_growth": null
+      "issuer": "Elliptic Laboratories ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 2,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "NEXT": {
-      "name": "NEXT Biometrics Group ASA",
-      "price": 0.94,
-      "currency": "NOK",
-      "sector": "Technology",
-      "market_cap": 21223398,
-      "ev": 38077398,
-      "fcf": -3853000,
-      "hist_fcf_growth": null,
-      "pe": null,
-      "implied_growth": null
+      "issuer": "NEXT Biometrics Group ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "TEL": {
-      "name": "Telenor ASA",
-      "price": 149.9,
-      "currency": "NOK",
-      "sector": "Communication Services",
-      "market_cap": 204986941440,
-      "ev": 254437941248,
-      "fcf": 7121375232,
-      "hist_fcf_growth": -0.010653138553429864,
-      "pe": 12.2068405,
-      "implied_growth": 0.13322830200195312
+      "issuer": "Telenor ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "CADLR": {
-      "name": "Cadeler A/S",
-      "price": 54.05,
-      "currency": "NOK",
-      "sector": "Industrials",
-      "market_cap": 20857032704,
-      "ev": 22230340704,
-      "fcf": -554002112,
-      "hist_fcf_growth": null,
-      "pe": 6.5277777,
-      "implied_growth": null
-    },
-    "ORK": {
-      "name": "Orkla ASA",
-      "price": 99.95,
-      "currency": "NOK",
-      "sector": "Consumer Defensive",
-      "market_cap": 97652948992,
-      "ev": 111847949312,
-      "fcf": 6867125248,
-      "hist_fcf_growth": 0.40556619136653094,
-      "pe": 15.544323,
-      "implied_growth": 0.029300689697265625
+      "issuer": "Cadeler A/S",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "KMAR": {
-      "name": "Kongsberg Maritime ASA",
-      "price": 53.42,
-      "currency": "NOK",
-      "sector": "Industrials",
-      "market_cap": null,
-      "ev": null,
-      "fcf": 4299000000.0,
-      "hist_fcf_growth": 3.4509616834830315,
-      "pe": 12.423255,
-      "implied_growth": null
+      "issuer": "Kongsberg Maritime ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 2,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "BORR": {
-      "name": "BORR DRILLING LIMITED",
-      "price": 44.8,
-      "currency": "NOK",
-      "sector": "Energy",
-      "market_cap": 13829165056,
-      "ev": 15889764992,
-      "fcf": -90037504,
-      "hist_fcf_growth": null,
-      "pe": 31.549295,
-      "implied_growth": null
+      "issuer": "Borr Drilling Limited",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "KOMPL": {
-      "name": "Komplett ASA",
-      "price": 6.12,
-      "currency": "NOK",
-      "sector": "Consumer Cyclical",
-      "market_cap": 1073087936,
-      "ev": 2276088000,
-      "fcf": 160000000,
-      "hist_fcf_growth": -0.12156708052299536,
-      "pe": null,
-      "implied_growth": 0.011260986328125
+      "issuer": "Komplett ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     },
     "CYVIZ": {
-      "name": "Cyviz AS",
-      "price": 24.9,
-      "currency": "NOK",
-      "sector": "Technology",
-      "market_cap": 324350464,
-      "ev": 375722464,
-      "fcf": 21513876,
-      "hist_fcf_growth": null,
-      "pe": null,
-      "implied_growth": 0.038562774658203125
+      "issuer": "Cyviz AS",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 2,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "NORSE": {
+      "issuer": "Norse Atlantic ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "VEND": {
+      "issuer": "Vend Marketplaces ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "HAV": {
+      "issuer": "HAV Group ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "INSTA": {
+      "issuer": "Instabank ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 2,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "SCATC": {
+      "issuer": "Scatec ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "ACED": {
+      "issuer": "Ace Digital AS",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "HDLY": {
+      "issuer": "Huddly AS",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "ARR": {
+      "issuer": "Arribatec Group ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "HEX": {
+      "issuer": "Hexagon Composites ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "CRNA": {
+      "issuer": "Circio Holding ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 3,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "LOKO": {
+      "issuer": "Lokotech Group AS",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 3,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "MDATA": {
+      "issuer": "Magnora Data Center ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "IDEX": {
+      "issuer": "IDEX Biometrics ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "ACR": {
+      "issuer": "Axactor ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "DOFG": {
+      "issuer": "DOF Group ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "ELK": {
+      "issuer": "Elkem ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "CAPT": {
+      "issuer": "Capital Tankers Corp.",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "ASCHO": {
+      "issuer": "Aktieselskabet Schouw & Co.",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "TOM": {
+      "issuer": "Tomra Systems ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 2,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "NOSN": {
+      "issuer": "NOS Nova AS",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "OCEAN": {
+      "issuer": "Ocean GeoLoop ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "GENT": {
+      "issuer": "Gentian Diagnostics ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
+    },
+    "VAR": {
+      "issuer": "Vår Energi ASA",
+      "n_buy": 0,
+      "n_sell": 0,
+      "n_program": 1,
+      "n_unknown": 0,
+      "buy_nok": 0.0,
+      "sell_nok": 0.0,
+      "buyers": [],
+      "roles": [],
+      "cluster": false,
+      "top_role": null
     }
   }
 }
