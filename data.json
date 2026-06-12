@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-12T14:53:23.378774+00:00",
+  "generated": "2026-06-12T14:56:01.520959+00:00",
   "window_days": 14,
-  "base_total": 1235,
+  "base_total": 439,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
