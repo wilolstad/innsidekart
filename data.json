@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-12T08:30:01.454167+00:00",
+  "generated": "2026-06-12T08:33:15.678359+00:00",
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
@@ -944,15 +944,15 @@
     },
     "LINK": {
       "name": "LINK Mobility Group Holding ASA",
-      "price": 23.44,
+      "price": 23.46,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 6617567232,
-      "ev": 8333187328,
+      "market_cap": 6623213568,
+      "ev": 8338833664,
       "fcf": 870579648,
       "hist_fcf_growth": 0.19682698972527124,
-      "pe": 53.272728,
-      "implied_growth": -0.04238128662109375
+      "pe": 53.31818,
+      "implied_growth": -0.04228973388671875
     },
     "OSUN": {
       "name": "Ocean Sun AS",
@@ -992,11 +992,11 @@
     },
     "LIFE": {
       "name": "Lifecare ASA",
-      "price": 0.2795,
+      "price": 0.28,
       "currency": "NOK",
       "sector": "Healthcare",
-      "market_cap": 83324464,
-      "ev": 99730464,
+      "market_cap": 83473520,
+      "ev": 99879520,
       "fcf": -82969000,
       "hist_fcf_growth": null,
       "pe": null,
@@ -1028,15 +1028,15 @@
     },
     "TEL": {
       "name": "Telenor ASA",
-      "price": 150.0,
+      "price": 149.9,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 205123698688,
-      "ev": 254574698496,
+      "market_cap": 204986941440,
+      "ev": 254437941248,
       "fcf": 7121375232,
       "hist_fcf_growth": -0.010653138553429864,
-      "pe": 12.214984,
-      "implied_growth": 0.13330078125
+      "pe": 12.2068405,
+      "implied_growth": 0.13322830200195312
     },
     "CADLR": {
       "name": "Cadeler A/S",
@@ -1052,26 +1052,26 @@
     },
     "ORK": {
       "name": "Orkla ASA",
-      "price": 100.0,
+      "price": 99.95,
       "currency": "NOK",
       "sector": "Consumer Defensive",
-      "market_cap": 97701806080,
-      "ev": 111896806400,
+      "market_cap": 97652948992,
+      "ev": 111847949312,
       "fcf": 6867125248,
       "hist_fcf_growth": 0.40556619136653094,
-      "pe": 15.5521,
-      "implied_growth": 0.02935791015625
+      "pe": 15.544323,
+      "implied_growth": 0.029300689697265625
     },
     "KMAR": {
       "name": "Kongsberg Maritime ASA",
-      "price": 53.48,
+      "price": 53.42,
       "currency": "NOK",
       "sector": "Industrials",
       "market_cap": null,
       "ev": null,
       "fcf": 4299000000.0,
       "hist_fcf_growth": 3.4509616834830315,
-      "pe": 12.437208,
+      "pe": 12.423255,
       "implied_growth": null
     },
     "BORR": {

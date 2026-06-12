@@ -22,7 +22,7 @@ h1{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(30px,5vw,46px);
 h2{font-family:'Sora',sans-serif;font-size:18px;font-weight:600;margin:44px 0 6px}
 .legend{font-size:12.5px;color:var(--steel);margin-bottom:14px}
 .legend .sw{display:inline-block;width:18px;height:8px;border-radius:4px;
-  background:var(--rust);margin-right:5px}
+  background:var(--faint);margin-right:5px}
 .legend .dt{display:inline-block;width:9px;height:9px;border-radius:50%;
   background:var(--green);margin:0 5px 0 14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;
@@ -70,23 +70,19 @@ h2{font-family:'Sora',sans-serif;font-size:18px;font-weight:600;margin:44px 0 6p
 <h1>Innsidekart</h1>
 <p class="sub">Ferske meldepliktige handler fra primærinnsidere på Oslo Børs —
 og hvilken FCF-vekst markedet priser inn i hvert selskap (reverse-DCF).</p>
-<div class="meta">Oppdatert 12.06.2026 08:30 UTC · WACC 9% ·
+<div class="meta">Oppdatert 12.06.2026 08:33 UTC · WACC 9% ·
 terminalvekst 2.5% · 10 års horisont</div>
 <div class="stale" id="stale" hidden>Dataene er over to døgn gamle —
 den nattlige oppdateringen har trolig feilet.</div>
 
 <h2>Selskaper med fersk innsideaktivitet</h2>
-<div class="legend"><span class="sw"></span>priset inn (10 års FCF-vekst)
-<span class="dt"></span>historisk levert · grønt tall = selskapet har levert
-mer enn markedet nå krever</div>
-<div class="card"><div class="row"><div><span class="tick">SBNOR</span>
-        <span class="name">Sparebanken Norge</span>
-        <div class="sm">182.22 NOK · 31.5 mrd NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card">
+<div class="legend"><span class="sw"></span>vekst markedet priser inn (10 år)
+<span class="dt"></span>historisk levert · grønn bar = levert mer enn kravet,
+rust = mindre, grå = mangler historikk</div>
+<div class="card">
     <div class="row"><div><span class="tick">LINK</span>
         <span class="name">LINK Mobility Group Holding ASA</span>
-        <div class="sm">23.44 NOK · 6.6 mrd NOK</div></div>
+        <div class="sm">23.46 NOK · 6.6 mrd NOK</div></div>
       <div><div class="big cheap">-4.2%</div>
            <div class="biglbl">priset inn / år</div></div>
     </div>
@@ -100,15 +96,7 @@ mer enn markedet nå krever</div>
       <span style="left:0">−15 %</span>
       <span style="left:33.3%;transform:translateX(-50%)">0</span>
       <span style="right:0">+30 %</span>
-    </div></div><div class="card"><div class="row"><div><span class="tick">OSUN</span>
-        <span class="name">Ocean Sun AS</span>
-        <div class="sm">0.998 NOK · 50 mill NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">SPOG</span>
-        <span class="name">Sparebanken Øst</span>
-        <div class="sm">73.8 NOK · 1.5 mrd NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card">
+    </div></div><div class="card">
     <div class="row"><div><span class="tick">VEI</span>
         <span class="name">Veidekke ASA</span>
         <div class="sm">180.8 NOK · 24.4 mrd NOK</div></div>
@@ -125,22 +113,10 @@ mer enn markedet nå krever</div>
       <span style="left:0">−15 %</span>
       <span style="left:33.3%;transform:translateX(-50%)">0</span>
       <span style="right:0">+30 %</span>
-    </div></div><div class="card"><div class="row"><div><span class="tick">LIFE</span>
-        <span class="name">Lifecare ASA</span>
-        <div class="sm">0.2795 NOK · 83 mill NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">ELABS</span>
-        <span class="name">Elliptic Laboratories ASA</span>
-        <div class="sm">2.96 NOK · 374 mill NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">NEXT</span>
-        <span class="name">NEXT Biometrics Group ASA</span>
-        <div class="sm">0.94 NOK · 21 mill NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card">
+    </div></div><div class="card">
     <div class="row"><div><span class="tick">TEL</span>
         <span class="name">Telenor ASA</span>
-        <div class="sm">150.0 NOK · 205.1 mrd NOK</div></div>
+        <div class="sm">149.9 NOK · 205.0 mrd NOK</div></div>
       <div><div class="big rich">+13.3%</div>
            <div class="biglbl">priset inn / år</div></div>
     </div>
@@ -154,14 +130,10 @@ mer enn markedet nå krever</div>
       <span style="left:0">−15 %</span>
       <span style="left:33.3%;transform:translateX(-50%)">0</span>
       <span style="right:0">+30 %</span>
-    </div></div><div class="card"><div class="row"><div><span class="tick">CADLR</span>
-        <span class="name">Cadeler A/S</span>
-        <div class="sm">54.05 NOK · 20.9 mrd NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card">
+    </div></div><div class="card">
     <div class="row"><div><span class="tick">ORK</span>
         <span class="name">Orkla ASA</span>
-        <div class="sm">100.0 NOK · 97.7 mrd NOK</div></div>
+        <div class="sm">99.95 NOK · 97.7 mrd NOK</div></div>
       <div><div class="big cheap">+2.9%</div>
            <div class="biglbl">priset inn / år</div></div>
     </div>
@@ -175,15 +147,7 @@ mer enn markedet nå krever</div>
       <span style="left:0">−15 %</span>
       <span style="left:33.3%;transform:translateX(-50%)">0</span>
       <span style="right:0">+30 %</span>
-    </div></div><div class="card"><div class="row"><div><span class="tick">KMAR</span>
-        <span class="name">Kongsberg Maritime ASA</span>
-        <div class="sm">53.48 NOK · n/a</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">BORR</span>
-        <span class="name">BORR DRILLING LIMITED</span>
-        <div class="sm">44.8 NOK · 13.8 mrd NOK</div></div></div>
-        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
-        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card">
+    </div></div><div class="card">
     <div class="row"><div><span class="tick">KOMPL</span>
         <span class="name">Komplett ASA</span>
         <div class="sm">6.12 NOK · 1.1 mrd NOK</div></div>
@@ -216,7 +180,43 @@ mer enn markedet nå krever</div>
       <span style="left:0">−15 %</span>
       <span style="left:33.3%;transform:translateX(-50%)">0</span>
       <span style="right:0">+30 %</span>
-    </div></div>
+    </div></div><div class="card"><div class="row"><div><span class="tick">SBNOR</span>
+        <span class="name">Sparebanken Norge</span>
+        <div class="sm">182.22 NOK · 31.5 mrd NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">OSUN</span>
+        <span class="name">Ocean Sun AS</span>
+        <div class="sm">0.998 NOK · 50 mill NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">SPOG</span>
+        <span class="name">Sparebanken Øst</span>
+        <div class="sm">73.8 NOK · 1.5 mrd NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">LIFE</span>
+        <span class="name">Lifecare ASA</span>
+        <div class="sm">0.28 NOK · 83 mill NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">ELABS</span>
+        <span class="name">Elliptic Laboratories ASA</span>
+        <div class="sm">2.96 NOK · 374 mill NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">NEXT</span>
+        <span class="name">NEXT Biometrics Group ASA</span>
+        <div class="sm">0.94 NOK · 21 mill NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">CADLR</span>
+        <span class="name">Cadeler A/S</span>
+        <div class="sm">54.05 NOK · 20.9 mrd NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">KMAR</span>
+        <span class="name">Kongsberg Maritime ASA</span>
+        <div class="sm">53.42 NOK · n/a</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div><div class="card"><div class="row"><div><span class="tick">BORR</span>
+        <span class="name">BORR DRILLING LIMITED</span>
+        <div class="sm">44.8 NOK · 13.8 mrd NOK</div></div></div>
+        <div class="na">Reverse-DCF ikke meningsfull her — negativ eller
+        manglende fri kontantstrøm, eller finansforetak.</div></div>
 
 <h2>Siste meldinger</h2>
 <div class="msgs"><a class="msg" href="https://newsweb.oslobors.no/message/676058" target="_blank" rel="noopener">
@@ -318,7 +318,7 @@ Gordon-vekst i terminalen). Datakilder: Newsweb (Euronext Oslo) og
 Yahoo Finance. Dette er et analyseverktøy, ikke investeringsråd.</p>
 
 <script>
-if (Date.now() - new Date("2026-06-12T08:30:01.454167+00:00").getTime() > 48*3600*1000)
+if (Date.now() - new Date("2026-06-12T08:33:15.678359+00:00").getTime() > 48*3600*1000)
   document.getElementById("stale").hidden = false;
 </script>
 </body></html>
