@@ -28,10 +28,17 @@ Live: https://wilolstad.github.io/innsidekart/
 ```bash
 pip install requests yfinance pdfplumber
 python pipeline.py          # siste 14 dager + side
-python backfill.py 90       # historikk (resumerbar, throttlet)
+python backfill.py 1930     # historikk til mars 2021 (resumerbar, throttlet)
 python build_db.py          # innsidekart.db for analyse
+python backtest.py          # slår innsidekjøp indeksen? (fase 2)
 open index.html
 ```
+
+`backtest.py` måler likevektet meravkastning 1/3/6/12 mnd etter hvert
+innsidekjøp mot ^OSEAX, segmentert på cluster og rolle. Entry er første
+handelsdag etter publisering (ingen look-ahead), og events uten prisdata
+hos Yahoo telles og rapporteres (overlevelsesskjevhet). Til artikkelen:
+bytt prisdata til TITLON og faktorjuster med Ødegaards data.
 
 ## Kjente begrensninger
 
@@ -51,6 +58,7 @@ open index.html
 - [x] Parse vedlegg/brødtekst: kjøp/salg, volum, beløp, rolle
 - [x] Cluster-kjøp-flagg (2+ innsidekjøp samme selskap innen 14 dager)
 - [x] Historisk transaksjonsbase (NDJSON i repo + SQLite lokalt)
-- [ ] Backfill til mars 2021 (kjør `backfill.py` i flere omganger)
-- [ ] Backtest: slår norske innsidekjøp indeksen? (fase 2 — artikkel)
+- [ ] Backfill til mars 2021 (kjører — `backfill.py` er resumerbar)
+- [ ] Backtest-artikkel: slår norske innsidekjøp indeksen?
+      (`backtest.py` er klar; venter på full historikk)
 - [ ] Per-selskap WACC (bransje-beta)
