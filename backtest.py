@@ -165,8 +165,20 @@ def main():
                                           "snitt", "median", "hit_rate"])
         w.writeheader()
         w.writerows(results)
-    print("\nSkrev backtest_results.csv (aggregert) — eventnivå i minnet,"
-          "\nutvid ved behov. Husk forbeholdene i docstringen før publisering.")
+    from datetime import date
+    meta = {
+        "run_date": date.today().isoformat(),
+        "period_from": min(b["published"][:10] for b in buys),
+        "period_to": max(b["published"][:10] for b in buys),
+        "n_buys": len(buys),
+        "n_events": len(rows),
+        "n_missing_prices": missing,
+        "benchmark": bench_name,
+    }
+    with open("backtest_meta.json", "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    print("\nSkrev backtest_results.csv + backtest_meta.json."
+          "\nHusk forbeholdene i docstringen før publisering.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="no"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slår norske innsidekjøp børsen? — Innsidekart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16191D; --muted:#667085; --faint:#98A2B3; --hair:#E4E7EC;
+  --green:#067647; --red:#B42318; --rowhover:#F9FAFB; --chip:#F2F4F7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#FFFFFF;color:var(--ink);
+  font-family:'IBM Plex Sans',sans-serif;line-height:1.55;font-size:15px;
+  padding:44px 24px 80px;max-width:980px;margin:0 auto}
+.nav{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  flex-wrap:wrap}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;
+  letter-spacing:0.14em;color:var(--muted);text-transform:uppercase}
+.navlink{font-size:13px;color:var(--ink);text-decoration:none;
+  border-bottom:1px solid var(--ink);padding-bottom:1px;white-space:nowrap}
+.navlink:hover{color:var(--muted);border-color:var(--muted)}
+h1{font-size:27px;font-weight:600;letter-spacing:-0.01em;margin-top:4px}
+.lead{color:var(--ink);max-width:74ch;margin-top:10px;font-size:15px}
+.lead b{font-weight:600}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:16px;
+  border-top:2px solid var(--ink);padding-top:10px}
+.stat .v{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:17px}
+.stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:0.06em}
+.meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--faint);
+  margin-top:12px;text-transform:uppercase;letter-spacing:0.08em}
+h2{font-size:15px;font-weight:600;margin:40px 0 8px;
+  text-transform:uppercase;letter-spacing:0.05em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:12px}
+.scard{border:1px solid var(--hair);border-radius:4px;padding:14px 16px}
+.slabel{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;display:inline-block;
+  padding:2px 7px;border-radius:3px;background:var(--chip);
+  color:var(--muted);margin-bottom:9px}
+.slabel.strong{background:var(--green);color:#fff}
+.slabel.good{color:var(--green);background:#E7F4EE}
+.slabel.warn{color:var(--red);background:#FBEAE7}
+.scard .stxt{font-size:13.5px;margin-top:5px;color:var(--ink)}
+.bars{margin-top:11px}
+.brow{display:flex;align-items:center;gap:8px;margin-top:5px}
+.blbl{font-size:11px;color:var(--muted);width:118px;flex:none}
+.btrack{flex:1;height:7px;background:var(--chip);border-radius:2px;
+  position:relative}
+.bfill{position:absolute;left:0;top:0;height:7px;border-radius:2px}
+.bfill.ink{background:var(--faint)} .bfill.grn{background:var(--green)}
+.bval{font-family:'IBM Plex Mono',monospace;font-size:11.5px;width:56px;
+  text-align:right;flex:none;font-variant-numeric:tabular-nums}
+.guide{font-size:12.5px;color:var(--muted);margin-bottom:10px;max-width:80ch}
+.twrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{font-size:11px;font-weight:500;text-transform:uppercase;
+  letter-spacing:0.06em;color:var(--muted);text-align:left;
+  border-top:2px solid var(--ink);border-bottom:1px solid var(--hair);
+  padding:8px 10px 6px;white-space:nowrap}
+td{border-bottom:1px solid var(--hair);padding:8px 8px;vertical-align:top}
+tbody tr:hover{background:var(--rowhover)}
+.num{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;
+  white-space:nowrap}
+th.r,td.r{text-align:right}
+.tick{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13.5px}
+.name{color:var(--muted);font-size:12.5px}
+.buy{color:var(--green)} .sell{color:var(--red)}
+.prog,.unk{color:var(--faint)}
+.pos{color:var(--red)} .neg{color:var(--green)} .neu{color:var(--muted)}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;
+  color:var(--green);border:1px solid var(--green);border-radius:3px;
+  padding:0 5px;margin-left:7px;letter-spacing:0.05em;white-space:nowrap}
+.type{font-size:11px;font-weight:600;letter-spacing:0.04em;
+  font-family:'IBM Plex Mono',monospace;white-space:nowrap}
+a.mlink{color:inherit;text-decoration:none}
+a.mlink:hover{text-decoration:underline}
+.mut{color:var(--muted)} .fnt{color:var(--faint)}
+details{margin-top:14px}
+summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px;
+  color:var(--muted);padding:8px 0}
+summary:hover{color:var(--ink)}
+.foot{margin-top:48px;font-size:13px;color:var(--muted);max-width:78ch;
+  border-top:1px solid var(--hair);padding-top:16px}
+.foot p{margin-bottom:8px}
+.stale{border:1px solid var(--red);color:var(--red);
+  padding:10px 14px;border-radius:4px;margin-top:14px;font-size:14px}
+article{max-width:720px}
+article h2{margin-top:36px}
+article p{margin:12px 0;font-size:15px}
+article ul{margin:12px 0 12px 22px}
+article li{margin:7px 0;font-size:15px}
+article .tablenote{font-size:12.5px;color:var(--muted)}
+article .srcs{font-size:12.5px;color:var(--muted);margin-top:20px}
+article table{margin-top:14px}
+</style></head><body>
+<article>
+<div class="kicker"><a class="mlink" href="index.html">← Innsidekart</a></div>
+<h1>Slår norske innsidekjøp børsen?</h1>
+<p class="lead">Et levende eksperiment: hver natt leser denne siden alle
+meldepliktige innsidehandler på Oslo Børs, og tallene i analysen under
+regenereres etter hvert som datasettet vokser bakover mot mars 2021.
+Skrevet juni 2026 — konklusjonen har dato, ikke fasit.</p>
+<div class="meta">Backtest per 2026-06-12 · 240 innsidekjøp
+2025-10-22 – 2026-06-12 · benchmark ^OSEAX</div>
+
+<h2>Hvorfor spørsmålet er verdt å stille</h2>
+<p>Innsidere — ledelsen og styret — vet mer om selskapet sitt enn du gjør.
+Når de bruker egne penger på å kjøpe aksjer i eget selskap, er det den
+dyreste formen for optimisme som finnes. Salg betyr derimot lite: folk
+selger fordi de skal kjøpe hus, betale skatt eller spre risiko. Kjøp har
+i praksis bare én forklaring. Derfor har innsidekjøp en særstilling i
+finanslitteraturen som et av få signaler som ser ut til å bære ekte
+informasjon.</p>
+<p>Men det meste av det vi «vet», er amerikansk. Seyhun (1986) viste at
+amerikanske innsidere tjener unormal avkastning, Lakonishok og Lee (2001)
+fant at det særlig er <i>kjøpene</i> — og spesielt i små selskaper — som er
+informative, og Cohen, Malloy og Pomorski (2012) skilte rutinehandler fra
+opportunistiske og fant at nesten all informasjon ligger i de siste.
+For Norge er det påfallende tynt, og det mest kjente resultatet peker
+motsatt vei: Eckbo og Smith fulgte innsidehandler på Oslo Børs gjennom
+80- og 90-tallet og fant <i>ingen</i> meravkastning (Journal of Finance,
+1998). Etter at EUs markedsmisbruksforordning MAR trådte i kraft i Norge
+i mars 2021 — med krav om umiddelbar offentliggjøring i standardisert
+format — har jeg ikke funnet noen åpen, etterprøvbar test på norske data.
+Det er hullet dette prosjektet borer i.</p>
+
+<h2>Datasettet</h2>
+<p>Kilden er Newsweb, Oslo Børs' meldingssystem, kategori «meldepliktige
+handler for primærinnsidere». Hver melding parses maskinelt: kjøp eller
+salg, antall aksjer, pris, beløp og innsiderens rolle, lest fra
+meldingsteksten og MAR-vedleggene. Per i dag inneholder basen
+<b>1235 transaksjoner</b>, og den vokser hver natt — bakover mot
+mars 2021 og fremover med nye meldinger.</p>
+<p>To valg er viktige for kvaliteten. For det første filtreres
+opsjonstildelinger, aksjeprogrammer og andre rutinemessige transaksjoner
+bort fra signaltallene — det er Cohen-Malloy-Pomorski-poenget om at rutine
+er støy. For det andre gjettes det aldri: felter parseren ikke klarer å
+lese (priser i ustrukturerte PDF-er, typisk) står som ukjente og er
+synlige i rådataene. Samme handel publisert på norsk og engelsk telles
+én gang.</p>
+
+<h2>Metoden</h2>
+<p>Klassisk eventstudie, med vilje enkel og uten frihetsgrader å skru på:</p>
+<ul>
+<li><b>Entry:</b> første handelsdag <i>etter</i> at meldingen er publisert.
+Ingen look-ahead — du kunne handlet på dette i virkeligheten.</li>
+<li><b>Horisonter:</b> 1, 3, 6 og 12 måneder (21/63/126/252 handelsdager).</li>
+<li><b>Mål:</b> aksjens avkastning minus benchmark (^OSEAX) i samme
+vindu — likevektet per event.</li>
+<li><b>Segmenter:</b> alle kjøp; cluster-kjøp (minst to innsidekjøp i samme
+selskap innen 14 dager); kjøp av CEO, CFO eller styreleder.</li>
+</ul>
+<p>Events uten prisdata hos Yahoo Finance telles åpent i stedet for å
+forsvinne stille: per 2026-06-12 mangler 33 av 240 kjøp
+prisdata, typisk fordi selskapet er strøket fra børsen. Det er
+overlevelsesskjevhet, og den gjør tallene under <i>penere</i> enn
+virkeligheten — de dårligste utfallene mangler.</p>
+
+<h2>Tallene, per 2026-06-12</h2>
+<div class="twrap"><table>
+<thead><tr><th>Segment</th><th>Horisont</th><th class="r">N</th>
+<th class="r">Snitt</th><th class="r">Median</th>
+<th class="r">Hit-rate</th></tr></thead>
+<tbody><tr>
+  <td>Alle kjøp</td>
+  <td class="num">1m</td>
+  <td class="num r">164</td>
+  <td class="num r">-1,0 %</td>
+  <td class="num r">-2,5 %</td>
+  <td class="num r">40 %</td>
+</tr><tr>
+  <td>Alle kjøp</td>
+  <td class="num">3m</td>
+  <td class="num r">111</td>
+  <td class="num r">-7,2 %</td>
+  <td class="num r">-10,0 %</td>
+  <td class="num r">25 %</td>
+</tr><tr>
+  <td>Alle kjøp</td>
+  <td class="num">6m</td>
+  <td class="num r">49</td>
+  <td class="num r">-15,4 %</td>
+  <td class="num r">-23,1 %</td>
+  <td class="num r">22 %</td>
+</tr><tr>
+  <td>Cluster-kjøp</td>
+  <td class="num">1m</td>
+  <td class="num r">81</td>
+  <td class="num r">+1,2 %</td>
+  <td class="num r">-0,8 %</td>
+  <td class="num r">44 %</td>
+</tr><tr>
+  <td>Cluster-kjøp</td>
+  <td class="num">3m</td>
+  <td class="num r">50</td>
+  <td class="num r">-9,2 %</td>
+  <td class="num r">-10,0 %</td>
+  <td class="num r">20 %</td>
+</tr><tr>
+  <td>Cluster-kjøp</td>
+  <td class="num">6m</td>
+  <td class="num r">25</td>
+  <td class="num r">-22,4 %</td>
+  <td class="num r">-24,3 %</td>
+  <td class="num r">12 %</td>
+</tr><tr>
+  <td>CEO/CFO/styreleder</td>
+  <td class="num">1m</td>
+  <td class="num r">38</td>
+  <td class="num r">-1,7 %</td>
+  <td class="num r">-3,4 %</td>
+  <td class="num r">42 %</td>
+</tr><tr>
+  <td>CEO/CFO/styreleder</td>
+  <td class="num">3m</td>
+  <td class="num r">25</td>
+  <td class="num r">-8,4 %</td>
+  <td class="num r">-10,7 %</td>
+  <td class="num r">24 %</td>
+</tr><tr>
+  <td>CEO/CFO/styreleder</td>
+  <td class="num">6m</td>
+  <td class="num r">16</td>
+  <td class="num r">-22,1 %</td>
+  <td class="num r">-24,9 %</td>
+  <td class="num r">12 %</td>
+</tr></tbody></table></div>
+<p class="tablenote">164 målbare events. Snitt og median er
+meravkastning mot ^OSEAX; hit-rate er andelen events som slo
+benchmarken. Horisonter mangler der datasettet ennå er for ungt.</p>
+<p>Lesningen så langt — og ordet <i>foreløpig</i> gjør tungt arbeid i denne
+setningen: norske innsidekjøp ser ikke ut som gratis penger. Det rimer
+med Eckbo og Smith, ikke med den amerikanske litteraturen. Den mest
+nærliggende forklaringen er at innsidekjøp ofte skjer i selskaper i
+motvind — innsidere kjøper kniven mens den faller — og i et marked som
+har steget, henger den porteføljen etter. Om det er et regime eller et
+resultat, vet vi først når basen dekker hele perioden tilbake til 2021.
+Det er derfor denne siden oppdaterer tallene sine selv i stedet for å
+fryse en konklusjon.</p>
+
+<h2>Hva som mangler før dette er et svar</h2>
+<ul>
+<li><b>Delistede selskaper.</b> Yahoo mangler dem; de 33 tapte
+eventene må hentes fra en akademisk database (TITLON ved UiT har norske
+børsdata med delistede aksjer, gratis for studenter via Feide).</li>
+<li><b>Faktorjustering.</b> Meravkastning mot hovedindeksen blander
+innsidesignalet med størrelseseffekten — innsidekjøp domineres av små
+selskaper. Neste steg er justering med markeds- og size-faktorer
+(Ødegaard publiserer ferdigberegnede faktorer for Oslo Børs) og OSESX
+som robusthetssjekk.</li>
+<li><b>Per-selskap-vekting.</b> Likevekt per event lar ett selskap med
+fem kjøp og ett kursras dominere. Robusthet: aggreger per selskap.</li>
+<li><b>Kostnader.</b> Småselskaper på Oslo Børs har spread som spiser
+papiravkastning. En tradbar strategi må regne netto.</li>
+<li><b>Inferens.</b> Overlappende vinduer og klyngede events gjør naive
+t-verdier for optimistiske; bootstrap eller klyngerobuste standardfeil
+før noe kalles signifikant.</li>
+</ul>
+
+<h2>Veien videre</h2>
+<p>Basen fylles nå bakover mot MAR-grensen i mars 2021 — målet er fem års
+historikk med tusenvis av kjøp. Da kjøres analysen på nytt med
+justeringene over, og denne siden oppdateres. All kode og alle rådata er
+åpne: <a class="mlink"
+href="https://github.com/wilolstad/innsidekart"><b>github.com/wilolstad/innsidekart</b></a>.
+Finner du feil i metoden, si fra — det er halve poenget med å gjøre dette
+i det åpne.</p>
+
+<p class="srcs"><b>Referanser.</b> Seyhun (1986), <i>Insiders' profits,
+costs of trading, and market efficiency</i>, JFE · Eckbo &amp; Smith (1998),
+<i>The conditional performance of insider trades</i>, JF · Lakonishok &amp;
+Lee (2001), <i>Are insider trades informative?</i>, RFS · Cohen, Malloy
+&amp; Pomorski (2012), <i>Decoding inside information</i>, JF.</p>
+
+<p class="srcs">Dette er et studentprosjekt og analyseverktøy,
+ikke investeringsråd. Datakilder: Newsweb (Euronext Oslo), Yahoo Finance.</p>
+</article></body></html>

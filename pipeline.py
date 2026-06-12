@@ -216,6 +216,7 @@ def build_dataset():
     return {
         "generated": datetime.now(timezone.utc).isoformat(),
         "window_days": WINDOW_DAYS,
+        "base_total": len(db),
         "assumptions": {"wacc": WACC, "terminal_g": TERMINAL_G,
                         "stage1_years": STAGE1_YEARS},
         "messages": recent,
@@ -227,9 +228,10 @@ def main():
     data = build_dataset()
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    from render import render_site
+    from render import render_site, render_article
     render_site(data, "index.html")
-    print("Skrev data.json og index.html")
+    render_article(data, "analyse.html")
+    print("Skrev data.json, index.html og analyse.html")
 
 
 if __name__ == "__main__":

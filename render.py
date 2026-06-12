@@ -1,30 +1,59 @@
-"""Renderer data.json til en statisk index.html."""
+"""Renderer data.json til index.html + analyse.html."""
 
+import csv
+import json
+import os
 from datetime import datetime
 from html import escape
 
 CSS = """
 :root{
   --ink:#16191D; --muted:#667085; --faint:#98A2B3; --hair:#E4E7EC;
-  --green:#067647; --red:#B42318; --rowhover:#F9FAFB;
+  --green:#067647; --red:#B42318; --rowhover:#F9FAFB; --chip:#F2F4F7;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#FFFFFF;color:var(--ink);
   font-family:'IBM Plex Sans',sans-serif;line-height:1.55;font-size:15px;
   padding:44px 24px 80px;max-width:980px;margin:0 auto}
+.nav{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  flex-wrap:wrap}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;
   letter-spacing:0.14em;color:var(--muted);text-transform:uppercase}
+.navlink{font-size:13px;color:var(--ink);text-decoration:none;
+  border-bottom:1px solid var(--ink);padding-bottom:1px;white-space:nowrap}
+.navlink:hover{color:var(--muted);border-color:var(--muted)}
 h1{font-size:27px;font-weight:600;letter-spacing:-0.01em;margin-top:4px}
 .lead{color:var(--ink);max-width:74ch;margin-top:10px;font-size:15px}
 .lead b{font-weight:600}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:16px;
+  border-top:2px solid var(--ink);padding-top:10px}
+.stat .v{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:17px}
+.stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:0.06em}
 .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--faint);
   margin-top:12px;text-transform:uppercase;letter-spacing:0.08em}
 h2{font-size:15px;font-weight:600;margin:40px 0 8px;
   text-transform:uppercase;letter-spacing:0.05em}
-.hl{max-width:78ch}
-.hl p{padding:7px 0;border-bottom:1px solid var(--hair);font-size:14.5px}
-.hl p:first-child{border-top:2px solid var(--ink)}
-.hl .tick{margin-right:2px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:12px}
+.scard{border:1px solid var(--hair);border-radius:4px;padding:14px 16px}
+.slabel{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;display:inline-block;
+  padding:2px 7px;border-radius:3px;background:var(--chip);
+  color:var(--muted);margin-bottom:9px}
+.slabel.strong{background:var(--green);color:#fff}
+.slabel.good{color:var(--green);background:#E7F4EE}
+.slabel.warn{color:var(--red);background:#FBEAE7}
+.scard .stxt{font-size:13.5px;margin-top:5px;color:var(--ink)}
+.bars{margin-top:11px}
+.brow{display:flex;align-items:center;gap:8px;margin-top:5px}
+.blbl{font-size:11px;color:var(--muted);width:118px;flex:none}
+.btrack{flex:1;height:7px;background:var(--chip);border-radius:2px;
+  position:relative}
+.bfill{position:absolute;left:0;top:0;height:7px;border-radius:2px}
+.bfill.ink{background:var(--faint)} .bfill.grn{background:var(--green)}
+.bval{font-family:'IBM Plex Mono',monospace;font-size:11.5px;width:56px;
+  text-align:right;flex:none;font-variant-numeric:tabular-nums}
 .guide{font-size:12.5px;color:var(--muted);margin-bottom:10px;max-width:80ch}
 .twrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
@@ -59,6 +88,23 @@ summary:hover{color:var(--ink)}
 .foot p{margin-bottom:8px}
 .stale{border:1px solid var(--red);color:var(--red);
   padding:10px 14px;border-radius:4px;margin-top:14px;font-size:14px}
+article{max-width:720px}
+article h2{margin-top:36px}
+article p{margin:12px 0;font-size:15px}
+article ul{margin:12px 0 12px 22px}
+article li{margin:7px 0;font-size:15px}
+article .tablenote{font-size:12.5px;color:var(--muted)}
+article .srcs{font-size:12.5px;color:var(--muted);margin-top:20px}
+article table{margin-top:14px}
+"""
+
+HEAD = """<!doctype html>
+<html lang="no"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>{css}</style></head><body>
 """
 
 
@@ -103,39 +149,70 @@ def growth_cls(ig, hg):
     return "neg" if ig < hg else "pos"
 
 
-def build_highlights(companies):
-    """1-3 setninger i klartekst om det mest interessante akkurat nå."""
+def signal_cards(companies):
+    """Inntil 3 kort om de mest interessante kjøpene, med søyle-sammenligning
+    av hva markedet forventer og hva selskapet har levert."""
     items = []
     for tk, c in companies.items():
         if not c.get("n_buy"):
             continue
-        ig, hg = c.get("implied_growth"), c.get("hist_fcf_growth")
+        if c.get("sector") == "Financial Services":
+            ig = hg = None
+        else:
+            ig, hg = c.get("implied_growth"), c.get("hist_fcf_growth")
         cheap = ig is not None and hg is not None and ig < hg
         amt, approx = est_amount(c, "buy")
         items.append(((c.get("cluster", False), cheap, c["n_buy"], amt or 0),
-                      tk, c, amt, approx))
+                      tk, c, ig, hg, cheap, amt, approx))
     items.sort(key=lambda x: x[0], reverse=True)
 
-    out = []
-    for _, tk, c, amt, approx in items[:3]:
-        ig, hg = c.get("implied_growth"), c.get("hist_fcf_growth")
-        nm = escape(c.get("name") or c.get("issuer") or tk)
+    cards = []
+    for _, tk, c, ig, hg, cheap, amt, approx in items[:3]:
+        cluster = c.get("cluster", False)
+        if cluster and cheap:
+            label, lcls = "Sterkt kjøpssignal", "strong"
+        elif cheap:
+            label, lcls = "Kjøp i lavt priset selskap", "good"
+        elif ig is not None:
+            label, lcls = "Kjøp tross høy prising", "warn"
+        else:
+            label, lcls = "Kjøpssignal", ""
+        nm = escape(c.get("name") or c.get("issuer") or "")
         if c["n_buy"] >= 2:
-            s = f"<span class='tick'>{tk}</span> {nm}: <b>{c['n_buy']} innsidekjøp</b> på to uker"
+            txt = f"<b>{c['n_buy']} innsidekjøp</b> på to uker"
         else:
             who = escape(c["buyers"][0]) if c.get("buyers") else None
             rolle = c.get("top_role")
-            hvem = f"{who} ({rolle.lower()})" if who and rolle else (who or "én innsider")
-            s = f"<span class='tick'>{tk}</span> {nm}: <b>{hvem} kjøpte</b>"
+            hvem = f"{who} ({rolle.lower()})" if who and rolle else (who or "Én innsider")
+            txt = f"<b>{hvem}</b> kjøpte"
         if amt:
-            s += f" for {'≈ ' if approx else ''}{fmt_nok(amt)}"
-        if ig is not None:
-            s += f". Børskursen forutsetter {fmt_pct(ig)} årlig vekst"
-            if hg is not None:
-                s += f" — selskapet har levert {fmt_pct(hg)}"
-        s += "."
-        out.append(f"<p>{s}</p>")
-    return "".join(out)
+            txt += f" for {'≈ ' if approx else ''}{fmt_nok(amt)}"
+        txt += "."
+
+        bars = ""
+        if ig is not None and hg is not None:
+            mx = max(abs(ig), abs(hg)) or 1
+            wi, wh = max(abs(ig)/mx*100, 3), max(abs(hg)/mx*100, 3)
+            bars = f"""<div class="bars">
+  <div class="brow"><span class="blbl">markedet forventer</span>
+    <div class="btrack"><div class="bfill ink" style="width:{wi:.0f}%"></div></div>
+    <span class="bval">{fmt_pct(ig)}</span></div>
+  <div class="brow"><span class="blbl">selskapet har levert</span>
+    <div class="btrack"><div class="bfill grn" style="width:{wh:.0f}%"></div></div>
+    <span class="bval">{fmt_pct(hg)}</span></div>
+</div>"""
+        elif ig is not None:
+            bars = f"""<div class="bars"><div class="brow">
+  <span class="blbl">markedet forventer</span>
+  <div class="btrack"><div class="bfill ink" style="width:50%"></div></div>
+  <span class="bval">{fmt_pct(ig)}</span></div></div>"""
+
+        cards.append(f"""<div class="scard">
+<span class="slabel {lcls}">{label}</span>
+<div><span class="tick">{tk}</span> <span class="name">{nm}</span></div>
+<p class="stxt">{txt}</p>
+{bars}</div>""")
+    return "".join(cards)
 
 
 def company_row(tk, c):
@@ -199,35 +276,43 @@ def render_site(data, path):
     prog_msgs = [m for m in data["messages"] if m["type"] == "PROGRAM"]
     n_buy = sum(1 for m in signal_msgs if m["type"] == "KJØP")
     n_sell = sum(1 for m in signal_msgs if m["type"] == "SALG")
+    n_cluster = sum(1 for c in data["companies"].values() if c.get("cluster"))
 
-    highlights = build_highlights(data["companies"])
+    cards = signal_cards(data["companies"])
     comp_rows = "".join(company_row(tk, c)
                         for tk, c in data["companies"].items())
     sig_rows = "".join(message_row(m) for m in signal_msgs[:40])
     prog_rows = "".join(message_row(m) for m in prog_msgs[:40])
 
-    html = f"""<!doctype html>
-<html lang="no"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Innsidekart — innsidekjøp og hva markedet priser inn, Oslo Børs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>{CSS}</style></head><body>
-
+    html = HEAD.format(title="Innsidekart — innsidekjøp og hva markedet "
+                             "priser inn, Oslo Børs", css=CSS) + f"""
+<div class="nav">
 <div class="kicker">Oslo Børs · meldepliktige handler · siste {data['window_days']} dager</div>
+<a class="navlink" href="analyse.html">Analyse: slår innsidekjøp børsen? →</a>
+</div>
 <h1>Innsidekart</h1>
-<p class="lead">Når ledelsen eller styret handler aksjer i eget selskap, må det
-meldes til børsen samme dag. <b>Innsidekjøp er et av de mer pålitelige
+<p class="lead">Når ledelsen eller styret handler aksjer i eget selskap, må
+det meldes til børsen samme dag. <b>Innsidekjøp er et av de mer pålitelige
 signalene i aksjemarkedet</b> — innsidere kjøper når de mener prisen er for
-lav. Siste to uker: {n_buy} kjøp og {n_sell} salg. Opsjonstildelinger og
-aksjeprogrammer er rutine uten signalverdi og er skilt ut nederst.</p>
+lav. Denne siden leser alle meldingene, hver natt, og viser hvem som kjøpte
+og hva børskursen allerede forutsetter.</p>
+<div class="stats">
+  <div class="stat"><div class="v">{data.get('base_total', '–')}</div>
+    <div class="l">handler i basen</div></div>
+  <div class="stat"><div class="v buy">{n_buy}</div>
+    <div class="l">kjøp siste 14 d</div></div>
+  <div class="stat"><div class="v sell">{n_sell}</div>
+    <div class="l">salg siste 14 d</div></div>
+  <div class="stat"><div class="v">{n_cluster}</div>
+    <div class="l">cluster-selskaper</div></div>
+</div>
 <div class="meta">Oppdatert {gen} · WACC {a['wacc']*100:.0f} % ·
 terminalvekst {a['terminal_g']*100:.1f} % · {a['stage1_years']} års horisont</div>
 <div class="stale" id="stale" hidden>Dataene er over to døgn gamle —
 den nattlige oppdateringen har trolig feilet.</div>
 
 <h2>Akkurat nå</h2>
-<div class="hl">{highlights or '<p class="fnt">Ingen innsidekjøp siste to uker.</p>'}</div>
+<div class="cards">{cards or '<p class="fnt">Ingen innsidekjøp siste to uker.</p>'}</div>
 
 <h2>Kjøp og salg per selskap</h2>
 <p class="guide"><b>«Markedet krever»</b> er den årlige kontantstrømveksten
@@ -268,7 +353,9 @@ prisen ikke lot seg lese; felter vi ikke klarer å tolke vises som «–» og
 lenker til originalmeldingen. Samme handel publisert på norsk og engelsk
 telles én gang.</p>
 <p>Datakilder: Newsweb (Euronext Oslo) og Yahoo Finance.
-Dette er et analyseverktøy, ikke investeringsråd.</p>
+Dette er et analyseverktøy, ikke investeringsråd.
+<a class="mlink" href="https://github.com/wilolstad/innsidekart"><b>Kode og
+rådata på GitHub</b></a>.</p>
 </div>
 
 <script>
@@ -276,5 +363,46 @@ if (Date.now() - new Date("{data['generated']}").getTime() > 48*3600*1000)
   document.getElementById("stale").hidden = false;
 </script>
 </body></html>"""
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+
+def results_table(csv_path):
+    seg_label = {"Alle kjøp": "Alle kjøp", "Cluster-kjøp": "Cluster-kjøp",
+                 "CEO/CFO/styreleder": "CEO/CFO/styreleder"}
+    rows = []
+    with open(csv_path, encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            rows.append(f"""<tr>
+  <td>{seg_label.get(r['segment'], r['segment'])}</td>
+  <td class="num">{r['horisont']}</td>
+  <td class="num r">{int(r['n'])}</td>
+  <td class="num r">{float(r['snitt'])*100:+.1f} %</td>
+  <td class="num r">{float(r['median'])*100:+.1f} %</td>
+  <td class="num r">{float(r['hit_rate'])*100:.0f} %</td>
+</tr>""".replace(".", ","))
+    return """<div class="twrap"><table>
+<thead><tr><th>Segment</th><th>Horisont</th><th class="r">N</th>
+<th class="r">Snitt</th><th class="r">Median</th>
+<th class="r">Hit-rate</th></tr></thead>
+<tbody>""" + "".join(rows) + "</tbody></table></div>"
+
+
+def render_article(data, path):
+    if not (os.path.exists("backtest_results.csv")
+            and os.path.exists("backtest_meta.json")):
+        print("hopper over analyse.html (ingen backtest-resultater)")
+        return
+    from article import ARTICLE_BODY
+    with open("backtest_meta.json", encoding="utf-8") as f:
+        meta = json.load(f)
+    body = ARTICLE_BODY.format(
+        results_table=results_table("backtest_results.csv"),
+        base_total=data.get("base_total", "–"),
+        n_missing=meta["n_missing_prices"],
+        **{k: v for k, v in meta.items() if k != "n_missing_prices"})
+    html = (HEAD.format(title="Slår norske innsidekjøp børsen? — Innsidekart",
+                        css=CSS)
+            + f"<article>{body}</article></body></html>")
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
