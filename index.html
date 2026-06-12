@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="no"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Innsidekart — innsidehandler og hva som er priset inn, Oslo Børs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F7; --ink:#15202B; --steel:#5A6B7B; --line:#D7DEE4;
+  --green:#0E6F5C; --rust:#B23A2E; --card:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);
+  font-family:'IBM Plex Sans',sans-serif;line-height:1.55;
+  padding:40px 20px 80px;max-width:880px;margin:0 auto}
+h1{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,5vw,44px);
+  letter-spacing:-0.02em}
+.sub{color:var(--steel);margin-top:6px;max-width:60ch}
+.meta{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--steel);
+  margin-top:14px;text-transform:uppercase;letter-spacing:0.08em}
+h2{font-family:'Sora',sans-serif;font-size:20px;margin:48px 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:18px 20px;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  flex-wrap:wrap}
+.tick{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:17px}
+.name{color:var(--steel);font-size:14px}
+.num{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;
+  font-size:14px}
+.axis{position:relative;height:34px;margin-top:14px;border-bottom:1px solid var(--line)}
+.axis .zero{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.dot{position:absolute;top:9px;width:11px;height:11px;border-radius:50%;
+  transform:translateX(-50%)}
+.dot.market{background:var(--rust)}
+.dot.hist{background:var(--green)}
+.dot.market.cheap{background:var(--green)}
+.lbl{position:absolute;top:-8px;transform:translateX(-50%);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--steel)}
+.legend{display:flex;gap:18px;margin-top:8px;font-size:12px;color:var(--steel)}
+.legend span::before{content:'';display:inline-block;width:9px;height:9px;
+  border-radius:50%;margin-right:6px}
+.legend .m::before{background:var(--rust)}
+.legend .h::before{background:var(--green)}
+.msg{display:block;padding:12px 0;border-bottom:1px solid var(--line);
+  text-decoration:none;color:inherit}
+.msg:hover .t{text-decoration:underline}
+.msg .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--steel)}
+.msg .t{font-size:15px;margin-top:2px}
+.foot{margin-top:56px;font-size:13px;color:var(--steel);max-width:70ch}
+.na{color:var(--steel);font-size:13px;margin-top:10px}
+.stale{background:#FBEAE8;border:1px solid var(--rust);color:var(--rust);
+  padding:10px 14px;border-radius:8px;margin-top:14px;font-size:14px}
+</style></head><body>
+
+<h1>Innsidekart</h1>
+<p class="sub">Ferske meldepliktige handler fra primærinnsidere på Oslo Børs —
+og hvilken vekst markedet priser inn i hvert selskap (reverse-DCF).</p>
+<div class="meta">Oppdatert 12.06.2026 07:55 UTC · WACC 9% ·
+terminalvekst 2.5% · 10 års horisont</div>
+<div class="stale" id="stale" hidden>Dataene er over to døgn gamle —
+den nattlige oppdateringen har trolig feilet.</div>
+
+<h2>Selskaper med fersk innsideaktivitet</h2>
+<div class="card">
+    <div class="row">
+      <div><span class="tick">SBNOR</span>
+           <span class="name">Sparebanken Norge</span></div>
+      <div class="num">182.14 NOK
+           &nbsp;·&nbsp; 31.5 mrd NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">LINK</span>
+           <span class="name">LINK Mobility Group Holding ASA</span></div>
+      <div class="num">23.28 NOK
+           &nbsp;·&nbsp; 6.6 mrd NOK</div>
+    </div>
+    <div class="axis">
+      <div class="zero" style="left:25.0%"></div>
+      <span class="lbl" style="left:14.217758178710938%">-4.3%</span>
+      <div class="dot market cheap" style="left:14.217758178710938%"
+           title="Implisitt FCF-vekst (markedet)"></div><div class="dot hist" style="left:74.2067474313178%"
+           title="Historisk FCF-vekst (+19.7%)"></div></div><div class="legend"><span class="m">priset inn (10 år)</span>
+                <span class="h">historisk FCF-vekst</span></div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">OSUN</span>
+           <span class="name">Ocean Sun AS</span></div>
+      <div class="num">0.998 NOK
+           &nbsp;·&nbsp; 50 mill NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">SPOG</span>
+           <span class="name">Sparebanken Øst</span></div>
+      <div class="num">73.52 NOK
+           &nbsp;·&nbsp; 1.5 mrd NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">VEI</span>
+           <span class="name">Veidekke ASA</span></div>
+      <div class="num">180.4 NOK
+           &nbsp;·&nbsp; 24.3 mrd NOK</div>
+    </div>
+    <div class="axis">
+      <div class="zero" style="left:25.0%"></div>
+      <span class="lbl" style="left:0.0%">-10.2%</span>
+      <div class="dot market cheap" style="left:0.0%"
+           title="Implisitt FCF-vekst (markedet)"></div><div class="dot hist" style="left:100.0%"
+           title="Historisk FCF-vekst (+62.7%)"></div></div><div class="legend"><span class="m">priset inn (10 år)</span>
+                <span class="h">historisk FCF-vekst</span></div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">LIFE</span>
+           <span class="name">Lifecare ASA</span></div>
+      <div class="num">0.289 NOK
+           &nbsp;·&nbsp; 86 mill NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">ELABS</span>
+           <span class="name">Elliptic Laboratories ASA</span></div>
+      <div class="num">2.97 NOK
+           &nbsp;·&nbsp; 375 mill NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">NEXT</span>
+           <span class="name">NEXT Biometrics Group ASA</span></div>
+      <div class="num">0.982 NOK
+           &nbsp;·&nbsp; 22 mill NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">TEL</span>
+           <span class="name">Telenor ASA</span></div>
+      <div class="num">149.9 NOK
+           &nbsp;·&nbsp; 205.0 mrd NOK</div>
+    </div>
+    <div class="axis">
+      <div class="zero" style="left:25.0%"></div>
+      <span class="lbl" style="left:58.30707550048828%">+13.3%</span>
+      <div class="dot market" style="left:58.30707550048828%"
+           title="Implisitt FCF-vekst (markedet)"></div><div class="dot hist" style="left:22.336715361642533%"
+           title="Historisk FCF-vekst (-1.1%)"></div></div><div class="legend"><span class="m">priset inn (10 år)</span>
+                <span class="h">historisk FCF-vekst</span></div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">CADLR</span>
+           <span class="name">Cadeler A/S</span></div>
+      <div class="num">53.8 NOK
+           &nbsp;·&nbsp; 20.8 mrd NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">ORK</span>
+           <span class="name">Orkla ASA</span></div>
+      <div class="num">100.3 NOK
+           &nbsp;·&nbsp; 98.0 mrd NOK</div>
+    </div>
+    <div class="axis">
+      <div class="zero" style="left:25.0%"></div>
+      <span class="lbl" style="left:32.42673873901367%">+3.0%</span>
+      <div class="dot market cheap" style="left:32.42673873901367%"
+           title="Implisitt FCF-vekst (markedet)"></div><div class="dot hist" style="left:100.0%"
+           title="Historisk FCF-vekst (+40.6%)"></div></div><div class="legend"><span class="m">priset inn (10 år)</span>
+                <span class="h">historisk FCF-vekst</span></div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">KMAR</span>
+           <span class="name">Kongsberg Maritime ASA</span></div>
+      <div class="num">53.58 NOK
+           &nbsp;·&nbsp; n/a</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">BORR</span>
+           <span class="name">BORR DRILLING LIMITED</span></div>
+      <div class="num">44.995 NOK
+           &nbsp;·&nbsp; 13.9 mrd NOK</div>
+    </div>
+        <div class="na">Reverse-DCF ikke tilgjengelig (negativ/manglende FCF
+        eller finansforetak) — typisk for banker og selskaper uten positiv
+        kontantstrøm.</div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">KOMPL</span>
+           <span class="name">Komplett ASA</span></div>
+      <div class="num">6.12 NOK
+           &nbsp;·&nbsp; 1.1 mrd NOK</div>
+    </div>
+    <div class="axis">
+      <div class="zero" style="left:25.0%"></div>
+      <span class="lbl" style="left:27.81524658203125%">+1.1%</span>
+      <div class="dot market" style="left:27.81524658203125%"
+           title="Implisitt FCF-vekst (markedet)"></div><div class="dot hist" style="left:0.0%"
+           title="Historisk FCF-vekst (-12.2%)"></div></div><div class="legend"><span class="m">priset inn (10 år)</span>
+                <span class="h">historisk FCF-vekst</span></div></div><div class="card">
+    <div class="row">
+      <div><span class="tick">CYVIZ</span>
+           <span class="name">Cyviz AS</span></div>
+      <div class="num">24.0 NOK
+           &nbsp;·&nbsp; 313 mill NOK</div>
+    </div>
+    <div class="axis">
+      <div class="zero" style="left:25.0%"></div>
+      <span class="lbl" style="left:33.58926773071289%">+3.4%</span>
+      <div class="dot market" style="left:33.58926773071289%"
+           title="Implisitt FCF-vekst (markedet)"></div></div><div class="legend"><span class="m">priset inn (10 år)</span>
+                <span class="h">historisk FCF-vekst</span></div></div>
+
+<h2>Siste meldinger</h2>
+<a class="msg" href="https://newsweb.oslobors.no/message/676058" target="_blank" rel="noopener">
+            <div class="d">2026-06-12 · SBNOR</div>
+            <div class="t">Tildeling av egenkapitalbevis (SBNOR) til primærinnsidere og meldepliktig handel primærinnsidere</div></a><a class="msg" href="https://newsweb.oslobors.no/message/676057" target="_blank" rel="noopener">
+            <div class="d">2026-06-12 · SBNOR</div>
+            <div class="t">Allocation of equity certificates (SBNOR) to primary insiders and transactions made by primary insiders</div></a><a class="msg" href="https://newsweb.oslobors.no/message/676043" target="_blank" rel="noopener">
+            <div class="d">2026-06-12 · LINK</div>
+            <div class="t">LINK Mobility – Mandatory notification of trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/676037" target="_blank" rel="noopener">
+            <div class="d">2026-06-11 · OSUN</div>
+            <div class="t">Ocean Sun AS – Mandatory notification of trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675992" target="_blank" rel="noopener">
+            <div class="d">2026-06-11 · SPOG</div>
+            <div class="t">Sparebanken Øst – Tildeling av egenkapitalbevis i spareprogram til primærinnsidere</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675981" target="_blank" rel="noopener">
+            <div class="d">2026-06-11 · VEI</div>
+            <div class="t">Veidekke: Mandatory notification of trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675941" target="_blank" rel="noopener">
+            <div class="d">2026-06-11 · VEI</div>
+            <div class="t">Veidekke: Meldepliktig handel</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675890" target="_blank" rel="noopener">
+            <div class="d">2026-06-11 · LIFE</div>
+            <div class="t">Lifecare ASA: Mandatory notification of trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675876" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · ELABS</div>
+            <div class="t">Elliptic Labs: Mandatory Notifications of Trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675875" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · NEXT</div>
+            <div class="t">Exercise of subscription rights and allocation of shares and warrants in the rights issue to primary insider</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675874" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · TEL</div>
+            <div class="t">Trade by primary insiders</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675873" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · TEL</div>
+            <div class="t">Meldepliktig handel primærinnsidere</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675868" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · CADLR</div>
+            <div class="t">CADELER A/S: REPORTING ON TRANSACTIONS IN CADELER A/S SHARES BY PERSONS DISCHARGING MANAGERIAL RESPONSIBILITIES AND PERSONS CLOSELY ASSOCIATED WITH THEM</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675864" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · LIFE</div>
+            <div class="t">Lifecare ASA: Mandatory notification of trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675862" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · ORK</div>
+            <div class="t">Orkla ASA: Mandatory notification of trade   primary insiders</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675844" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · KMAR</div>
+            <div class="t">TRADE BY PRIMARY INSIDER</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675783" target="_blank" rel="noopener">
+            <div class="d">2026-06-10 · BORR</div>
+            <div class="t">Borr Drilling Limited – Notification of PDMR Transactions</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675770" target="_blank" rel="noopener">
+            <div class="d">2026-06-09 · KOMPL</div>
+            <div class="t">Komplett ASA: Grant of share options to primary insider</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675745" target="_blank" rel="noopener">
+            <div class="d">2026-06-09 · KMAR</div>
+            <div class="t">TRADE BY PRIMARY INSIDER</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675706" target="_blank" rel="noopener">
+            <div class="d">2026-06-09 · CYVIZ</div>
+            <div class="t">Resolution to increase the share capital in connection with share option programs</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675677" target="_blank" rel="noopener">
+            <div class="d">2026-06-09 · ZAL</div>
+            <div class="t">Mandatory notification of trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675664" target="_blank" rel="noopener">
+            <div class="d">2026-06-08 · NORSE</div>
+            <div class="t">Norse Atlantic ASA - Mandatory notification of trade - Receipt of Subscription Rights</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675657" target="_blank" rel="noopener">
+            <div class="d">2026-06-08 · VEND</div>
+            <div class="t">Vend Marketplaces ASA: Mandatory notification of trade by primary insider</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675651" target="_blank" rel="noopener">
+            <div class="d">2026-06-08 · HAV</div>
+            <div class="t">Notification of trade</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675619" target="_blank" rel="noopener">
+            <div class="d">2026-06-08 · REACH</div>
+            <div class="t">Mandatory Notification of Trade by Primary Insider</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675607" target="_blank" rel="noopener">
+            <div class="d">2026-06-08 · INSTA</div>
+            <div class="t">Mandatory notification of trade by primary insider</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675592" target="_blank" rel="noopener">
+            <div class="d">2026-06-08 · ZAL</div>
+            <div class="t">Settlement of employee share options and RSUs</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675571" target="_blank" rel="noopener">
+            <div class="d">2026-06-08 · SCATC</div>
+            <div class="t">Scatec ASA: Subscriptions for the Employee Share Purchase Programme 2026</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675554" target="_blank" rel="noopener">
+            <div class="d">2026-06-07 · ACED</div>
+            <div class="t">Mandatory Notification of Trade by Primary Insider</div></a><a class="msg" href="https://newsweb.oslobors.no/message/675546" target="_blank" rel="noopener">
+            <div class="d">2026-06-05 · CYVIZ</div>
+            <div class="t">Share options exercised</div></a>
+
+<p class="foot">Reverse-DCF løser for den 10-årige FCF-veksten som gjør at
+nåverdien av fremtidige kontantstrømmer er lik dagens selskapsverdi
+(enterprise value = markedsverdi + gjeld − kontanter; to-stegs modell,
+Gordon-vekst i terminalen). Grønn markør til høyre for rød
+betyr at selskapet historisk har vokst raskere enn markedet nå krever.
+Datakilder: Newsweb (Euronext Oslo) og Yahoo Finance. Dette er et
+analyseverktøy, ikke investeringsråd.</p>
+
+<script>
+if (Date.now() - new Date("2026-06-12T07:55:57.663586+00:00").getTime() > 48*3600*1000)
+  document.getElementById("stale").hidden = false;
+</script>
+</body></html>
