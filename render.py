@@ -20,7 +20,7 @@ h1{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(30px,5vw,46px);
 h2{font-family:'Sora',sans-serif;font-size:18px;font-weight:600;margin:44px 0 6px}
 .legend{font-size:12.5px;color:var(--steel);margin-bottom:14px}
 .legend .sw{display:inline-block;width:18px;height:8px;border-radius:4px;
-  background:var(--rust);margin-right:5px}
+  background:var(--faint);margin-right:5px}
 .legend .dt{display:inline-block;width:9px;height:9px;border-radius:50%;
   background:var(--green);margin:0 5px 0 14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;
@@ -122,9 +122,9 @@ def render_site(data, path):
     a = data["assumptions"]
     gen = datetime.fromisoformat(data["generated"]).strftime("%d.%m.%Y %H:%M UTC")
 
-    cards = "".join(
-        company_card(tk, c) for tk, c in data["companies"].items()
-    )
+    comps = sorted(data["companies"].items(),
+                   key=lambda kv: kv[1].get("implied_growth") is None)
+    cards = "".join(company_card(tk, c) for tk, c in comps)
     msgs = "".join(
         f"""<a class="msg" href="{m['url']}" target="_blank" rel="noopener">
             <span class="d">{m['published'][8:10]}.{m['published'][5:7]}</span>
@@ -150,9 +150,9 @@ terminalvekst {a['terminal_g']*100:.1f}% · {a['stage1_years']} års horisont</d
 den nattlige oppdateringen har trolig feilet.</div>
 
 <h2>Selskaper med fersk innsideaktivitet</h2>
-<div class="legend"><span class="sw"></span>priset inn (10 års FCF-vekst)
-<span class="dt"></span>historisk levert · grønt tall = selskapet har levert
-mer enn markedet nå krever</div>
+<div class="legend"><span class="sw"></span>vekst markedet priser inn (10 år)
+<span class="dt"></span>historisk levert · grønn bar = levert mer enn kravet,
+rust = mindre, grå = mangler historikk</div>
 {cards}
 
 <h2>Siste meldinger</h2>
