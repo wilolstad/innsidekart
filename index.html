@@ -20,15 +20,20 @@ h1{font-size:27px;font-weight:600;letter-spacing:-0.01em;margin-top:4px}
 .lead b{font-weight:600}
 .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--faint);
   margin-top:12px;text-transform:uppercase;letter-spacing:0.08em}
-h2{font-size:15px;font-weight:600;margin:42px 0 10px;
+h2{font-size:15px;font-weight:600;margin:40px 0 8px;
   text-transform:uppercase;letter-spacing:0.05em}
+.hl{max-width:78ch}
+.hl p{padding:7px 0;border-bottom:1px solid var(--hair);font-size:14.5px}
+.hl p:first-child{border-top:2px solid var(--ink)}
+.hl .tick{margin-right:2px}
+.guide{font-size:12.5px;color:var(--muted);margin-bottom:10px;max-width:80ch}
 .twrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
+table{width:100%;border-collapse:collapse;font-size:13px}
 thead th{font-size:11px;font-weight:500;text-transform:uppercase;
   letter-spacing:0.06em;color:var(--muted);text-align:left;
   border-top:2px solid var(--ink);border-bottom:1px solid var(--hair);
   padding:8px 10px 6px;white-space:nowrap}
-td{border-bottom:1px solid var(--hair);padding:9px 10px;vertical-align:top}
+td{border-bottom:1px solid var(--hair);padding:8px 8px;vertical-align:top}
 tbody tr:hover{background:var(--rowhover)}
 .num{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;
   white-space:nowrap}
@@ -46,6 +51,10 @@ th.r,td.r{text-align:right}
 a.mlink{color:inherit;text-decoration:none}
 a.mlink:hover{text-decoration:underline}
 .mut{color:var(--muted)} .fnt{color:var(--faint)}
+details{margin-top:14px}
+summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px;
+  color:var(--muted);padding:8px 0}
+summary:hover{color:var(--ink)}
 .foot{margin-top:48px;font-size:13px;color:var(--muted);max-width:78ch;
   border-top:1px solid var(--hair);padding-top:16px}
 .foot p{margin-bottom:8px}
@@ -55,83 +64,91 @@ a.mlink:hover{text-decoration:underline}
 
 <div class="kicker">Oslo Børs · meldepliktige handler · siste 14 dager</div>
 <h1>Innsidekart</h1>
-<p class="lead">Ledelse og styremedlemmer må melde alle handler i eget selskap
-til børsen. <b>Innsidekjøp</b> er historisk et av de mer pålitelige signalene
-i aksjemarkedet — innsidere kjøper når de mener prisen er for lav. Tabellen
-viser hvem som har kjøpt og solgt siste to uker (19 kjøp, 3 salg),
-og hvilken årlig kontantstrømvekst dagens børskurs allerede forutsetter
-(<b>«priset inn»</b>, reverse-DCF). Kombinasjonen er poenget: innsidekjøp i
-selskaper der markedet priser inn lite, er det mest interessante hjørnet.</p>
-<div class="meta">Oppdatert 12.06.2026 09:23 UTC · WACC 9 % ·
+<p class="lead">Når ledelsen eller styret handler aksjer i eget selskap, må det
+meldes til børsen samme dag. <b>Innsidekjøp er et av de mer pålitelige
+signalene i aksjemarkedet</b> — innsidere kjøper når de mener prisen er for
+lav. Siste to uker: 19 kjøp og 3 salg. Opsjonstildelinger og
+aksjeprogrammer er rutine uten signalverdi og er skilt ut nederst.</p>
+<div class="meta">Oppdatert 12.06.2026 14:15 UTC · WACC 9 % ·
 terminalvekst 2.5 % · 10 års horisont</div>
 <div class="stale" id="stale" hidden>Dataene er over to døgn gamle —
 den nattlige oppdateringen har trolig feilet.</div>
 
-<h2>Selskaper med innsideaktivitet</h2>
+<h2>Akkurat nå</h2>
+<div class="hl"><p><span class='tick'>ORK</span> Orkla ASA: <b>6 innsidekjøp</b> på to uker for ≈ 7,5 mill. kr. Børskursen forutsetter +3,0 % årlig vekst — selskapet har levert +40,6 %.</p><p><span class='tick'>NORCO</span> NORCONSULT ASA: <b>2 innsidekjøp</b> på to uker for ≈ 1,5 mill. kr. Børskursen forutsetter -5,7 % årlig vekst — selskapet har levert +6,0 %.</p><p><span class='tick'>AFG</span> AF Gruppen ASA: <b>én innsider kjøpte</b> for ≈ 28,6 mill. kr. Børskursen forutsetter -6,3 % årlig vekst — selskapet har levert +32,8 %.</p></div>
+
+<h2>Kjøp og salg per selskap</h2>
+<p class="guide"><b>«Markedet krever»</b> er den årlige kontantstrømveksten
+som må til for å forsvare dagens børskurs (reverse-DCF) — <b>«har levert»</b>
+er hva selskapet faktisk har klart historisk. Grønt krav = markedet forventer
+mindre enn selskapet har levert; innsidekjøp dér er det interessante signalet.
+≈ betyr at beløpet er anslått fra antall aksjer × dagens kurs.
+CLUSTER = to eller flere innsidekjøp på to uker.</p>
 <div class="twrap"><table>
 <thead><tr><th>Selskap</th><th>Innsidekjøp</th><th>Innsidesalg</th>
-<th class="r">Priset inn</th><th class="r">Levert (FCF)</th>
-<th class="r">Mcap</th></tr></thead>
+<th class="r" title="Årlig FCF-vekst som forsvarer dagens kurs">Markedet krever</th>
+<th class="r" title="Historisk årlig FCF-vekst">Har levert</th>
+<th class="r">Børsverdi</th></tr></thead>
 <tbody><tr>
   <td><span class="tick">ORK</span><span class="badge">CLUSTER</span><br>
       <span class="name">Orkla ASA</span></td>
-  <td class="num" title=""><span class="buy">6</span></td>
+  <td class="num" title=""><span class="buy">6 kjøp · ≈ 7,5 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neg">+3.0 %</td>
-  <td class="num r mut">+40.6 %</td>
-  <td class="num r mut">98,0 mrd</td>
+  <td class="num r neg">+3,0 %</td>
+  <td class="num r mut">+40,6 %</td>
+  <td class="num r mut">97,9 mrd</td>
 </tr><tr>
   <td><span class="tick">NORCO</span><span class="badge">CLUSTER</span><br>
       <span class="name">NORCONSULT ASA</span></td>
-  <td class="num" title=""><span class="buy">2</span></td>
+  <td class="num" title=""><span class="buy">2 kjøp · ≈ 1,5 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neg">-5.7 %</td>
-  <td class="num r mut">+6.0 %</td>
+  <td class="num r neg">-5,7 %</td>
+  <td class="num r mut">+6,0 %</td>
   <td class="num r mut">10,6 mrd</td>
 </tr><tr>
   <td><span class="tick">DNB</span><br>
       <span class="name">DNB Bank ASA</span></td>
-  <td class="num" title="Gro Bakstad"><span class="buy">1 · 1,8 MNOK</span></td>
+  <td class="num" title="Gro Bakstad"><span class="buy">1 kjøp · 1,8 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
   <td class="num r neu">–</td>
-  <td class="num r mut">+134.3 %</td>
-  <td class="num r mut">414,3 mrd</td>
+  <td class="num r mut">–</td>
+  <td class="num r mut">416,4 mrd</td>
 </tr><tr>
   <td><span class="tick">ALNG</span><br>
       <span class="name">ALNG ASA</span></td>
-  <td class="num" title="Niels Rigault"><span class="buy">1 · 1,2 MNOK</span></td>
+  <td class="num" title="Niels Rigault"><span class="buy">1 kjøp · 1,2 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
-  <td class="num r pos">+26.5 %</td>
-  <td class="num r mut">-18.4 %</td>
-  <td class="num r mut">714 mill</td>
+  <td class="num r pos">+26,4 %</td>
+  <td class="num r mut">-18,4 %</td>
+  <td class="num r mut">705 mill</td>
 </tr><tr>
   <td><span class="tick">STB</span><br>
       <span class="name">Storebrand ASA</span></td>
-  <td class="num" title="LINE MERETHE HESTVIK"><span class="buy">1 · 200 680 NOK</span></td>
+  <td class="num" title="LINE MERETHE HESTVIK"><span class="buy">1 kjøp · 201&nbsp;000</span></td>
   <td class="num"><span class="fnt">–</span></td>
   <td class="num r neu">–</td>
-  <td class="num r mut">+19.5 %</td>
+  <td class="num r mut">–</td>
   <td class="num r mut">72,7 mrd</td>
 </tr><tr>
   <td><span class="tick">CODE</span><br>
       <span class="name">CodeLab Capital AS</span></td>
-  <td class="num" title=""><span class="buy">1 · 68 600 NOK</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp · 69&nbsp;000</span></td>
   <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">+25.5 %</td>
+  <td class="num r neu">+24,0 %</td>
   <td class="num r mut">–</td>
-  <td class="num r mut">62 mill</td>
+  <td class="num r mut">56 mill</td>
 </tr><tr>
   <td><span class="tick">REACH</span><br>
       <span class="name">Reach Subsea ASA</span></td>
-  <td class="num" title=""><span class="buy">1</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp · ≈ 10,7 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neg">-11.8 %</td>
-  <td class="num r mut">+40.0 %</td>
+  <td class="num r neg">-11,6 %</td>
+  <td class="num r mut">+40,0 %</td>
   <td class="num r mut">1,7 mrd</td>
 </tr><tr>
   <td><span class="tick">PROT</span><br>
       <span class="name">Protector Forsikring ASA</span></td>
-  <td class="num" title=""><span class="buy">1</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp · ≈ 164,3 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
   <td class="num r neu">–</td>
   <td class="num r mut">–</td>
@@ -139,23 +156,23 @@ den nattlige oppdateringen har trolig feilet.</div>
 </tr><tr>
   <td><span class="tick">AFG</span><br>
       <span class="name">AF Gruppen ASA</span></td>
-  <td class="num" title=""><span class="buy">1</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp · ≈ 28,6 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neg">-6.4 %</td>
-  <td class="num r mut">+32.8 %</td>
-  <td class="num r mut">21,0 mrd</td>
+  <td class="num r neg">-6,3 %</td>
+  <td class="num r mut">+32,8 %</td>
+  <td class="num r mut">21,3 mrd</td>
 </tr><tr>
   <td><span class="tick">XPLRA</span><br>
       <span class="name">Xplora Technologies AS</span></td>
-  <td class="num" title=""><span class="buy">1</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp · ≈ 8,1 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
   <td class="num r neu">–</td>
   <td class="num r mut">–</td>
-  <td class="num r mut">2,0 mrd</td>
+  <td class="num r mut">1,9 mrd</td>
 </tr><tr>
   <td><span class="tick">HGSB</span><br>
       <span class="name">Haugesund Sparebank</span></td>
-  <td class="num" title=""><span class="buy">1</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp · ≈ 62&nbsp;000</span></td>
   <td class="num"><span class="fnt">–</span></td>
   <td class="num r neu">–</td>
   <td class="num r mut">–</td>
@@ -163,7 +180,7 @@ den nattlige oppdateringen har trolig feilet.</div>
 </tr><tr>
   <td><span class="tick">NOHAL</span><br>
       <span class="name">Nordic Halibut AS</span></td>
-  <td class="num" title=""><span class="buy">1</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp</span></td>
   <td class="num"><span class="fnt">–</span></td>
   <td class="num r neu">–</td>
   <td class="num r mut">–</td>
@@ -171,7 +188,7 @@ den nattlige oppdateringen har trolig feilet.</div>
 </tr><tr>
   <td><span class="tick">ABG</span><br>
       <span class="name">ABG Sundal Collier Holding ASA</span></td>
-  <td class="num" title=""><span class="buy">1</span></td>
+  <td class="num" title=""><span class="buy">1 kjøp · ≈ 12,4 mill.</span></td>
   <td class="num"><span class="fnt">–</span></td>
   <td class="num r neu">–</td>
   <td class="num r mut">–</td>
@@ -180,321 +197,201 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td><span class="tick">VEI</span><br>
       <span class="name">Veidekke ASA</span></td>
   <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="sell">1</span></td>
-  <td class="num r neg">-10.1 %</td>
-  <td class="num r mut">+62.7 %</td>
-  <td class="num r mut">24,4 mrd</td>
+  <td class="num"><span class="sell">1 salg · ≈ 725&nbsp;000</span></td>
+  <td class="num r neg">-10,1 %</td>
+  <td class="num r mut">+62,7 %</td>
+  <td class="num r mut">24,5 mrd</td>
 </tr><tr>
   <td><span class="tick">ZAL</span><br>
       <span class="name">Zalaris ASA</span></td>
   <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="sell">1</span></td>
-  <td class="num r neu">-0.7 %</td>
+  <td class="num"><span class="sell">1 salg · ≈ 30 mill.</span></td>
+  <td class="num r neu">-0,9 %</td>
   <td class="num r mut">–</td>
   <td class="num r mut">2,2 mrd</td>
 </tr><tr>
   <td><span class="tick">GOD</span><br>
       <span class="name">Goodtech ASA</span></td>
   <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="sell">1</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">SBNOR</span><br>
-      <span class="name">Sparebanken Norge</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">LINK</span><br>
-      <span class="name">Link Mobility Group Holding ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">OSUN</span><br>
-      <span class="name">Ocean Sun AS</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">SPOG</span><br>
-      <span class="name">Sparebanken Øst</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">LIFE</span><br>
-      <span class="name">Lifecare ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">ELABS</span><br>
-      <span class="name">Elliptic Laboratories ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">NEXT</span><br>
-      <span class="name">NEXT Biometrics Group ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">TEL</span><br>
-      <span class="name">Telenor ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">CADLR</span><br>
-      <span class="name">Cadeler A/S</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">KMAR</span><br>
-      <span class="name">Kongsberg Maritime ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">BORR</span><br>
-      <span class="name">Borr Drilling Limited</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">KOMPL</span><br>
-      <span class="name">Komplett ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">CYVIZ</span><br>
-      <span class="name">Cyviz AS</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">NORSE</span><br>
-      <span class="name">Norse Atlantic ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">VEND</span><br>
-      <span class="name">Vend Marketplaces ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">HAV</span><br>
-      <span class="name">HAV Group ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">INSTA</span><br>
-      <span class="name">Instabank ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">SCATC</span><br>
-      <span class="name">Scatec ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">ACED</span><br>
-      <span class="name">Ace Digital AS</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">HDLY</span><br>
-      <span class="name">Huddly AS</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">ARR</span><br>
-      <span class="name">Arribatec Group ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">HEX</span><br>
-      <span class="name">Hexagon Composites ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">CRNA</span><br>
-      <span class="name">Circio Holding ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">LOKO</span><br>
-      <span class="name">Lokotech Group AS</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">MDATA</span><br>
-      <span class="name">Magnora Data Center ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">IDEX</span><br>
-      <span class="name">IDEX Biometrics ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">ACR</span><br>
-      <span class="name">Axactor ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">DOFG</span><br>
-      <span class="name">DOF Group ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">ELK</span><br>
-      <span class="name">Elkem ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">CAPT</span><br>
-      <span class="name">Capital Tankers Corp.</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">ASCHO</span><br>
-      <span class="name">Aktieselskabet Schouw &amp; Co.</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">TOM</span><br>
-      <span class="name">Tomra Systems ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">NOSN</span><br>
-      <span class="name">NOS Nova AS</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">OCEAN</span><br>
-      <span class="name">Ocean GeoLoop ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">GENT</span><br>
-      <span class="name">Gentian Diagnostics ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
-  <td class="num r neu">–</td>
-  <td class="num r mut">–</td>
-  <td class="num r mut">–</td>
-</tr><tr>
-  <td><span class="tick">VAR</span><br>
-      <span class="name">Vår Energi ASA</span></td>
-  <td class="num" title=""><span class="fnt">–</span></td>
-  <td class="num"><span class="fnt">–</span></td>
+  <td class="num"><span class="sell">1 salg</span></td>
   <td class="num r neu">–</td>
   <td class="num r mut">–</td>
   <td class="num r mut">–</td>
 </tr></tbody>
 </table></div>
 
-<h2>Siste meldinger</h2>
+<h2>Meldingene</h2>
 <div class="twrap"><table>
-<thead><tr><th>Dato</th><th>Ticker</th><th>Type</th><th>Innsider</th>
-<th class="r">Beløp</th><th>Melding</th></tr></thead>
+<thead><tr><th>Dato</th><th>Ticker</th><th>Type</th>
+<th>Innsider</th><th class="r">Beløp</th><th>Melding</th></tr></thead>
+<tbody><tr>
+  <td class="num fnt">11.06</td>
+  <td class="tick">VEI</td>
+  <td><span class="type sell">SALG</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675941" target="_blank" rel="noopener">Veidekke: Meldepliktig handel</a></td>
+</tr><tr>
+  <td class="num fnt">09.06</td>
+  <td class="tick">ZAL</td>
+  <td><span class="type sell">SALG</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675677" target="_blank" rel="noopener">Mandatory notification of trade</a></td>
+</tr><tr>
+  <td class="num fnt">08.06</td>
+  <td class="tick">REACH</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675619" target="_blank" rel="noopener">Mandatory Notification of Trade by Primary Insider</a></td>
+</tr><tr>
+  <td class="num fnt">05.06</td>
+  <td class="tick">GOD</td>
+  <td><span class="type sell">SALG</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675506" target="_blank" rel="noopener">Mandatory notification of trade by primary insider</a></td>
+</tr><tr>
+  <td class="num fnt">04.06</td>
+  <td class="tick">ALNG</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Niels Rigault <span class="fnt">(Ledelse)</span></td>
+  <td class="num r">1,2 mill. kr</td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675483" target="_blank" rel="noopener">ALNG ASA – Mandatory notification of trade</a></td>
+</tr><tr>
+  <td class="num fnt">04.06</td>
+  <td class="tick">PROT</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675482" target="_blank" rel="noopener">Mandatory notification of trade - Protector Forsikring ASA</a></td>
+</tr><tr>
+  <td class="num fnt">04.06</td>
+  <td class="tick">STB</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>LINE MERETHE HESTVIK <span class="fnt">(Styre)</span></td>
+  <td class="num r">201&nbsp;000 kr</td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675476" target="_blank" rel="noopener">STOREBRAND ASA: Meldepliktig handel for primærinnsider</a></td>
+</tr><tr>
+  <td class="num fnt">04.06</td>
+  <td class="tick">AFG</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675472" target="_blank" rel="noopener">Notifiable trade</a></td>
+</tr><tr>
+  <td class="num fnt">04.06</td>
+  <td class="tick">NORCO</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675374" target="_blank" rel="noopener">Norconsult: Mandatory notification of trade by primary insider</a></td>
+</tr><tr>
+  <td class="num fnt">04.06</td>
+  <td class="tick">ORK</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675355" target="_blank" rel="noopener">Orkla ASA: Mandatory notification of trade   primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">03.06</td>
+  <td class="tick">NORCO</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675233" target="_blank" rel="noopener">Norconsult: Mandatory notification of trade by primary insider</a></td>
+</tr><tr>
+  <td class="num fnt">02.06</td>
+  <td class="tick">ORK</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675210" target="_blank" rel="noopener">Orkla ASA: Mandatory notification of trade   primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">02.06</td>
+  <td class="tick">ORK</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675209" target="_blank" rel="noopener">Orkla ASA: Mandatory notification of trade   primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">02.06</td>
+  <td class="tick">ORK</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675207" target="_blank" rel="noopener">Orkla ASA: Mandatory notification of trade   primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">02.06</td>
+  <td class="tick">ORK</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675151" target="_blank" rel="noopener">Orkla ASA: Mandatory notification of trade   primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">XPLRA</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675105" target="_blank" rel="noopener">Xplora Technologies AS: Mandatory notification of purchase by primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">HGSB</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675093" target="_blank" rel="noopener">Haugesund Sparebank – Meldepliktig handel</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">CODE</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Nærstående</td>
+  <td class="num r">69&nbsp;000 kr</td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675087" target="_blank" rel="noopener">Primary insider notification - purchase of shares</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">DNB</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Gro Bakstad <span class="fnt">(Styre)</span></td>
+  <td class="num r">1,8 mill. kr</td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675084" target="_blank" rel="noopener">Meldepliktig handel for primærinnsidere</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">ORK</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675039" target="_blank" rel="noopener">Orkla ASA: Mandatory notification of trade   primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">NOHAL</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td><span class="fnt">–</span></td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675032" target="_blank" rel="noopener">Nordic Halibut AS – Mandatory notification of trade </a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">ABG</td>
+  <td><span class="type unk">UKJENT</span></td>
+  <td><span class="fnt">–</span></td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675029" target="_blank" rel="noopener">ABG - Extension of forward contracts</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">ABG</td>
+  <td><span class="type buy">KJØP</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675023" target="_blank" rel="noopener">ABG - Share transactions</a></td>
+</tr></tbody>
+</table></div>
+<details><summary>+ 53 rutinemeldinger (opsjoner, tildelinger,
+aksjeprogrammer) — klikk for å vise</summary>
+<div class="twrap"><table>
+<thead><tr><th>Dato</th><th>Ticker</th><th>Type</th>
+<th>Innsider</th><th class="r">Beløp</th><th>Melding</th></tr></thead>
 <tbody><tr>
   <td class="num fnt">12.06</td>
   <td class="tick">SBNOR</td>
@@ -525,17 +422,10 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675992" target="_blank" rel="noopener">Sparebanken Øst – Tildeling av egenkapitalbevis i spareprogram til primærinnsidere</a></td>
 </tr><tr>
   <td class="num fnt">11.06</td>
-  <td class="tick">VEI</td>
-  <td><span class="type sell">SALG</span></td>
-  <td>Innsider</td>
-  <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675941" target="_blank" rel="noopener">Veidekke: Meldepliktig handel</a></td>
-</tr><tr>
-  <td class="num fnt">11.06</td>
   <td class="tick">LIFE</td>
   <td><span class="type prog">PROGRAM</span></td>
   <td>Nærstående</td>
-  <td class="num r">351 174 NOK</td>
+  <td class="num r">351&nbsp;000 kr</td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675890" target="_blank" rel="noopener">Lifecare ASA: Mandatory notification of trade</a></td>
 </tr><tr>
   <td class="num fnt">10.06</td>
@@ -563,14 +453,14 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td class="tick">CADLR</td>
   <td><span class="type prog">PROGRAM</span></td>
   <td>Nærstående</td>
-  <td class="num r">292 205 NOK</td>
+  <td class="num r">292&nbsp;000 kr</td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675868" target="_blank" rel="noopener">CADELER A/S: REPORTING ON TRANSACTIONS IN CADELER A/S SHARES BY PERSONS DISCHARGING MANAGE</a></td>
 </tr><tr>
   <td class="num fnt">10.06</td>
   <td class="tick">LIFE</td>
   <td><span class="type prog">PROGRAM</span></td>
   <td>Styreleder</td>
-  <td class="num r">995 960 NOK</td>
+  <td class="num r">996&nbsp;000 kr</td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675864" target="_blank" rel="noopener">Lifecare ASA: Mandatory notification of trade</a></td>
 </tr><tr>
   <td class="num fnt">10.06</td>
@@ -605,7 +495,7 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td class="tick">KMAR</td>
   <td><span class="type prog">PROGRAM</span></td>
   <td>Vegard Ryen Skullerud <span class="fnt">(Innsider)</span></td>
-  <td class="num r">191 548 NOK</td>
+  <td class="num r">192&nbsp;000 kr</td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675745" target="_blank" rel="noopener">TRADE BY PRIMARY INSIDER</a></td>
 </tr><tr>
   <td class="num fnt">09.06</td>
@@ -614,13 +504,6 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td><span class="fnt">–</span></td>
   <td class="num r"><span class="fnt">–</span></td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675706" target="_blank" rel="noopener">Resolution to increase the share capital in connection with share option programs</a></td>
-</tr><tr>
-  <td class="num fnt">09.06</td>
-  <td class="tick">ZAL</td>
-  <td><span class="type sell">SALG</span></td>
-  <td>Innsider</td>
-  <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675677" target="_blank" rel="noopener">Mandatory notification of trade</a></td>
 </tr><tr>
   <td class="num fnt">08.06</td>
   <td class="tick">NORSE</td>
@@ -642,13 +525,6 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td>Innsider</td>
   <td class="num r"><span class="fnt">–</span></td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675651" target="_blank" rel="noopener">Notification of trade</a></td>
-</tr><tr>
-  <td class="num fnt">08.06</td>
-  <td class="tick">REACH</td>
-  <td><span class="type buy">KJØP</span></td>
-  <td>Innsider</td>
-  <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675619" target="_blank" rel="noopener">Mandatory Notification of Trade by Primary Insider</a></td>
 </tr><tr>
   <td class="num fnt">08.06</td>
   <td class="tick">INSTA</td>
@@ -682,7 +558,7 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td class="tick">CYVIZ</td>
   <td><span class="type prog">PROGRAM</span></td>
   <td>Ellen Kristine Lome <span class="fnt">(Innsider)</span></td>
-  <td class="num r">6 013 NOK</td>
+  <td class="num r">6&nbsp;000 kr</td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675546" target="_blank" rel="noopener">Share options exercised</a></td>
 </tr><tr>
   <td class="num fnt">05.06</td>
@@ -706,27 +582,6 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td class="num r"><span class="fnt">–</span></td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675532" target="_blank" rel="noopener">Elliptic Labs: Grant of 2026 Share Options, Replacement Options and Mandatory Notification</a></td>
 </tr><tr>
-  <td class="num fnt">05.06</td>
-  <td class="tick">GOD</td>
-  <td><span class="type sell">SALG</span></td>
-  <td>Innsider</td>
-  <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675506" target="_blank" rel="noopener">Mandatory notification of trade by primary insider</a></td>
-</tr><tr>
-  <td class="num fnt">04.06</td>
-  <td class="tick">ALNG</td>
-  <td><span class="type buy">KJØP</span></td>
-  <td>Niels Rigault <span class="fnt">(Ledelse)</span></td>
-  <td class="num r">1,2 MNOK</td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675483" target="_blank" rel="noopener">ALNG ASA – Mandatory notification of trade</a></td>
-</tr><tr>
-  <td class="num fnt">04.06</td>
-  <td class="tick">PROT</td>
-  <td><span class="type buy">KJØP</span></td>
-  <td>Innsider</td>
-  <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675482" target="_blank" rel="noopener">Mandatory notification of trade - Protector Forsikring ASA</a></td>
-</tr><tr>
   <td class="num fnt">04.06</td>
   <td class="tick">HEX</td>
   <td><span class="type prog">PROGRAM</span></td>
@@ -738,29 +593,8 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td class="tick">STB</td>
   <td><span class="type prog">PROGRAM</span></td>
   <td>LINE MERETHE HESTVIK <span class="fnt">(Styre)</span></td>
-  <td class="num r">200 680 NOK</td>
+  <td class="num r">201&nbsp;000 kr</td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675477" target="_blank" rel="noopener">STOREBRAND ASA: Notice of transaction by PDMR</a></td>
-</tr><tr>
-  <td class="num fnt">04.06</td>
-  <td class="tick">STB</td>
-  <td><span class="type buy">KJØP</span></td>
-  <td>LINE MERETHE HESTVIK <span class="fnt">(Styre)</span></td>
-  <td class="num r">200 680 NOK</td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675476" target="_blank" rel="noopener">STOREBRAND ASA: Meldepliktig handel for primærinnsider</a></td>
-</tr><tr>
-  <td class="num fnt">04.06</td>
-  <td class="tick">AFG</td>
-  <td><span class="type buy">KJØP</span></td>
-  <td>Innsider</td>
-  <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675472" target="_blank" rel="noopener">Notifiable trade</a></td>
-</tr><tr>
-  <td class="num fnt">04.06</td>
-  <td class="tick">NORCO</td>
-  <td><span class="type buy">KJØP</span></td>
-  <td>Innsider</td>
-  <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675374" target="_blank" rel="noopener">Norconsult: Mandatory notification of trade by primary insider</a></td>
 </tr><tr>
   <td class="num fnt">04.06</td>
   <td class="tick">CRNA</td>
@@ -769,34 +603,95 @@ den nattlige oppdateringen har trolig feilet.</div>
   <td class="num r"><span class="fnt">–</span></td>
   <td><a class="mlink" href="https://newsweb.oslobors.no/message/675357" target="_blank" rel="noopener">Circio Holding ASA   Exercise of Warrants by primary insiders</a></td>
 </tr><tr>
-  <td class="num fnt">04.06</td>
-  <td class="tick">ORK</td>
-  <td><span class="type buy">KJØP</span></td>
+  <td class="num fnt">03.06</td>
+  <td class="tick">LOKO</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td><span class="fnt">–</span></td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675329" target="_blank" rel="noopener">Mandatory Notification of Trade by Primary Insider</a></td>
+</tr><tr>
+  <td class="num fnt">03.06</td>
+  <td class="tick">LIFE</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td>Styreleder</td>
+  <td class="num r">63&nbsp;000 kr</td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675269" target="_blank" rel="noopener">Lifecare ASA: Mandatory notification of trade</a></td>
+</tr><tr>
+  <td class="num fnt">03.06</td>
+  <td class="tick">MDATA</td>
+  <td><span class="type prog">PROGRAM</span></td>
   <td>Innsider</td>
   <td class="num r"><span class="fnt">–</span></td>
-  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675355" target="_blank" rel="noopener">Orkla ASA: Mandatory notification of trade   primary insiders</a></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675262" target="_blank" rel="noopener">Magnora Data Center ASA: Mandatory notification of trade in connection with the private pl</a></td>
+</tr><tr>
+  <td class="num fnt">03.06</td>
+  <td class="tick">IDEX</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td>Ledelse</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675238" target="_blank" rel="noopener">IDEX Biometrics ASA: Mandatory notification of trade and disclosure of large shareholding</a></td>
+</tr><tr>
+  <td class="num fnt">02.06</td>
+  <td class="tick">ACR</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675208" target="_blank" rel="noopener">Subsequent offering – Subscription by primary insiders and reminder of subscription period</a></td>
+</tr><tr>
+  <td class="num fnt">02.06</td>
+  <td class="tick">NORCO</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675153" target="_blank" rel="noopener">Norconsult: Employee Share Programs 2026</a></td>
+</tr><tr>
+  <td class="num fnt">02.06</td>
+  <td class="tick">CRNA</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td>Ola Melin <span class="fnt">(Ledelse)</span></td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675146" target="_blank" rel="noopener">Circio Holding ASA   Exercise of Warrants by primary insiders</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">DOFG</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td>Innsider</td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675122" target="_blank" rel="noopener">DOF Group ASA - Mandatory notification of trade</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">PROT</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td><span class="fnt">–</span></td>
+  <td class="num r"><span class="fnt">–</span></td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675115" target="_blank" rel="noopener">Transfer of shares to primary insiders in connection with the company&#x27;s share purchase pro</a></td>
+</tr><tr>
+  <td class="num fnt">01.06</td>
+  <td class="tick">ELK</td>
+  <td><span class="type prog">PROGRAM</span></td>
+  <td>Erik Christian Must <span class="fnt">(Styre)</span></td>
+  <td class="num r">22,9 mill. kr</td>
+  <td><a class="mlink" href="https://newsweb.oslobors.no/message/675107" target="_blank" rel="noopener">Elkem ASA: Notification of trade - primary insiders</a></td>
 </tr></tbody>
-</table></div>
+</table></div></details>
 
 <div class="foot">
-<p><b>Metode.</b> «Priset inn» er den 10-årige FCF-veksten som gjør at
-nåverdien av fremtidige kontantstrømmer (WACC 9 %,
+<p><b>Metode.</b> «Markedet krever» løser for den 10-årige FCF-veksten som
+gjør at nåverdien av fremtidige kontantstrømmer (WACC 9 %,
 Gordon-terminal 2.5 %) er lik dagens selskapsverdi
-(enterprise value = markedsverdi + gjeld − kontanter). Grønt tall = selskapet
-har historisk levert mer enn markedet nå krever. Banker og forsikring får
-ikke estimat — FCF-modeller gir ikke mening der.</p>
-<p><b>Klassifisering.</b> Kjøp/salg leses maskinelt fra meldingstekst og
-MAR-vedlegg. PROGRAM er opsjoner, tildelinger og aksjeprogrammer — rutinemessige
-transaksjoner med liten signalverdi, holdt utenfor kjøps- og salgstallene.
-Beløp vises der volum og pris lar seg lese; resten lenker til
-originalmeldingen. CLUSTER = to eller flere innsidekjøp i samme selskap
-innenfor vinduet.</p>
+(enterprise value = markedsverdi + gjeld − kontanter). Banker og forsikring
+får ikke estimat — kontantstrømmodeller gir ikke mening der.</p>
+<p><b>Data.</b> Kjøp/salg, volum og beløp leses maskinelt fra meldingstekst
+og MAR-vedlegg. Beløp merket ≈ er anslått fra volum × dagens kurs fordi
+prisen ikke lot seg lese; felter vi ikke klarer å tolke vises som «–» og
+lenker til originalmeldingen. Samme handel publisert på norsk og engelsk
+telles én gang.</p>
 <p>Datakilder: Newsweb (Euronext Oslo) og Yahoo Finance.
 Dette er et analyseverktøy, ikke investeringsråd.</p>
 </div>
 
 <script>
-if (Date.now() - new Date("2026-06-12T09:23:28.681968+00:00").getTime() > 48*3600*1000)
+if (Date.now() - new Date("2026-06-12T14:15:08.437580+00:00").getTime() > 48*3600*1000)
   document.getElementById("stale").hidden = false;
 </script>
 </body></html>
