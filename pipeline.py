@@ -126,20 +126,29 @@ def aggregate(records):
             continue
         a = agg.setdefault(tk, {
             "issuer": r["issuer"], "n_buy": 0, "n_sell": 0, "n_program": 0,
-            "n_unknown": 0, "buy_nok": 0.0, "sell_nok": 0.0,
+            "n_unknown": 0, "buy_amount": 0.0, "buy_vol_noamt": 0,
+            "sell_amount": 0.0, "sell_vol_noamt": 0,
             "buyers": [], "roles": [],
         })
         kind = r["type"]
         if kind == "KJØP":
             a["n_buy"] += 1
-            a["buy_nok"] += r.get("amount") or 0
+            if r.get("amount"):
+                a["buy_amount"] += r["amount"]
+            elif r.get("volume"):
+                # beløp ukjent men volum kjent: estimeres i render
+                # som volum x dagens kurs (merkes med tilnærmet-tegn)
+                a["buy_vol_noamt"] += r["volume"]
             if r.get("name") and r["name"] not in a["buyers"]:
                 a["buyers"].append(r["name"])
             if r.get("role"):
                 a["roles"].append(r["role"])
         elif kind == "SALG":
             a["n_sell"] += 1
-            a["sell_nok"] += r.get("amount") or 0
+            if r.get("amount"):
+                a["sell_amount"] += r["amount"]
+            elif r.get("volume"):
+                a["sell_vol_noamt"] += r["volume"]
         elif kind == "PROGRAM":
             a["n_program"] += 1
         else:
@@ -177,10 +186,12 @@ def build_dataset():
     recent.sort(key=lambda r: r["published"], reverse=True)
     agg = aggregate(recent)
 
-    # verdsett de mest interessante først: kjøpsaktivitet, så resten
-    ranked = sorted(agg.keys(),
-                    key=lambda tk: (-agg[tk]["n_buy"], -agg[tk]["buy_nok"],
-                                    -agg[tk]["n_sell"]))
+    # hovedtabellen viser kun selskaper med ekte kjøp/salg — selskaper som
+    # bare har program-/ukjent-meldinger er støy og holdes utenfor
+    ranked = sorted(
+        (tk for tk in agg if agg[tk]["n_buy"] or agg[tk]["n_sell"]),
+        key=lambda tk: (-agg[tk]["n_buy"], -agg[tk]["buy_amount"],
+                        -agg[tk]["n_sell"]))
     companies = {}
     for tk in ranked:
         comp = {"issuer": agg[tk]["issuer"], **{k: v for k, v in agg[tk].items()
