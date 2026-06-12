@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-12T07:55:57.663586+00:00",
+  "generated": "2026-06-12T08:04:39.280655+00:00",
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
@@ -932,27 +932,27 @@
   "companies": {
     "SBNOR": {
       "name": "Sparebanken Norge",
-      "price": 182.14,
+      "price": 182.1,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 31521603584,
-      "ev": 319868599296,
+      "market_cap": 31514681344,
+      "ev": 319861677056,
       "fcf": 6860000000.0,
       "hist_fcf_growth": 0.4483273304205444,
-      "pe": 11.045483,
+      "pe": 11.0430565,
       "implied_growth": null
     },
     "LINK": {
       "name": "LINK Mobility Group Holding ASA",
-      "price": 23.28,
+      "price": 23.42,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 6572396544,
-      "ev": 8288016640,
+      "market_cap": 6611920896,
+      "ev": 8327540992,
       "fcf": 870579648,
       "hist_fcf_growth": 0.19682698972527124,
-      "pe": 52.909092,
-      "implied_growth": -0.04312896728515625
+      "pe": 53.227272,
+      "implied_growth": -0.04247474670410156
     },
     "OSUN": {
       "name": "Ocean Sun AS",
@@ -980,15 +980,15 @@
     },
     "VEI": {
       "name": "Veidekke ASA",
-      "price": 180.4,
+      "price": 180.8,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 24346109952,
-      "ev": 19988110144,
+      "market_cap": 24400095232,
+      "ev": 20042095424,
       "fcf": 3185125120,
       "hist_fcf_growth": 0.6266987747390833,
-      "pe": 15.288135,
-      "implied_growth": -0.10198593139648438
+      "pe": 15.322034,
+      "implied_growth": -0.101593017578125
     },
     "LIFE": {
       "name": "Lifecare ASA",
@@ -1028,50 +1028,50 @@
     },
     "TEL": {
       "name": "Telenor ASA",
-      "price": 149.9,
+      "price": 149.7,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 204986941440,
-      "ev": 254437941248,
+      "market_cap": 204713443328,
+      "ev": 254164443136,
       "fcf": 7121375232,
       "hist_fcf_growth": -0.010653138553429864,
-      "pe": 12.2068405,
-      "implied_growth": 0.13322830200195312
+      "pe": 12.190554,
+      "implied_growth": 0.133087158203125
     },
     "CADLR": {
       "name": "Cadeler A/S",
-      "price": 53.8,
+      "price": 53.85,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 20760561664,
-      "ev": 22133869664,
+      "market_cap": 20779855872,
+      "ev": 22153163872,
       "fcf": -554002112,
       "hist_fcf_growth": null,
-      "pe": 6.4897466,
+      "pe": 6.503623,
       "implied_growth": null
     },
     "ORK": {
       "name": "Orkla ASA",
-      "price": 100.3,
+      "price": 100.2,
       "currency": "NOK",
       "sector": "Consumer Defensive",
-      "market_cap": 97994915840,
-      "ev": 112189916160,
+      "market_cap": 97897201664,
+      "ev": 112092201984,
       "fcf": 6867125248,
       "hist_fcf_growth": 0.40556619136653094,
-      "pe": 15.598757,
-      "implied_growth": 0.029706954956054688
+      "pe": 15.583203,
+      "implied_growth": 0.029590606689453125
     },
     "KMAR": {
       "name": "Kongsberg Maritime ASA",
-      "price": 53.58,
+      "price": 53.38,
       "currency": "NOK",
       "sector": "Industrials",
       "market_cap": null,
       "ev": null,
       "fcf": 4299000000.0,
       "hist_fcf_growth": 3.4509616834830315,
-      "pe": 12.460465,
+      "pe": 12.413953,
       "implied_growth": null
     },
     "BORR": {
@@ -1088,15 +1088,15 @@
     },
     "KOMPL": {
       "name": "Komplett ASA",
-      "price": 6.12,
+      "price": 6.1,
       "currency": "NOK",
       "sector": "Consumer Cyclical",
-      "market_cap": 1073087936,
-      "ev": 2276088000,
+      "market_cap": 1069581120,
+      "ev": 2272581184,
       "fcf": 160000000,
       "hist_fcf_growth": -0.12156708052299536,
       "pe": null,
-      "implied_growth": 0.011260986328125
+      "implied_growth": 0.01105499267578125
     },
     "CYVIZ": {
       "name": "Cyviz AS",
