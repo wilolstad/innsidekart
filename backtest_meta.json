@@ -1,9 +1,9 @@
 {
-  "run_date": "2026-06-12",
-  "period_from": "2025-10-22",
+  "run_date": "2026-06-13",
+  "period_from": "2021-02-28",
   "period_to": "2026-06-12",
-  "n_buys": 240,
-  "n_events": 164,
-  "n_missing_prices": 33,
+  "n_buys": 2986,
+  "n_events": 2266,
+  "n_missing_prices": 675,
   "benchmark": "^OSEAX"
 }

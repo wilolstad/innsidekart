@@ -11,8 +11,8 @@ ARTICLE_BODY = """
 <h1>Slår norske innsidekjøp børsen?</h1>
 <p class="lead">Et levende eksperiment: hver natt leser denne siden alle
 meldepliktige innsidehandler på Oslo Børs, og tallene i analysen under
-regenereres etter hvert som datasettet vokser bakover mot mars 2021.
-Skrevet juni 2026 — konklusjonen har dato, ikke fasit.</p>
+regenereres automatisk. Datasettet dekker hele MAR-perioden — mars 2021
+til i dag. Skrevet juni 2026 — konklusjonen har dato, ikke fasit.</p>
 <div class="meta">Backtest per {run_date} · {n_buys} innsidekjøp
 {period_from} – {period_to} · benchmark {benchmark}</div>
 
@@ -41,9 +41,9 @@ Det er hullet dette prosjektet borer i.</p>
 <p>Kilden er Newsweb, Oslo Børs' meldingssystem, kategori «meldepliktige
 handler for primærinnsidere». Hver melding parses maskinelt: kjøp eller
 salg, antall aksjer, pris, beløp og innsiderens rolle, lest fra
-meldingsteksten og MAR-vedleggene. Per i dag inneholder basen
-<b>{base_total} transaksjoner</b>, og den vokser hver natt — bakover mot
-mars 2021 og fremover med nye meldinger.</p>
+meldingsteksten og MAR-vedleggene. Basen inneholder
+<b>{base_total} transaksjoner</b> og dekker hele perioden siden MAR trådte
+i kraft i mars 2021; nye meldinger legges til hver natt.</p>
 <p>To valg er viktige for kvaliteten. For det første filtreres
 opsjonstildelinger, aksjeprogrammer og andre rutinemessige transaksjoner
 bort fra signaltallene — det er Cohen-Malloy-Pomorski-poenget om at rutine
@@ -74,15 +74,24 @@ virkeligheten — de dårligste utfallene mangler.</p>
 <p class="tablenote">{n_events} målbare events. Snitt og median er
 meravkastning mot {benchmark}; hit-rate er andelen events som slo
 benchmarken. Horisonter mangler der datasettet ennå er for ungt.</p>
-<p>Lesningen så langt — og ordet <i>foreløpig</i> gjør tungt arbeid i denne
-setningen: norske innsidekjøp ser ikke ut som gratis penger. Det rimer
-med Eckbo og Smith, ikke med den amerikanske litteraturen. Den mest
-nærliggende forklaringen er at innsidekjøp ofte skjer i selskaper i
-motvind — innsidere kjøper kniven mens den faller — og i et marked som
-har steget, henger den porteføljen etter. Om det er et regime eller et
-resultat, vet vi først når basen dekker hele perioden tilbake til 2021.
-Det er derfor denne siden oppdaterer tallene sine selv i stedet for å
-fryse en konklusjon.</p>
+<p>Fem års fasit er ubehagelig lesning for innsidekjøp-entusiaster:
+porteføljen av norske innsidekjøp har tapt mot hovedindeksen på samtlige
+horisonter, og gapet vokser med tiden — rundt to–tre prosentpoeng bak
+etter tre måneder, over ti etter ett år, med treffrate under 40 %. Mest
+påfallende: <b>cluster-kjøp, det mest populære «sterke» signalet, er det
+svakeste av alt.</b> Når flere innsidere kjøper samtidig, er det oftere et
+selskap i fritt fall enn en skjult perle. Det eneste segmentet som holder
+seg rundt nullstreken er kjøp fra CEO, CFO og styreleder — hierarki ser
+ut til å bety mer enn antall.</p>
+<p>Dette rimer med Eckbo og Smith (1998) og står i kontrast til de
+amerikanske funnene. Husk også retningen på skjevheten: kjøpene uten
+prisdata er i stor grad selskaper som siden forsvant fra børsen — med dem
+inkludert blir bildet trolig <i>verre</i>, ikke bedre. En del av
+underprestasjonen er sannsynligvis en størrelseseffekt (innsidekjøp
+domineres av småselskaper, mens hovedindeksen i perioden ble løftet av
+store energiselskaper), og å isolere den er neste steg. Men den praktiske
+konklusjonen står seg: å kopiere norske innsidekjøp i blinde har vært en
+pålitelig måte å tape mot indeksen på.</p>
 
 <h2>Hva som mangler før dette er et svar</h2>
 <ul>
@@ -104,10 +113,11 @@ før noe kalles signifikant.</li>
 </ul>
 
 <h2>Veien videre</h2>
-<p>Basen fylles nå bakover mot MAR-grensen i mars 2021 — målet er fem års
-historikk med tusenvis av kjøp. Da kjøres analysen på nytt med
-justeringene over, og denne siden oppdateres. All kode og alle rådata er
-åpne: <a class="mlink"
+<p>Basen er komplett tilbake til MAR-grensen, så neste steg er presisjon,
+ikke volum: delistede selskaper inn via TITLON, faktorjustering, vekting
+per selskap og kostnader — listen over. Hvis topplederkjøpene fortsatt
+står seg etter de justeringene, er <i>det</i> det tradbare hjørnet.
+All kode og alle rådata er åpne: <a class="mlink"
 href="https://github.com/wilolstad/innsidekart"><b>github.com/wilolstad/innsidekart</b></a>.
 Finner du feil i metoden, si fra — det er halve poenget med å gjøre dette
 i det åpne.</p>

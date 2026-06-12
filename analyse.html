@@ -100,10 +100,10 @@ article table{margin-top:14px}
 <h1>Slår norske innsidekjøp børsen?</h1>
 <p class="lead">Et levende eksperiment: hver natt leser denne siden alle
 meldepliktige innsidehandler på Oslo Børs, og tallene i analysen under
-regenereres etter hvert som datasettet vokser bakover mot mars 2021.
-Skrevet juni 2026 — konklusjonen har dato, ikke fasit.</p>
-<div class="meta">Backtest per 2026-06-12 · 240 innsidekjøp
-2025-10-22 – 2026-06-12 · benchmark ^OSEAX</div>
+regenereres automatisk. Datasettet dekker hele MAR-perioden — mars 2021
+til i dag. Skrevet juni 2026 — konklusjonen har dato, ikke fasit.</p>
+<div class="meta">Backtest per 2026-06-13 · 2986 innsidekjøp
+2021-02-28 – 2026-06-12 · benchmark ^OSEAX</div>
 
 <h2>Hvorfor spørsmålet er verdt å stille</h2>
 <p>Innsidere — ledelsen og styret — vet mer om selskapet sitt enn du gjør.
@@ -130,9 +130,9 @@ Det er hullet dette prosjektet borer i.</p>
 <p>Kilden er Newsweb, Oslo Børs' meldingssystem, kategori «meldepliktige
 handler for primærinnsidere». Hver melding parses maskinelt: kjøp eller
 salg, antall aksjer, pris, beløp og innsiderens rolle, lest fra
-meldingsteksten og MAR-vedleggene. Per i dag inneholder basen
-<b>439 transaksjoner</b>, og den vokser hver natt — bakover mot
-mars 2021 og fremover med nye meldinger.</p>
+meldingsteksten og MAR-vedleggene. Basen inneholder
+<b>9760 transaksjoner</b> og dekker hele perioden siden MAR trådte
+i kraft i mars 2021; nye meldinger legges til hver natt.</p>
 <p>To valg er viktige for kvaliteten. For det første filtreres
 opsjonstildelinger, aksjeprogrammer og andre rutinemessige transaksjoner
 bort fra signaltallene — det er Cohen-Malloy-Pomorski-poenget om at rutine
@@ -153,12 +153,12 @@ vindu — likevektet per event.</li>
 selskap innen 14 dager); kjøp av CEO, CFO eller styreleder.</li>
 </ul>
 <p>Events uten prisdata hos Yahoo Finance telles åpent i stedet for å
-forsvinne stille: per 2026-06-12 mangler 33 av 240 kjøp
+forsvinne stille: per 2026-06-13 mangler 675 av 2986 kjøp
 prisdata, typisk fordi selskapet er strøket fra børsen. Det er
 overlevelsesskjevhet, og den gjør tallene under <i>penere</i> enn
 virkeligheten — de dårligste utfallene mangler.</p>
 
-<h2>Tallene, per 2026-06-12</h2>
+<h2>Tallene, per 2026-06-13</h2>
 <div class="twrap"><table>
 <thead><tr><th>Segment</th><th>Horisont</th><th class="r">N</th>
 <th class="r">Snitt</th><th class="r">Median</th>
@@ -166,83 +166,113 @@ virkeligheten — de dårligste utfallene mangler.</p>
 <tbody><tr>
   <td>Alle kjøp</td>
   <td class="num">1m</td>
-  <td class="num r">164</td>
+  <td class="num r">2266</td>
+  <td class="num r">-0,7 %</td>
   <td class="num r">-1,0 %</td>
-  <td class="num r">-2,5 %</td>
-  <td class="num r">40 %</td>
+  <td class="num r">45 %</td>
 </tr><tr>
   <td>Alle kjøp</td>
   <td class="num">3m</td>
-  <td class="num r">111</td>
-  <td class="num r">-7,2 %</td>
-  <td class="num r">-10,0 %</td>
-  <td class="num r">25 %</td>
+  <td class="num r">2213</td>
+  <td class="num r">-2,5 %</td>
+  <td class="num r">-2,1 %</td>
+  <td class="num r">45 %</td>
 </tr><tr>
   <td>Alle kjøp</td>
   <td class="num">6m</td>
-  <td class="num r">49</td>
-  <td class="num r">-15,4 %</td>
-  <td class="num r">-23,1 %</td>
-  <td class="num r">22 %</td>
+  <td class="num r">2151</td>
+  <td class="num r">-5,4 %</td>
+  <td class="num r">-5,5 %</td>
+  <td class="num r">40 %</td>
+</tr><tr>
+  <td>Alle kjøp</td>
+  <td class="num">12m</td>
+  <td class="num r">2006</td>
+  <td class="num r">-12,9 %</td>
+  <td class="num r">-10,8 %</td>
+  <td class="num r">38 %</td>
 </tr><tr>
   <td>Cluster-kjøp</td>
   <td class="num">1m</td>
-  <td class="num r">81</td>
-  <td class="num r">+1,2 %</td>
-  <td class="num r">-0,8 %</td>
+  <td class="num r">1356</td>
+  <td class="num r">-0,9 %</td>
+  <td class="num r">-1,1 %</td>
   <td class="num r">44 %</td>
 </tr><tr>
   <td>Cluster-kjøp</td>
   <td class="num">3m</td>
-  <td class="num r">50</td>
-  <td class="num r">-9,2 %</td>
-  <td class="num r">-10,0 %</td>
-  <td class="num r">20 %</td>
+  <td class="num r">1325</td>
+  <td class="num r">-3,6 %</td>
+  <td class="num r">-2,6 %</td>
+  <td class="num r">44 %</td>
 </tr><tr>
   <td>Cluster-kjøp</td>
   <td class="num">6m</td>
-  <td class="num r">25</td>
-  <td class="num r">-22,4 %</td>
-  <td class="num r">-24,3 %</td>
-  <td class="num r">12 %</td>
+  <td class="num r">1300</td>
+  <td class="num r">-8,7 %</td>
+  <td class="num r">-6,6 %</td>
+  <td class="num r">39 %</td>
+</tr><tr>
+  <td>Cluster-kjøp</td>
+  <td class="num">12m</td>
+  <td class="num r">1224</td>
+  <td class="num r">-19,8 %</td>
+  <td class="num r">-15,2 %</td>
+  <td class="num r">35 %</td>
 </tr><tr>
   <td>CEO/CFO/styreleder</td>
   <td class="num">1m</td>
-  <td class="num r">38</td>
-  <td class="num r">-1,7 %</td>
-  <td class="num r">-3,4 %</td>
-  <td class="num r">42 %</td>
+  <td class="num r">418</td>
+  <td class="num r">-1,4 %</td>
+  <td class="num r">-1,1 %</td>
+  <td class="num r">44 %</td>
 </tr><tr>
   <td>CEO/CFO/styreleder</td>
   <td class="num">3m</td>
-  <td class="num r">25</td>
-  <td class="num r">-8,4 %</td>
-  <td class="num r">-10,7 %</td>
-  <td class="num r">24 %</td>
+  <td class="num r">405</td>
+  <td class="num r">-0,7 %</td>
+  <td class="num r">+0,1 %</td>
+  <td class="num r">50 %</td>
 </tr><tr>
   <td>CEO/CFO/styreleder</td>
   <td class="num">6m</td>
-  <td class="num r">16</td>
-  <td class="num r">-22,1 %</td>
-  <td class="num r">-24,9 %</td>
-  <td class="num r">12 %</td>
+  <td class="num r">396</td>
+  <td class="num r">-1,1 %</td>
+  <td class="num r">-0,8 %</td>
+  <td class="num r">49 %</td>
+</tr><tr>
+  <td>CEO/CFO/styreleder</td>
+  <td class="num">12m</td>
+  <td class="num r">366</td>
+  <td class="num r">-2,9 %</td>
+  <td class="num r">-4,6 %</td>
+  <td class="num r">43 %</td>
 </tr></tbody></table></div>
-<p class="tablenote">164 målbare events. Snitt og median er
+<p class="tablenote">2266 målbare events. Snitt og median er
 meravkastning mot ^OSEAX; hit-rate er andelen events som slo
 benchmarken. Horisonter mangler der datasettet ennå er for ungt.</p>
-<p>Lesningen så langt — og ordet <i>foreløpig</i> gjør tungt arbeid i denne
-setningen: norske innsidekjøp ser ikke ut som gratis penger. Det rimer
-med Eckbo og Smith, ikke med den amerikanske litteraturen. Den mest
-nærliggende forklaringen er at innsidekjøp ofte skjer i selskaper i
-motvind — innsidere kjøper kniven mens den faller — og i et marked som
-har steget, henger den porteføljen etter. Om det er et regime eller et
-resultat, vet vi først når basen dekker hele perioden tilbake til 2021.
-Det er derfor denne siden oppdaterer tallene sine selv i stedet for å
-fryse en konklusjon.</p>
+<p>Fem års fasit er ubehagelig lesning for innsidekjøp-entusiaster:
+porteføljen av norske innsidekjøp har tapt mot hovedindeksen på samtlige
+horisonter, og gapet vokser med tiden — rundt to–tre prosentpoeng bak
+etter tre måneder, over ti etter ett år, med treffrate under 40 %. Mest
+påfallende: <b>cluster-kjøp, det mest populære «sterke» signalet, er det
+svakeste av alt.</b> Når flere innsidere kjøper samtidig, er det oftere et
+selskap i fritt fall enn en skjult perle. Det eneste segmentet som holder
+seg rundt nullstreken er kjøp fra CEO, CFO og styreleder — hierarki ser
+ut til å bety mer enn antall.</p>
+<p>Dette rimer med Eckbo og Smith (1998) og står i kontrast til de
+amerikanske funnene. Husk også retningen på skjevheten: kjøpene uten
+prisdata er i stor grad selskaper som siden forsvant fra børsen — med dem
+inkludert blir bildet trolig <i>verre</i>, ikke bedre. En del av
+underprestasjonen er sannsynligvis en størrelseseffekt (innsidekjøp
+domineres av småselskaper, mens hovedindeksen i perioden ble løftet av
+store energiselskaper), og å isolere den er neste steg. Men den praktiske
+konklusjonen står seg: å kopiere norske innsidekjøp i blinde har vært en
+pålitelig måte å tape mot indeksen på.</p>
 
 <h2>Hva som mangler før dette er et svar</h2>
 <ul>
-<li><b>Delistede selskaper.</b> Yahoo mangler dem; de 33 tapte
+<li><b>Delistede selskaper.</b> Yahoo mangler dem; de 675 tapte
 eventene må hentes fra en akademisk database (TITLON ved UiT har norske
 børsdata med delistede aksjer, gratis for studenter via Feide).</li>
 <li><b>Faktorjustering.</b> Meravkastning mot hovedindeksen blander
@@ -260,10 +290,11 @@ før noe kalles signifikant.</li>
 </ul>
 
 <h2>Veien videre</h2>
-<p>Basen fylles nå bakover mot MAR-grensen i mars 2021 — målet er fem års
-historikk med tusenvis av kjøp. Da kjøres analysen på nytt med
-justeringene over, og denne siden oppdateres. All kode og alle rådata er
-åpne: <a class="mlink"
+<p>Basen er komplett tilbake til MAR-grensen, så neste steg er presisjon,
+ikke volum: delistede selskaper inn via TITLON, faktorjustering, vekting
+per selskap og kostnader — listen over. Hvis topplederkjøpene fortsatt
+står seg etter de justeringene, er <i>det</i> det tradbare hjørnet.
+All kode og alle rådata er åpne: <a class="mlink"
 href="https://github.com/wilolstad/innsidekart"><b>github.com/wilolstad/innsidekart</b></a>.
 Finner du feil i metoden, si fra — det er halve poenget med å gjøre dette
 i det åpne.</p>
