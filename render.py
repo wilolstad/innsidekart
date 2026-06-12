@@ -5,6 +5,13 @@ import json
 import os
 from datetime import datetime
 from html import escape
+from urllib.parse import quote
+
+# Fase 0-validering for Pro-abonnementet: e-postfangst. Settes til en
+# skjema-URL (f.eks. Tally) når den finnes — tom streng gir mailto-fallback,
+# så lista virker fra dag én uten tredjepartskonto.
+PRO_SIGNUP_URL = ""
+PRO_SIGNUP_EMAIL = "william.olstad@gmail.com"
 
 CSS = """
 :root{
@@ -88,6 +95,20 @@ summary:hover{color:var(--ink)}
 .foot p{margin-bottom:8px}
 .stale{border:1px solid var(--red);color:var(--red);
   padding:10px 14px;border-radius:4px;margin-top:14px;font-size:14px}
+.probox{border:2px solid var(--ink);margin-top:40px;padding:18px 20px 16px}
+.probox .pk{font-family:'IBM Plex Mono',monospace;font-size:11px;
+  font-weight:600;letter-spacing:0.14em;text-transform:uppercase}
+.probox .pk .soon{color:var(--muted);font-weight:400}
+.probox .pfeat{font-size:14px;margin-top:9px;max-width:78ch}
+.probox .phon{font-size:13px;color:var(--muted);margin-top:7px;max-width:78ch}
+.probox .prow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  margin-top:13px}
+.pbtn{display:inline-block;background:var(--ink);color:#fff;padding:8px 15px;
+  font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap}
+.pbtn:hover{background:var(--muted)}
+.pfound{font-size:12.5px;color:var(--ink)}
+.pfine{font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+  color:var(--faint);margin-top:11px}
 article{max-width:720px}
 article h2{margin-top:36px}
 article p{margin:12px 0;font-size:15px}
@@ -269,6 +290,31 @@ MSG_HEAD = """<thead><tr><th>Dato</th><th>Ticker</th><th>Type</th>
 <th>Innsider</th><th class="r">Beløp</th><th>Melding</th></tr></thead>"""
 
 
+def pro_box():
+    """Venteliste-boks for Pro (fase 0: måler betalingsvilje før bygging)."""
+    if PRO_SIGNUP_URL:
+        href = PRO_SIGNUP_URL
+    else:
+        subject = quote("Innsidekart Pro — sett meg på lista")
+        body = quote("Sett meg på Pro-lista. Send e-posten som den er — "
+                     "du trenger ikke skrive noe mer.")
+        href = f"mailto:{PRO_SIGNUP_EMAIL}?subject={subject}&body={body}"
+    return f"""<div class="probox">
+<div class="pk">Innsidekart Pro <span class="soon">· under bygging</span></div>
+<p class="pfeat">Full historikk for hvert selskap siden 2021 ·
+shortregisteret med navngitte fond · selskapenes egne tilbakekjøp ·
+e-postvarsler per ticker.</p>
+<p class="phon">Komplett data, ikke «signaler» —
+<a class="mlink" href="analyse.html"><b>analysen</b></a> viser hvorfor vi
+aldri kommer til å selge kjøpsanbefalinger. 99 kr/mnd ved lansering.</p>
+<div class="prow">
+  <a class="pbtn" href="{href}">Sett meg på lista →</a>
+  <span class="pfound">De første 50 låser <b>49 kr/mnd — for alltid</b>.</span>
+</div>
+<p class="pfine">Ingen spam: én e-post når Pro lanseres, maks to underveis.</p>
+</div>"""
+
+
 def render_site(data, path):
     a = data["assumptions"]
     gen = datetime.fromisoformat(data["generated"]).strftime("%d.%m.%Y %H:%M UTC")
@@ -292,10 +338,11 @@ def render_site(data, path):
 </div>
 <h1>Innsidekart</h1>
 <p class="lead">Når ledelsen eller styret handler aksjer i eget selskap, må
-det meldes til børsen samme dag. <b>Innsidekjøp er et av de mer pålitelige
-signalene i aksjemarkedet</b> — innsidere kjøper når de mener prisen er for
-lav. Denne siden leser alle meldingene, hver natt, og viser hvem som kjøpte
-og hva børskursen allerede forutsetter.</p>
+det meldes til børsen samme dag. Denne siden leser alle meldingene, hver
+natt, og viser hvem som handlet og hva børskursen allerede forutsetter.
+<b>Fem års fasit: innsidekjøp flest slår ikke børsen</b> —
+<a class="mlink" href="analyse.html"><b>analysen viser hvorfor</b></a>,
+og hvilket hjørne av dem som likevel står seg.</p>
 <div class="stats">
   <div class="stat"><div class="v">{data.get('base_total', '–')}</div>
     <div class="l">handler i basen</div></div>
@@ -313,6 +360,8 @@ den nattlige oppdateringen har trolig feilet.</div>
 
 <h2>Akkurat nå</h2>
 <div class="cards">{cards or '<p class="fnt">Ingen innsidekjøp siste to uker.</p>'}</div>
+
+{pro_box()}
 
 <h2>Kjøp og salg per selskap</h2>
 <p class="guide"><b>«Markedet krever»</b> er den årlige kontantstrømveksten
@@ -403,6 +452,6 @@ def render_article(data, path):
         **{k: v for k, v in meta.items() if k != "n_missing_prices"})
     html = (HEAD.format(title="Slår norske innsidekjøp børsen? — Innsidekart",
                         css=CSS)
-            + f"<article>{body}</article></body></html>")
+            + f"<article>{body}{pro_box()}</article></body></html>")
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
