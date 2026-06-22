@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21T08:47:30.285922+00:00",
+  "generated": "2026-06-22T10:23:18.490093+00:00",
   "window_days": 14,
   "base_total": 9788,
   "assumptions": {
@@ -855,22 +855,6 @@
       "n_insiders": 1,
       "name": "Position",
       "role": "Innsider"
-    },
-    {
-      "messageId": 675554,
-      "published": "2026-06-07T17:05:05.316Z",
-      "ticker": "ACED",
-      "issuer": "Ace Digital AS",
-      "title": "Mandatory Notification of Trade by Primary Insider",
-      "url": "https://newsweb.oslobors.no/message/675554",
-      "type": "PROGRAM",
-      "source": "none",
-      "volume": null,
-      "price": 485.0,
-      "amount": null,
-      "n_insiders": null,
-      "name": null,
-      "role": null
     }
   ],
   "companies": {
@@ -891,11 +875,11 @@
       "cluster": false,
       "top_role": "Styre",
       "name": "Selvaag Bolig ASA",
-      "price": 32.9,
+      "price": 32.7,
       "currency": "NOK",
       "sector": "Real Estate",
-      "market_cap": 3082538752,
-      "ev": 6917270848,
+      "market_cap": 3063799808,
+      "ev": 6898531904,
       "fcf": -1276453248,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -917,11 +901,11 @@
       "cluster": false,
       "top_role": null,
       "name": "SENTIA ASA",
-      "price": 78.0,
+      "price": 76.5,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 7799012864,
-      "ev": 3563012928,
+      "market_cap": 7649031680,
+      "ev": 3413031744,
       "fcf": 4421250048,
       "hist_fcf_growth": -0.005345909006415517,
       "implied_growth": null
@@ -941,11 +925,11 @@
       "cluster": false,
       "top_role": null,
       "name": "MAGNORA DATA CENTER ASA",
-      "price": 12.81,
+      "price": 12.95,
       "currency": "NOK",
       "sector": "Technology",
-      "market_cap": 1281000064,
-      "ev": 1287000064,
+      "market_cap": 1294999936,
+      "ev": 1300999936,
       "fcf": null,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -965,11 +949,11 @@
       "cluster": false,
       "top_role": null,
       "name": "5th Planet Games A/S",
-      "price": 1.47,
+      "price": 1.435,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 395251552,
-      "ev": 388061552,
+      "market_cap": 385840768,
+      "ev": 378650768,
       "fcf": -307750,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -991,11 +975,11 @@
       "cluster": false,
       "top_role": "Ledelse",
       "name": "Thor Medical ASA",
-      "price": 4.195,
+      "price": 4.165,
       "currency": "NOK",
       "sector": "Healthcare",
-      "market_cap": 1510207744,
-      "ev": 1501030752,
+      "market_cap": 1499407616,
+      "ev": 1490230624,
       "fcf": -90503376,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1017,14 +1001,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Reach Subsea ASA",
-      "price": 5.1,
+      "price": 5.11,
       "currency": "NOK",
       "sector": "Energy",
-      "market_cap": 1667490944,
-      "ev": 3074357952,
+      "market_cap": 1670760576,
+      "ev": 3077627584,
       "fcf": 552084608,
       "hist_fcf_growth": 0.39990429173485564,
-      "implied_growth": -0.11957168579101562
+      "implied_growth": -0.11941337585449219
     },
     "VEI": {
       "issuer": "Veidekke ASA",
@@ -1041,14 +1025,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Veidekke ASA",
-      "price": 184.8,
+      "price": 183.2,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 24939919360,
-      "ev": 20581919552,
+      "market_cap": 24723988480,
+      "ev": 20365988672,
       "fcf": 3185125120,
       "hist_fcf_growth": 0.6266987747390833,
-      "implied_growth": -0.09773445129394531
+      "implied_growth": -0.09926414489746094
     },
     "ZAL": {
       "issuer": "Zalaris ASA",
@@ -1065,14 +1049,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Zalaris ASA",
-      "price": 99.8,
+      "price": 99.6,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 2173588480,
-      "ev": 2430757472,
+      "market_cap": 2169232384,
+      "ev": 2426401376,
       "fcf": 199482496,
       "hist_fcf_growth": null,
-      "implied_growth": -0.009521484375
+      "implied_growth": -0.009763717651367188
     }
   }
 }
