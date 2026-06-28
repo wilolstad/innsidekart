@@ -1,13 +1,29 @@
 {
-  "generated": "2026-06-27T07:36:58.285907+00:00",
+  "generated": "2026-06-28T08:03:59.083674+00:00",
   "window_days": 14,
-  "base_total": 9820,
+  "base_total": 9821,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 677169,
+      "published": "2026-06-27T20:11:37.797Z",
+      "ticker": "ZAL",
+      "issuer": "Zalaris ASA",
+      "title": "Acceptances received under the mandatory offer by Kona BidCo AS to acquire all shares in Zalaris ASA",
+      "url": "https://newsweb.oslobors.no/message/677169",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 158700,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
+    },
     {
       "messageId": 677166,
       "published": "2026-06-26T20:38:36.701Z",
@@ -902,6 +918,33 @@
       "hist_fcf_growth": 0.6266987747390833,
       "implied_growth": -0.09180068969726562
     },
+    "ZAL": {
+      "issuer": "Zalaris ASA",
+      "n_buy": 2,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_amount": 0.0,
+      "buy_vol_noamt": 5469700,
+      "sell_amount": 0.0,
+      "sell_vol_noamt": 0,
+      "buyers": [],
+      "roles": [
+        "Innsider",
+        "Innsider"
+      ],
+      "cluster": true,
+      "top_role": null,
+      "name": "Zalaris ASA",
+      "price": 100.0,
+      "currency": "NOK",
+      "sector": "Industrials",
+      "market_cap": 2177944320,
+      "ev": 2435113312,
+      "fcf": 199482496,
+      "hist_fcf_growth": null,
+      "implied_growth": -0.009281158447265625
+    },
     "MGN": {
       "issuer": "Magnora ASA",
       "n_buy": 2,
@@ -975,32 +1018,6 @@
       "fcf": 2095125,
       "hist_fcf_growth": -0.5910504595293087,
       "implied_growth": 0.448944091796875
-    },
-    "ZAL": {
-      "issuer": "Zalaris ASA",
-      "n_buy": 1,
-      "n_sell": 0,
-      "n_program": 0,
-      "n_unknown": 0,
-      "buy_amount": 0.0,
-      "buy_vol_noamt": 5311000,
-      "sell_amount": 0.0,
-      "sell_vol_noamt": 0,
-      "buyers": [],
-      "roles": [
-        "Innsider"
-      ],
-      "cluster": false,
-      "top_role": null,
-      "name": "Zalaris ASA",
-      "price": 100.0,
-      "currency": "NOK",
-      "sector": "Industrials",
-      "market_cap": 2177944320,
-      "ev": 2435113312,
-      "fcf": 199482496,
-      "hist_fcf_growth": null,
-      "implied_growth": -0.009281158447265625
     },
     "AFG": {
       "issuer": "AF Gruppen ASA",
