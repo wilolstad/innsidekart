@@ -1,13 +1,29 @@
 {
-  "generated": "2026-07-04T07:25:04.064888+00:00",
+  "generated": "2026-07-05T07:44:37.133421+00:00",
   "window_days": 14,
-  "base_total": 9849,
+  "base_total": 9850,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 677658,
+      "published": "2026-07-04T08:09:42.239Z",
+      "ticker": "ZAL",
+      "issuer": "Zalaris ASA",
+      "title": "Acceptances received under the mandatory offer by Kona BidCo AS to acquire all shares in Zalaris ASA",
+      "url": "https://newsweb.oslobors.no/message/677658",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 38000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
+    },
     {
       "messageId": 677641,
       "published": "2026-07-03T13:25:27.294Z",
@@ -940,16 +956,17 @@
   "companies": {
     "ZAL": {
       "issuer": "Zalaris ASA",
-      "n_buy": 6,
+      "n_buy": 7,
       "n_sell": 0,
       "n_program": 0,
       "n_unknown": 0,
       "buy_amount": 0.0,
-      "buy_vol_noamt": 5966700,
+      "buy_vol_noamt": 6004700,
       "sell_amount": 0.0,
       "sell_vol_noamt": 0,
       "buyers": [],
       "roles": [
+        "Innsider",
         "Innsider",
         "Innsider",
         "Innsider",
