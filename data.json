@@ -1,13 +1,45 @@
 {
-  "generated": "2026-07-12T07:08:02.996805+00:00",
+  "generated": "2026-07-13T07:49:37.598561+00:00",
   "window_days": 14,
-  "base_total": 9868,
+  "base_total": 9870,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 678062,
+      "published": "2026-07-13T07:48:03.939Z",
+      "ticker": "KMAR",
+      "issuer": "Kongsberg Maritime ASA",
+      "title": "TRADE BY PRIMARY INSIDER",
+      "url": "https://newsweb.oslobors.no/message/678062",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 48,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Lisa Edvardsen Haugan",
+      "role": "Innsider"
+    },
+    {
+      "messageId": 678031,
+      "published": "2026-07-12T20:52:30.430Z",
+      "ticker": "HAV",
+      "issuer": "HAV Group ASA",
+      "title": "Notification of trade",
+      "url": "https://newsweb.oslobors.no/message/678031",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 2988,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
+    },
     {
       "messageId": 678023,
       "published": "2026-07-10T21:09:35.531Z",
@@ -727,22 +759,6 @@
       "n_insiders": 1,
       "name": "Helge Simonnes",
       "role": "Innsider"
-    },
-    {
-      "messageId": 677173,
-      "published": "2026-06-28T21:50:00.000Z",
-      "ticker": "IWS",
-      "issuer": "Integrated Wind Solutions ASA",
-      "title": "PDMR Notification",
-      "url": "https://newsweb.oslobors.no/message/677173",
-      "type": "PROGRAM",
-      "source": "none",
-      "volume": null,
-      "price": null,
-      "amount": null,
-      "n_insiders": null,
-      "name": null,
-      "role": null
     }
   ],
   "companies": {
@@ -851,11 +867,11 @@
       "price": 7.52,
       "currency": "NOK",
       "sector": "Energy",
-      "market_cap": 2280179712,
-      "ev": 2352084712,
+      "market_cap": 2274115328,
+      "ev": 2346020328,
       "fcf": 42065124,
       "hist_fcf_growth": null,
-      "implied_growth": 0.19306182861328125
+      "implied_growth": 0.19271469116210938
     },
     "BONHR": {
       "issuer": "Bonheur ASA",
@@ -879,11 +895,11 @@
       "price": 221.0,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 9399547904,
-      "ev": 9878547968,
+      "market_cap": 9654739968,
+      "ev": 10133740032,
       "fcf": 937949888,
       "hist_fcf_growth": -0.8822733778984896,
-      "implied_growth": -0.029291152954101562
+      "implied_growth": -0.02581787109375
     },
     "EPR": {
       "issuer": "Europris ASA",
@@ -905,11 +921,11 @@
       "price": 81.2,
       "currency": "NOK",
       "sector": "Consumer Defensive",
-      "market_cap": 13288317952,
-      "ev": 18371475904,
+      "market_cap": 13157399552,
+      "ev": 18240557504,
       "fcf": 1608649344,
       "hist_fcf_growth": 0.06617588351972836,
-      "implied_growth": -0.018283843994140625
+      "implied_growth": -0.019252777099609375
     },
     "NOFIN": {
       "issuer": "Nordic Financials ASA",
@@ -933,8 +949,8 @@
       "price": 1.71,
       "currency": "NOK",
       "sector": "Utilities",
-      "market_cap": 33676828,
-      "ev": 19492828,
+      "market_cap": 35055408,
+      "ev": 20871408,
       "fcf": -6387125,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -957,8 +973,8 @@
       "price": 194.88,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 28104480768,
-      "ev": 32994482176,
+      "market_cap": 28121786368,
+      "ev": 33011787776,
       "fcf": 9902000000.0,
       "hist_fcf_growth": null,
       "implied_growth": null
