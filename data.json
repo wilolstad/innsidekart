@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-18T06:30:08.915162+00:00",
+  "generated": "2026-07-19T07:07:40.844590+00:00",
   "window_days": 14,
   "base_total": 9911,
   "assumptions": {
@@ -903,38 +903,21 @@
       "n_insiders": null,
       "name": null,
       "role": null
-    },
-    {
-      "messageId": 677658,
-      "published": "2026-07-04T08:09:42.239Z",
-      "ticker": "ZAL",
-      "issuer": "Zalaris ASA",
-      "title": "Acceptances received under the mandatory offer by Kona BidCo AS to acquire all shares in Zalaris ASA",
-      "url": "https://newsweb.oslobors.no/message/677658",
-      "type": "KJØP",
-      "source": "pdf",
-      "volume": 38000,
-      "price": null,
-      "amount": null,
-      "n_insiders": 1,
-      "name": null,
-      "role": "Innsider"
     }
   ],
   "companies": {
     "ZAL": {
       "issuer": "Zalaris ASA",
-      "n_buy": 8,
+      "n_buy": 7,
       "n_sell": 0,
       "n_program": 0,
       "n_unknown": 0,
       "buy_amount": 0.0,
-      "buy_vol_noamt": 13954100,
+      "buy_vol_noamt": 13916100,
       "sell_amount": 0.0,
       "sell_vol_noamt": 0,
       "buyers": [],
       "roles": [
-        "Innsider",
         "Innsider",
         "Innsider",
         "Innsider",
@@ -975,15 +958,15 @@
       ],
       "cluster": true,
       "top_role": null,
-      "name": "Telenor ASA",
+      "name": null,
       "price": 134.4,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 183337320448,
-      "ev": 238885324800,
-      "fcf": 9866375168,
+      "market_cap": null,
+      "ev": null,
+      "fcf": 9430750208,
       "hist_fcf_growth": -0.010653138553429864,
-      "implied_growth": 0.08176803588867188
+      "implied_growth": null
     },
     "SKAND": {
       "issuer": "Skandia GreenPower AS",
@@ -1084,8 +1067,8 @@
       "currency": "NOK",
       "sector": "Financial Services",
       "market_cap": 82013036544,
-      "ev": 82013036544,
-      "fcf": 4592000000.0,
+      "ev": 127672039424,
+      "fcf": 41393373184,
       "hist_fcf_growth": 0.19468985372068293,
       "implied_growth": null
     },
@@ -1137,7 +1120,7 @@
       "sector": "Basic Materials",
       "market_cap": 2943886592,
       "ev": 7303886400,
-      "fcf": -1331250048,
+      "fcf": -1005249984,
       "hist_fcf_growth": null,
       "implied_growth": null
     },
@@ -1189,9 +1172,9 @@
       "sector": "Industrials",
       "market_cap": 13563021312,
       "ev": 18828021760,
-      "fcf": 1293124992,
+      "fcf": 1167500032,
       "hist_fcf_growth": 0.1549115031001227,
-      "implied_growth": 0.01436614990234375
+      "implied_growth": 0.027982711791992188
     },
     "GJF": {
       "issuer": "Gjensidige Forsikring ASA",
@@ -1211,12 +1194,12 @@
       ],
       "cluster": false,
       "top_role": "Styre",
-      "name": "Gjensidige Forsikring ASA",
+      "name": null,
       "price": 277.0,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 138490068992,
-      "ev": 66887072256,
+      "market_cap": null,
+      "ev": null,
       "fcf": 5430949888,
       "hist_fcf_growth": 0.5452636679006664,
       "implied_growth": null
