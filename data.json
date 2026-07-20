@@ -1,13 +1,29 @@
 {
-  "generated": "2026-07-19T07:07:40.844590+00:00",
+  "generated": "2026-07-20T07:42:40.119768+00:00",
   "window_days": 14,
-  "base_total": 9911,
+  "base_total": 9912,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 678421,
+      "published": "2026-07-20T06:45:09.959Z",
+      "ticker": "ATEA",
+      "issuer": "Atea ASA",
+      "title": "Mandatory notification of trade",
+      "url": "https://newsweb.oslobors.no/message/678421",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 24685,
+      "price": 83.05,
+      "amount": 2050089.25,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Innsider"
+    },
     {
       "messageId": 678392,
       "published": "2026-07-17T18:16:14.870Z",
@@ -929,14 +945,14 @@
       "cluster": true,
       "top_role": null,
       "name": "Zalaris ASA",
-      "price": 102.0,
+      "price": 99.0,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 2221502976,
-      "ev": 2478671968,
+      "market_cap": 2156164864,
+      "ev": 2413333856,
       "fcf": 199482496,
       "hist_fcf_growth": null,
-      "implied_growth": -0.00688934326171875
+      "implied_growth": -0.010492324829101562
     },
     "TEL": {
       "issuer": "Telenor ASA",
@@ -958,15 +974,15 @@
       ],
       "cluster": true,
       "top_role": null,
-      "name": null,
-      "price": 134.4,
+      "name": "Telenor ASA",
+      "price": 132.0,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": null,
-      "ev": null,
+      "market_cap": 180063436800,
+      "ev": 235611441152,
       "fcf": 9430750208,
       "hist_fcf_growth": -0.010653138553429864,
-      "implied_growth": null
+      "implied_growth": 0.08591079711914062
     },
     "SKAND": {
       "issuer": "Skandia GreenPower AS",
@@ -983,11 +999,11 @@
       "cluster": true,
       "top_role": null,
       "name": "Skandia GreenPower AS",
-      "price": 1.43,
+      "price": 1.35,
       "currency": "NOK",
       "sector": "Utilities",
-      "market_cap": 170835648,
-      "ev": 11112640,
+      "market_cap": 161278416,
+      "ev": 1555408,
       "fcf": 53025156,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1063,11 +1079,11 @@
       "cluster": false,
       "top_role": "Styre",
       "name": "Storebrand ASA",
-      "price": 195.9,
+      "price": 195.5,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 82013036544,
-      "ev": 127672039424,
+      "market_cap": 81845575680,
+      "ev": 127504578560,
       "fcf": 41393373184,
       "hist_fcf_growth": 0.19468985372068293,
       "implied_growth": null
@@ -1091,11 +1107,11 @@
       "cluster": false,
       "top_role": null,
       "name": "Pareto Bank ASA",
-      "price": 61.0,
+      "price": 59.9,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 4683727872,
-      "ev": 10601520128,
+      "market_cap": 4599267328,
+      "ev": 10517059584,
       "fcf": 405755000.0,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1115,11 +1131,11 @@
       "cluster": false,
       "top_role": null,
       "name": "Norske Skog ASA",
-      "price": 34.7,
+      "price": 34.8,
       "currency": "NOK",
       "sector": "Basic Materials",
-      "market_cap": 2943886592,
-      "ev": 7303886400,
+      "market_cap": 2952370432,
+      "ev": 7312370240,
       "fcf": -1005249984,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1141,14 +1157,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Reach Subsea ASA",
-      "price": 4.82,
+      "price": 4.9,
       "currency": "NOK",
       "sector": "Energy",
-      "market_cap": 1575942528,
-      "ev": 2982809536,
+      "market_cap": 1602099200,
+      "ev": 3008966208,
       "fcf": 552084608,
       "hist_fcf_growth": 0.39990429173485564,
-      "implied_growth": -0.12408447265625
+      "implied_growth": -0.12277793884277344
     },
     "NAS": {
       "issuer": "Norwegian Air Shuttle ASA",
@@ -1167,14 +1183,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Norwegian Air Shuttle ASA",
-      "price": 12.885,
+      "price": 12.655,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 13563021312,
-      "ev": 18828021760,
+      "market_cap": 13320918016,
+      "ev": 18585918464,
       "fcf": 1167500032,
       "hist_fcf_growth": 0.1549115031001227,
-      "implied_growth": 0.027982711791992188
+      "implied_growth": 0.0262603759765625
     },
     "GJF": {
       "issuer": "Gjensidige Forsikring ASA",
@@ -1194,12 +1210,12 @@
       ],
       "cluster": false,
       "top_role": "Styre",
-      "name": null,
-      "price": 277.0,
+      "name": "Gjensidige Forsikring ASA",
+      "price": 274.4,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": null,
-      "ev": null,
+      "market_cap": 137190154240,
+      "ev": 65587157504,
       "fcf": 5430949888,
       "hist_fcf_growth": 0.5452636679006664,
       "implied_growth": null
@@ -1219,14 +1235,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Odfjell SE",
-      "price": 113.6,
+      "price": 114.2,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 8995277824,
-      "ev": 9910077792,
+      "market_cap": 9042788352,
+      "ev": 9957588320,
       "fcf": 176913376,
       "hist_fcf_growth": 0.02506642314608043,
-      "implied_growth": 0.19330596923828125
+      "implied_growth": 0.19395065307617188
     },
     "BONHR": {
       "issuer": "Bonheur ASA",
@@ -1247,14 +1263,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Bonheur ASA",
-      "price": 228.5,
+      "price": 230.0,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 9718537216,
-      "ev": 10197537280,
+      "market_cap": 9782335488,
+      "ev": 10261335552,
       "fcf": 859949888,
       "hist_fcf_growth": -0.8822733778984896,
-      "implied_growth": -0.013195037841796875
+      "implied_growth": -0.01235198974609375
     },
     "EPR": {
       "issuer": "Europris ASA",
@@ -1273,14 +1289,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Europris ASA",
-      "price": 83.2,
+      "price": 83.5,
       "currency": "NOK",
       "sector": "Consumer Defensive",
-      "market_cap": 13615617024,
-      "ev": 18698774976,
+      "market_cap": 13664712704,
+      "ev": 18747870656,
       "fcf": 1608649344,
       "hist_fcf_growth": 0.06617588351972836,
-      "implied_growth": -0.015893936157226562
+      "implied_growth": -0.015537261962890625
     },
     "OMDA": {
       "issuer": "Omda AS",
@@ -1297,14 +1313,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Omda AS",
-      "price": 37.9,
+      "price": 38.0,
       "currency": "NOK",
       "sector": "Healthcare",
-      "market_cap": 777240512,
-      "ev": 1213690496,
+      "market_cap": 779291264,
+      "ev": 1215741248,
       "fcf": 17278624,
       "hist_fcf_growth": null,
-      "implied_growth": 0.22395706176757812
+      "implied_growth": 0.22418785095214844
     }
   }
 }
