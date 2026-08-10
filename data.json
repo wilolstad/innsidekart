@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-09T05:30:15.192116+00:00",
+  "generated": "2026-08-10T05:57:25.742081+00:00",
   "window_days": 14,
   "base_total": 9953,
   "assumptions": {
@@ -562,15 +562,15 @@
       "roles": [],
       "cluster": false,
       "top_role": null,
-      "name": "TELENOR",
+      "name": "Telenor ASA",
       "price": 134.6,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 183254171648,
-      "ev": 238802176000,
+      "market_cap": 183452663808,
+      "ev": 239000668160,
       "fcf": 9430750208,
       "hist_fcf_growth": -0.010653138553429864,
-      "implied_growth": 0.08768653869628906
+      "implied_growth": 0.08779525756835938
     },
     "ROM": {
       "issuer": "RomReal Ltd.",
