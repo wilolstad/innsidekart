@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15T04:58:49.993045+00:00",
+  "generated": "2026-08-16T05:02:44.126984+00:00",
   "window_days": 14,
   "base_total": 9976,
   "assumptions": {
@@ -710,11 +710,11 @@
       "price": 37.85,
       "currency": "NOK",
       "sector": "Energy",
-      "market_cap": 3935100928,
-      "ev": 3891843904,
+      "market_cap": 3933006592,
+      "ev": 3889749568,
       "fcf": 73192376,
       "hist_fcf_growth": null,
-      "implied_growth": 0.1862945556640625
+      "implied_growth": 0.18622207641601562
     },
     "EPR": {
       "issuer": "Europris ASA",
@@ -782,15 +782,15 @@
       "roles": [],
       "cluster": false,
       "top_role": null,
-      "name": "Telenor ASA",
+      "name": "TELENOR",
       "price": 134.6,
       "currency": "NOK",
       "sector": "Communication Services",
-      "market_cap": 183149182976,
-      "ev": 238697187328,
+      "market_cap": 183168827392,
+      "ev": 238716831744,
       "fcf": 9430750208,
       "hist_fcf_growth": -0.010653138553429864,
-      "implied_growth": 0.08762741088867188
+      "implied_growth": 0.08763885498046875
     }
   }
 }
