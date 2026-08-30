@@ -1,13 +1,29 @@
 {
-  "generated": "2026-08-29T11:18:51.903907+00:00",
+  "generated": "2026-08-30T10:04:38.449518+00:00",
   "window_days": 14,
-  "base_total": 10064,
+  "base_total": 10066,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 681220,
+      "published": "2026-08-30T09:12:02.175Z",
+      "ticker": "NOFIN",
+      "issuer": "Nordic Financials ASA",
+      "title": "Meldepliktig handel for primærinnsider",
+      "url": "https://newsweb.oslobors.no/message/681220",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 25725,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Svend Egil Larsen",
+      "role": "Innsider"
+    },
     {
       "messageId": 681218,
       "published": "2026-08-29T07:40:42.143Z",
@@ -1492,6 +1508,34 @@
       "hist_fcf_growth": null,
       "implied_growth": null
     },
+    "NOFIN": {
+      "issuer": "Nordic Financials ASA",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_amount": 0.0,
+      "buy_vol_noamt": 25725,
+      "sell_amount": 0.0,
+      "sell_vol_noamt": 0,
+      "buyers": [
+        "Svend Egil Larsen"
+      ],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": "Nordic Financials ASA",
+      "price": 1.41,
+      "currency": "NOK",
+      "sector": "Financial Services",
+      "market_cap": 27768610,
+      "ev": 13584610,
+      "fcf": -6387125,
+      "hist_fcf_growth": null,
+      "implied_growth": null
+    },
     "EPR": {
       "issuer": "Europris ASA",
       "n_buy": 1,
@@ -1540,8 +1584,8 @@
       "price": 13.86,
       "currency": "NOK",
       "sector": "Real Estate",
-      "market_cap": 1386000000,
-      "ev": 1392000000,
+      "market_cap": 1365951872,
+      "ev": 1371951872,
       "fcf": null,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1715,16 +1759,7 @@
       "buyers": [],
       "roles": [],
       "cluster": false,
-      "top_role": null,
-      "name": "Moreld ASA",
-      "price": 24.0,
-      "currency": "NOK",
-      "sector": "Energy",
-      "market_cap": 4233437184,
-      "ev": 6186243328,
-      "fcf": 854880384,
-      "hist_fcf_growth": 103.09845246149459,
-      "implied_growth": -0.08148384094238281
+      "top_role": null
     },
     "KOA": {
       "issuer": "Kongsberg Automotive ASA",
