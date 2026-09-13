@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T08:46:57.427538+00:00",
+  "generated": "2026-09-13T09:41:23.183067+00:00",
   "window_days": 14,
   "base_total": 10141,
   "assumptions": {
@@ -1159,22 +1159,6 @@
       "n_insiders": 1,
       "name": "Svend Egil Larsen",
       "role": "Innsider"
-    },
-    {
-      "messageId": 681218,
-      "published": "2026-08-29T07:40:42.143Z",
-      "ticker": "ZAL",
-      "issuer": "Zalaris ASA",
-      "title": "Mandatory notification of trade ",
-      "url": "https://newsweb.oslobors.no/message/681218",
-      "type": "PROGRAM",
-      "source": "pdf",
-      "volume": 113900,
-      "price": null,
-      "amount": null,
-      "n_insiders": 1,
-      "name": null,
-      "role": "Innsider"
     }
   ],
   "companies": {
@@ -1310,8 +1294,8 @@
       "price": 14.9,
       "currency": "NOK",
       "sector": "Real Estate",
-      "market_cap": 1468447488,
-      "ev": 1474447488,
+      "market_cap": 1488214784,
+      "ev": 886114784,
       "fcf": null,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1494,9 +1478,9 @@
       "sector": "Utilities",
       "market_cap": 188755472,
       "ev": 83823016,
-      "fcf": 81631904,
+      "fcf": 81967848,
       "hist_fcf_growth": null,
-      "implied_growth": -0.4518623352050781
+      "implied_growth": -0.45291900634765625
     },
     "MOWI": {
       "issuer": "Mowi ASA",
@@ -1552,7 +1536,7 @@
       "issuer": "Zalaris ASA",
       "n_buy": 0,
       "n_sell": 1,
-      "n_program": 4,
+      "n_program": 3,
       "n_unknown": 0,
       "buy_amount": 0.0,
       "buy_vol_noamt": 0,
