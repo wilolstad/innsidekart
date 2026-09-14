@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T09:41:23.183067+00:00",
+  "generated": "2026-09-14T10:04:57.990156+00:00",
   "window_days": 14,
   "base_total": 10141,
   "assumptions": {
@@ -1143,22 +1143,6 @@
       "n_insiders": 1,
       "name": "Amir Moshe Snapir",
       "role": "Innsider"
-    },
-    {
-      "messageId": 681220,
-      "published": "2026-08-30T09:12:02.175Z",
-      "ticker": "NOFIN",
-      "issuer": "Nordic Financials ASA",
-      "title": "Meldepliktig handel for primærinnsider",
-      "url": "https://newsweb.oslobors.no/message/681220",
-      "type": "KJØP",
-      "source": "pdf",
-      "volume": 25725,
-      "price": null,
-      "amount": null,
-      "n_insiders": 1,
-      "name": "Svend Egil Larsen",
-      "role": "Innsider"
     }
   ],
   "companies": {
@@ -1179,42 +1163,12 @@
       "cluster": true,
       "top_role": null,
       "name": "Sparebanken Møre",
-      "price": 110.02,
+      "price": 110.2,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 5454725632,
-      "ev": 52429726208,
+      "market_cap": 5463650304,
+      "ev": 52438650880,
       "fcf": -2681000000.0,
-      "hist_fcf_growth": null,
-      "implied_growth": null
-    },
-    "NOFIN": {
-      "issuer": "Nordic Financials ASA",
-      "n_buy": 3,
-      "n_sell": 0,
-      "n_program": 0,
-      "n_unknown": 0,
-      "buy_amount": 0.0,
-      "buy_vol_noamt": 50435,
-      "sell_amount": 0.0,
-      "sell_vol_noamt": 0,
-      "buyers": [
-        "Svend Egil Larsen"
-      ],
-      "roles": [
-        "Innsider",
-        "Innsider",
-        "Innsider"
-      ],
-      "cluster": true,
-      "top_role": null,
-      "name": "Nordic Financials ASA",
-      "price": 1.43,
-      "currency": "NOK",
-      "sector": "Financial Services",
-      "market_cap": 28162490,
-      "ev": 19283490,
-      "fcf": -4213000,
       "hist_fcf_growth": null,
       "implied_growth": null
     },
@@ -1236,14 +1190,14 @@
       "cluster": true,
       "top_role": null,
       "name": "Norbit ASA",
-      "price": 162.0,
+      "price": 157.6,
       "currency": "NOK",
       "sector": "Technology",
-      "market_cap": 10364946432,
-      "ev": 10919546400,
+      "market_cap": 10083430400,
+      "ev": 10638030368,
       "fcf": 331087488,
       "hist_fcf_growth": null,
-      "implied_growth": 0.12262153625488281
+      "implied_growth": 0.11916351318359375
     },
     "VEI": {
       "issuer": "Veidekke ASA",
@@ -1262,14 +1216,43 @@
       "cluster": true,
       "top_role": null,
       "name": "Veidekke ASA",
-      "price": 205.0,
+      "price": 206.0,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 27666036736,
-      "ev": 24227036800,
+      "market_cap": 27800991744,
+      "ev": 24361991808,
       "fcf": 4067749888,
       "hist_fcf_growth": 0.6266987747390833,
-      "implied_growth": -0.10963058471679688
+      "implied_growth": -0.10881423950195312
+    },
+    "NOFIN": {
+      "issuer": "Nordic Financials ASA",
+      "n_buy": 2,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_amount": 0.0,
+      "buy_vol_noamt": 24710,
+      "sell_amount": 0.0,
+      "sell_vol_noamt": 0,
+      "buyers": [
+        "Svend Egil Larsen"
+      ],
+      "roles": [
+        "Innsider",
+        "Innsider"
+      ],
+      "cluster": true,
+      "top_role": null,
+      "name": "Nordic Financials ASA",
+      "price": 1.43,
+      "currency": "NOK",
+      "sector": "Financial Services",
+      "market_cap": 28162490,
+      "ev": 19283490,
+      "fcf": -4213000,
+      "hist_fcf_growth": null,
+      "implied_growth": null
     },
     "MDATA": {
       "issuer": "Magnora Data Center ASA",
@@ -1291,11 +1274,11 @@
       "cluster": true,
       "top_role": null,
       "name": "Magnora Data Center ASA",
-      "price": 14.9,
+      "price": 14.72,
       "currency": "NOK",
       "sector": "Real Estate",
-      "market_cap": 1488214784,
-      "ev": 886114784,
+      "market_cap": 1450707968,
+      "ev": 1456707968,
       "fcf": null,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1319,14 +1302,14 @@
       "cluster": false,
       "top_role": "Styre",
       "name": "SalMar ASA",
-      "price": 581.5,
+      "price": 576.0,
       "currency": "NOK",
       "sector": "Consumer Defensive",
-      "market_cap": 78815436800,
-      "ev": 99789437056,
+      "market_cap": 78069981184,
+      "ev": 99043981440,
       "fcf": 2227375104,
       "hist_fcf_growth": -0.1112085651015593,
-      "implied_growth": 0.1633434295654297
+      "implied_growth": 0.16234207153320312
     },
     "DVD": {
       "issuer": "Deep Value Driller AS",
@@ -1347,14 +1330,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Deep Value Driller AS",
-      "price": 20.95,
+      "price": 20.9,
       "currency": "NOK",
       "sector": "Energy",
-      "market_cap": 1958999680,
-      "ev": 1967337640,
+      "market_cap": 1954324224,
+      "ev": 1962662184,
       "fcf": 101861328,
       "hist_fcf_growth": null,
-      "implied_growth": 0.051898956298828125
+      "implied_growth": 0.051586151123046875
     },
     "AURG": {
       "issuer": "Aurskog Sparebank",
@@ -1371,11 +1354,11 @@
       "cluster": false,
       "top_role": null,
       "name": "Aurskog Sparebank",
-      "price": 257.0,
+      "price": 258.0,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 1188008448,
-      "ev": 6619040576,
+      "market_cap": 1192631040,
+      "ev": 6623663168,
       "fcf": -525198000.0,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1395,11 +1378,11 @@
       "cluster": false,
       "top_role": null,
       "name": "Lytix Biopharma ASA",
-      "price": 8.4,
+      "price": 8.0,
       "currency": "NOK",
       "sector": "Healthcare",
-      "market_cap": 645960064,
-      "ev": 556339064,
+      "market_cap": 615200064,
+      "ev": 525579064,
       "fcf": -52063124,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1423,14 +1406,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Zaptec ASA",
-      "price": 56.8,
+      "price": 54.7,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 4966020096,
-      "ev": 4605349104,
+      "market_cap": 4782416896,
+      "ev": 4421745904,
       "fcf": 434924736,
       "hist_fcf_growth": null,
-      "implied_growth": -0.02855682373046875
+      "implied_growth": -0.03411293029785156
     },
     "PROT": {
       "issuer": "Protector Forsikring ASA",
@@ -1449,11 +1432,11 @@
       "cluster": false,
       "top_role": null,
       "name": "Protector Forsikring ASA",
-      "price": 459.6,
+      "price": 455.0,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 37831892992,
-      "ev": 14119893248,
+      "market_cap": 37453246464,
+      "ev": 13741246720,
       "fcf": 1782249984,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1478,9 +1461,9 @@
       "sector": "Utilities",
       "market_cap": 188755472,
       "ev": 83823016,
-      "fcf": 81967848,
+      "fcf": 81631904,
       "hist_fcf_growth": null,
-      "implied_growth": -0.45291900634765625
+      "implied_growth": -0.4518623352050781
     },
     "MOWI": {
       "issuer": "Mowi ASA",
@@ -1499,14 +1482,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Mowi ASA",
-      "price": 205.8,
+      "price": 204.4,
       "currency": "NOK",
       "sector": "Consumer Defensive",
-      "market_cap": 108516409344,
-      "ev": 111902009280,
+      "market_cap": 107778195456,
+      "ev": 111163795392,
       "fcf": 22450000,
       "hist_fcf_growth": 0.16908741682080097,
-      "implied_growth": 0.9118423461914062
+      "implied_growth": 0.910552978515625
     },
     "AUTO": {
       "issuer": "AutoStore Holdings Ltd.",
@@ -1523,14 +1506,14 @@
       "cluster": false,
       "top_role": null,
       "name": "AutoStore Holdings Ltd.",
-      "price": 15.5,
+      "price": 15.08,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 52056580096,
-      "ev": 52147580096,
+      "market_cap": 50646016000,
+      "ev": 50737016000,
       "fcf": 142600000,
       "hist_fcf_growth": -0.12842201899643269,
-      "implied_growth": 0.4613227844238281
+      "implied_growth": 0.45713043212890625
     },
     "ZAL": {
       "issuer": "Zalaris ASA",
@@ -1547,14 +1530,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Zalaris ASA",
-      "price": 100.0,
+      "price": 101.0,
       "currency": "NOK",
       "sector": "Industrials",
-      "market_cap": 2182929152,
-      "ev": 2549995136,
+      "market_cap": 2204758528,
+      "ev": 2571824512,
       "fcf": 146088624,
       "hist_fcf_growth": null,
-      "implied_growth": 0.038494110107421875
+      "implied_growth": 0.03962516784667969
     },
     "SERHO": {
       "issuer": "Servatur Holding AS",
