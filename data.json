@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T09:29:53.048277+00:00",
+  "generated": "2026-09-27T10:09:41.977793+00:00",
   "window_days": 14,
   "base_total": 10209,
   "assumptions": {
@@ -1090,8 +1090,8 @@
       "price": 17.2,
       "currency": "NOK",
       "sector": "Real Estate",
-      "market_cap": 1695120768,
-      "ev": 1093020768,
+      "market_cap": 1717939328,
+      "ev": 1115839328,
       "fcf": null,
       "hist_fcf_growth": null,
       "implied_growth": null
