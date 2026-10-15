@@ -1,13 +1,45 @@
 {
-  "generated": "2026-10-14T09:40:34.551919+00:00",
+  "generated": "2026-10-15T09:20:02.578965+00:00",
   "window_days": 14,
-  "base_total": 10260,
+  "base_total": 10263,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 684112,
+      "published": "2026-10-15T05:40:00.000Z",
+      "ticker": "BORR",
+      "issuer": "Borr Drilling Limited",
+      "title": "Borr Drilling Limited - Notification of PDMR Transaction",
+      "url": "https://newsweb.oslobors.no/message/684112",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 750000,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": null,
+      "role": "Styre"
+    },
+    {
+      "messageId": 684100,
+      "published": "2026-10-14T17:25:37.760Z",
+      "ticker": "NOFIN",
+      "issuer": "Nordic Financials ASA",
+      "title": "Mandatory Notification of Trading by Primary Insiders",
+      "url": "https://newsweb.oslobors.no/message/684100",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 11861,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Svend Egil Larsen",
+      "role": "Innsider"
+    },
     {
       "messageId": 684048,
       "published": "2026-10-14T06:22:53.964Z",
@@ -519,54 +551,6 @@
       "n_insiders": null,
       "name": null,
       "role": null
-    },
-    {
-      "messageId": 683368,
-      "published": "2026-09-30T19:16:03.939Z",
-      "ticker": "NORDH",
-      "issuer": "Nordhealth AS",
-      "title": "Mandatory Notification of Trade of Primary Insiders",
-      "url": "https://newsweb.oslobors.no/message/683368",
-      "type": "KJØP",
-      "source": "pdf",
-      "volume": 5098470,
-      "price": null,
-      "amount": null,
-      "n_insiders": 4,
-      "name": "Charles MacBain",
-      "role": "CEO"
-    },
-    {
-      "messageId": 683362,
-      "published": "2026-09-30T16:01:07.357Z",
-      "ticker": "NOFIN",
-      "issuer": "Nordic Financials ASA",
-      "title": "Meldepliktig handel for primærinnsider",
-      "url": "https://newsweb.oslobors.no/message/683362",
-      "type": "KJØP",
-      "source": "pdf",
-      "volume": 18181,
-      "price": null,
-      "amount": null,
-      "n_insiders": 1,
-      "name": "Svend Egil Larsen",
-      "role": "Innsider"
-    },
-    {
-      "messageId": 683322,
-      "published": "2026-09-30T08:03:09.201Z",
-      "ticker": "LIFE",
-      "issuer": "Lifecare ASA",
-      "title": "Mandatory Notification of Trade by Primary Insider",
-      "url": "https://newsweb.oslobors.no/message/683322",
-      "type": "PROGRAM",
-      "source": "pdf",
-      "volume": 7200000,
-      "price": 0.55,
-      "amount": 3960000.0,
-      "n_insiders": 1,
-      "name": null,
-      "role": "Nærstående"
     }
   ],
   "companies": {
@@ -577,7 +561,7 @@
       "n_program": 0,
       "n_unknown": 0,
       "buy_amount": 0.0,
-      "buy_vol_noamt": 34866,
+      "buy_vol_noamt": 28546,
       "sell_amount": 0.0,
       "sell_vol_noamt": 0,
       "buyers": [
@@ -592,11 +576,11 @@
       "cluster": true,
       "top_role": null,
       "name": "Nordic Financials ASA",
-      "price": 1.27,
+      "price": 1.26,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 25011444,
-      "ev": 16132444,
+      "market_cap": 24814502,
+      "ev": 15935502,
       "fcf": -4213000,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -618,11 +602,11 @@
       "cluster": false,
       "top_role": null,
       "name": "Axactor ASA",
-      "price": 4.245,
+      "price": 4.18,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 3420087296,
-      "ev": 3976523296,
+      "market_cap": 3367718400,
+      "ev": 3924154400,
       "fcf": -217733872,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -644,42 +628,14 @@
       "cluster": false,
       "top_role": null,
       "name": "Arribatec Group ASA",
-      "price": 5.62,
+      "price": 5.5,
       "currency": "NOK",
       "sector": "Technology",
-      "market_cap": 376252224,
-      "ev": 372930224,
+      "market_cap": 368218368,
+      "ev": 364896368,
       "fcf": 48090876,
       "hist_fcf_growth": null,
-      "implied_growth": -0.071685791015625
-    },
-    "NORDH": {
-      "issuer": "Nordhealth AS",
-      "n_buy": 1,
-      "n_sell": 0,
-      "n_program": 0,
-      "n_unknown": 0,
-      "buy_amount": 0.0,
-      "buy_vol_noamt": 5098470,
-      "sell_amount": 0.0,
-      "sell_vol_noamt": 0,
-      "buyers": [
-        "Charles MacBain"
-      ],
-      "roles": [
-        "CEO"
-      ],
-      "cluster": false,
-      "top_role": "CEO",
-      "name": "Nordhealth AS",
-      "price": 27.0,
-      "currency": "NOK",
-      "sector": "Healthcare",
-      "market_cap": 2127976704,
-      "ev": 2115475704,
-      "fcf": -1899750,
-      "hist_fcf_growth": null,
-      "implied_growth": null
+      "implied_growth": -0.07476043701171875
     }
   }
 }
