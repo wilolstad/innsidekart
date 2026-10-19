@@ -1,13 +1,29 @@
 {
-  "generated": "2026-10-18T09:00:27.573227+00:00",
+  "generated": "2026-10-19T10:11:13.644932+00:00",
   "window_days": 14,
-  "base_total": 10266,
+  "base_total": 10267,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 684251,
+      "published": "2026-10-18T21:04:04.715Z",
+      "ticker": "BRUT",
+      "issuer": "Bruton Limited",
+      "title": "Bruton Limited (BRUT) - Mandatory Notification of Trade by PDMR",
+      "url": "https://newsweb.oslobors.no/message/684251",
+      "type": "PROGRAM",
+      "source": "pdf",
+      "volume": 297618,
+      "price": null,
+      "amount": null,
+      "n_insiders": 1,
+      "name": "Jens Martin Jensen",
+      "role": "Innsider"
+    },
     {
       "messageId": 684245,
       "published": "2026-10-16T13:48:53.199Z",
@@ -415,11 +431,11 @@
       "cluster": true,
       "top_role": null,
       "name": "Nordic Financials ASA",
-      "price": 1.27,
+      "price": 1.25,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 25011444,
-      "ev": 16132444,
+      "market_cap": 24617562,
+      "ev": 15738562,
       "fcf": -4213000,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -441,11 +457,11 @@
       "cluster": false,
       "top_role": null,
       "name": "Axactor ASA",
-      "price": 4.31,
+      "price": 4.325,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 3472456192,
-      "ev": 4028892192,
+      "market_cap": 3484541184,
+      "ev": 4040977184,
       "fcf": -217733872,
       "hist_fcf_growth": null,
       "implied_growth": null
