@@ -1,13 +1,45 @@
 {
-  "generated": "2026-10-21T09:31:43.619872+00:00",
+  "generated": "2026-10-22T09:34:13.873596+00:00",
   "window_days": 14,
-  "base_total": 10273,
+  "base_total": 10275,
   "assumptions": {
     "wacc": 0.09,
     "terminal_g": 0.025,
     "stage1_years": 10
   },
   "messages": [
+    {
+      "messageId": 684578,
+      "published": "2026-10-22T06:00:27.261Z",
+      "ticker": "TECH",
+      "issuer": "Techstep ASA",
+      "title": "Techstep ASA - Mandatory notification of trade - Subscription from primary insiders and close associates",
+      "url": "https://newsweb.oslobors.no/message/684578",
+      "type": "PROGRAM",
+      "source": "none",
+      "volume": null,
+      "price": null,
+      "amount": null,
+      "n_insiders": null,
+      "name": null,
+      "role": null
+    },
+    {
+      "messageId": 684553,
+      "published": "2026-10-21T21:26:58.756Z",
+      "ticker": "AJAXR",
+      "issuer": "Ajax Resources PLC",
+      "title": "Director/PDMR Shareholding",
+      "url": "https://newsweb.oslobors.no/message/684553",
+      "type": "KJØP",
+      "source": "pdf",
+      "volume": 125000,
+      "price": 8.0,
+      "amount": 1000000.0,
+      "n_insiders": 1,
+      "name": "Elmlea Properties Limited",
+      "role": "Innsider"
+    },
     {
       "messageId": 684440,
       "published": "2026-10-20T18:47:57.516Z",
@@ -327,22 +359,6 @@
       "n_insiders": 1,
       "name": null,
       "role": "Styre"
-    },
-    {
-      "messageId": 683664,
-      "published": "2026-10-07T04:40:00.000Z",
-      "ticker": "BORR",
-      "issuer": "Borr Drilling Limited",
-      "title": "Borr Drilling Limited - Notification of PDMR Transaction",
-      "url": "https://newsweb.oslobors.no/message/683664",
-      "type": "PROGRAM",
-      "source": "pdf",
-      "volume": 1500000,
-      "price": null,
-      "amount": null,
-      "n_insiders": 1,
-      "name": null,
-      "role": "Styre"
     }
   ],
   "companies": {
@@ -373,6 +389,34 @@
       "market_cap": 24617562,
       "ev": 15738562,
       "fcf": -4213000,
+      "hist_fcf_growth": null,
+      "implied_growth": null
+    },
+    "AJAXR": {
+      "issuer": "Ajax Resources PLC",
+      "n_buy": 1,
+      "n_sell": 0,
+      "n_program": 0,
+      "n_unknown": 0,
+      "buy_amount": 1000000.0,
+      "buy_vol_noamt": 0,
+      "sell_amount": 0.0,
+      "sell_vol_noamt": 0,
+      "buyers": [
+        "Elmlea Properties Limited"
+      ],
+      "roles": [
+        "Innsider"
+      ],
+      "cluster": false,
+      "top_role": null,
+      "name": null,
+      "price": null,
+      "currency": null,
+      "sector": null,
+      "market_cap": null,
+      "ev": null,
+      "fcf": null,
       "hist_fcf_growth": null,
       "implied_growth": null
     }
