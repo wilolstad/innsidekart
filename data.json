@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-24T09:03:15.462605+00:00",
+  "generated": "2026-10-25T09:19:46.539923+00:00",
   "window_days": 14,
   "base_total": 10288,
   "assumptions": {
@@ -522,7 +522,7 @@
       "sector": "Basic Materials",
       "market_cap": 3109321216,
       "ev": 7537321408,
-      "fcf": -711124992,
+      "fcf": -846124992,
       "hist_fcf_growth": null,
       "implied_growth": null
     },
@@ -546,8 +546,8 @@
       "price": 188.4,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": 78310621184,
-      "ev": 127468622848,
+      "market_cap": 78828077056,
+      "ev": 127986078720,
       "fcf": 43734126592,
       "hist_fcf_growth": 0.19468985372068293,
       "implied_growth": null
