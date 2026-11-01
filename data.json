@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T10:32:47.510132+00:00",
+  "generated": "2026-11-01T11:27:13.562036+00:00",
   "window_days": 14,
   "base_total": 10326,
   "assumptions": {
@@ -994,7 +994,7 @@
       "name": "Ajax Resources Plc",
       "price": 1.0898,
       "currency": "NOK",
-      "sector": "Financial Services",
+      "sector": "Basic Materials",
       "market_cap": 162734704,
       "ev": 159605711,
       "fcf": -785971,
@@ -1105,9 +1105,9 @@
       "sector": "Industrials",
       "market_cap": 312964939776,
       "ev": 310076939520,
-      "fcf": 3575375104,
+      "fcf": 4256624896,
       "hist_fcf_growth": 6.047298732064891,
-      "implied_growth": 0.2528362274169922
+      "implied_growth": 0.22891998291015625
     },
     "YAR": {
       "issuer": "Yara International ASA",
