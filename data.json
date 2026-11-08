@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T11:16:33.603451+00:00",
+  "generated": "2026-11-08T11:28:10.374400+00:00",
   "window_days": 14,
   "base_total": 10370,
   "assumptions": {
@@ -1366,11 +1366,11 @@
       "price": 17.5,
       "currency": "NOK",
       "sector": "Real Estate",
-      "market_cap": 16232115200,
-      "ev": 16232115200,
+      "market_cap": 16225280000,
+      "ev": 16225280000,
       "fcf": 2192375808,
       "hist_fcf_growth": 0.326378025934007,
-      "implied_growth": -0.0782318115234375
+      "implied_growth": -0.0782928466796875
     },
     "GJF": {
       "issuer": "Gjensidige Forsikring ASA",
@@ -1394,8 +1394,8 @@
       "price": 273.4,
       "currency": "NOK",
       "sector": "Financial Services",
-      "market_cap": null,
-      "ev": null,
+      "market_cap": 136690188288,
+      "ev": 63431386112,
       "fcf": 5463012352,
       "hist_fcf_growth": 0.5452636679006664,
       "implied_growth": null
@@ -1419,10 +1419,10 @@
       "currency": "NOK",
       "sector": "Industrials",
       "market_cap": 47261876224,
-      "ev": 47352876224,
-      "fcf": 142600000,
+      "ev": 47303276224,
+      "fcf": 183962496,
       "hist_fcf_growth": -0.12842201899643269,
-      "implied_growth": 0.44661712646484375
+      "implied_growth": 0.4081840515136719
     },
     "TECH": {
       "issuer": "Techstep ASA",
@@ -1495,7 +1495,7 @@
       "currency": "NOK",
       "sector": "Financial Services",
       "market_cap": 2050867328,
-      "ev": 3092954496,
+      "ev": 6633947472,
       "fcf": 1545129000.0,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1676,8 +1676,8 @@
       "price": 0.624,
       "currency": "NOK",
       "sector": "Utilities",
-      "market_cap": 88808288,
-      "ev": 87621446,
+      "market_cap": 34655236,
+      "ev": 33468394,
       "fcf": -561759,
       "hist_fcf_growth": null,
       "implied_growth": null
