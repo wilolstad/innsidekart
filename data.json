@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T12:56:37.268349+00:00",
+  "generated": "2026-11-22T12:48:02.272640+00:00",
   "window_days": 14,
   "base_total": 10449,
   "assumptions": {
@@ -1328,8 +1328,8 @@
       "price": 12.18,
       "currency": "NOK",
       "sector": "Real Estate",
-      "market_cap": 1200381952,
-      "ev": 651381952,
+      "market_cap": 1216540800,
+      "ev": 667540800,
       "fcf": null,
       "hist_fcf_growth": null,
       "implied_growth": null
@@ -1557,7 +1557,7 @@
       "currency": "NOK",
       "sector": "Financial Services",
       "market_cap": 6994445312,
-      "ev": 8865445120,
+      "ev": 7208445184,
       "fcf": 1025000000.0,
       "hist_fcf_growth": 0.8689947050083446,
       "implied_growth": null
